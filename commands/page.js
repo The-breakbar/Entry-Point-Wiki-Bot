@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 module.exports = {
 	name: "search",
 	description: "Search for a wiki page.",
-	options: [{ name: "query", type: "STRING", description: "What you want to search for on the wiki", required: true }],
+	options: [{ name: "query", type: "STRING", description: "Term to search for on the wiki.", required: true }],
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply();
