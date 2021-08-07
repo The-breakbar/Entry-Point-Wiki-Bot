@@ -2,9 +2,6 @@ module.exports = {
 	name: "ready",
 	once: true,
 	execute(client) {
-		// Client has logged in
-		console.log(`Logged in as ${client.user.tag}`);
-
 		// Fetch wiki server info
 		client.wikiServer = client.guilds.cache.get("621676630896672789");
 
@@ -18,5 +15,8 @@ module.exports = {
 				defaultPermission: data.defaultPermission
 			});
 		});
+
+		// Client has logged in
+		console.log(`Logged in as ${client.user.tag}`);
 	}
 };

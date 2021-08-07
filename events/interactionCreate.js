@@ -11,10 +11,17 @@ module.exports = {
 			await client.commands.get(interaction.commandName).execute(interaction, client);
 		} catch (error) {
 			console.error(error);
-			await interaction.followUp({
+			const errorMessage = {
 				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.ownerId}>.\n\`\`\`${error}\`\`\``,
 				ephemeral: true
-			});
+			};
+
+			// Check if command was alread replied to
+			if (interaction.replied) {
+				await interaction.followUp(errorMessage);
+			} else {
+				await interaction.reply(errorMessage);
+			}
 		}
 	}
 };

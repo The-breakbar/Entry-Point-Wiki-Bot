@@ -14,17 +14,23 @@ module.exports = {
 		const response = await fetch(
 			`https://entry-point.fandom.com/api.php?action=opensearch&format=json&search=${query}&namespace=0&limit=5&redirects=resolve`
 		).then((response) => response.json());
-		const links = response[3];
-		const linkTitels = response[1];
 
-		// Make button row
-		const row = new MessageActionRow().addComponents(
-			links.map((link, index) => {
-				return new MessageButton().setStyle("LINK").setLabel(linkTitels[index]).setURL(link);
-			})
-		);
+		// Check for results
+		if (response[1].length == 0) {
+			await interaction.followUp({ content: `There were no search results for \`${query}\`` });
+		} else {
+			const links = response[3];
+			const linkTitels = response[1];
 
-		// Reply with links
-		await interaction.followUp({ content: `Here are the search results for \`${query}\``, components: [row] });
+			// Make button row
+			const row = new MessageActionRow().addComponents(
+				links.map((link, index) => {
+					return new MessageButton().setStyle("LINK").setLabel(linkTitels[index]).setURL(link);
+				})
+			);
+
+			// Reply with links
+			await interaction.followUp({ content: `Here are the search results for \`${query}\``, components: [row] });
+		}
 	}
 };
