@@ -16,11 +16,11 @@ module.exports = {
 				ephemeral: true
 			};
 
-			// Check if command was alread replied to
-			if (interaction.replied) {
-				await interaction.followUp(errorMessage);
+			// Check if interaction deferred or replied to
+			if (interaction.deferred || interaction.replied) {
+				interaction.followUp(errorMessage);
 			} else {
-				await interaction.reply(errorMessage);
+				interaction.reply(errorMessage);
 			}
 		}
 	}
