@@ -11,7 +11,7 @@ module.exports = {
 			await client.commands.get(interaction.commandName).execute(interaction, client);
 		} catch (error) {
 			console.error(error);
-			await interaction.reply({
+			await interaction.followUp({
 				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.ownerId}>.\n\`\`\`${error}\`\`\``,
 				ephemeral: true
 			});

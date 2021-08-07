@@ -13,7 +13,8 @@ module.exports = {
 					"https://www.roblox.com/games/740581508/Entry-Point?privateServerLinkCode=SGuBUOpnHBdk_QEEM6DKCX3F69B7ER2X"
 				)
 		);
+
 		// Reply with message
-		await interaction.reply({ content: "Here is the link for the Wiki private server:", components: [row] });
+		await interaction.reply({ content: "Click to play:", components: [row] });
 	}
 };
