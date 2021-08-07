@@ -11,7 +11,7 @@ module.exports = {
 		// Bind slash commands for wiki server
 		client.commands.each((data) => {
 			client.wikiServer.commands.create({
-				name: data.name,
+				name: data.displayName,
 				description: data.description,
 				options: data.options,
 				defaultPermission: data.defaultPermission
