@@ -12,8 +12,8 @@ module.exports = {
 		} catch (error) {
 			console.error(error);
 			await interaction.reply({
-				content: `There was an error while executing the \`${interaction.commandName}\` command!\n\`\`\`${error}\`\`\``
-				// ephemeral: true
+				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.ownerId}>.\n\`\`\`${error}\`\`\``,
+				ephemeral: true
 			});
 		}
 	}

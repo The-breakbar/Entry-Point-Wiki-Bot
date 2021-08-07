@@ -9,9 +9,10 @@ module.exports = {
 		client.wikiServer = client.guilds.cache.get("621676630896672789");
 
 		// Bind slash commands for wiki server
+		client.wikiServer.commands.set([]);
 		client.commands.each((data) => {
 			client.wikiServer.commands.create({
-				name: data.displayName,
+				name: data.name,
 				description: data.description,
 				options: data.options,
 				defaultPermission: data.defaultPermission
