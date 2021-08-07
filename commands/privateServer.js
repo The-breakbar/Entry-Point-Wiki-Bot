@@ -2,7 +2,7 @@ const { MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
 	name: "privateserver",
-	description: "Get the Wiki Private Server link.",
+	description: "Get the Wiki private server link.",
 	async execute(interaction, client) {
 		// Link Button
 		const row = new MessageActionRow().addComponents(
