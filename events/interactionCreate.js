@@ -12,7 +12,7 @@ module.exports = {
 		} catch (error) {
 			console.error(error);
 			const errorMessage = {
-				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.ownerId}>.\n\`\`\`${error}\`\`\``,
+				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error}\`\`\``,
 				ephemeral: true
 			};
 

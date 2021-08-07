@@ -30,7 +30,10 @@ module.exports = {
 			);
 
 			// Reply with links
-			await interaction.followUp({ content: `Here are the search results for \`${query}\``, components: [row] });
+			await interaction.editReply({
+				content: `Here are the search results for \`${query}\``,
+				components: [row]
+			});
 		}
 	}
 };

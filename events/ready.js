@@ -3,12 +3,13 @@ module.exports = {
 	once: true,
 	execute(client) {
 		// Fetch wiki server info
-		client.wikiServer = client.guilds.cache.get("621676630896672789");
+		client.wikiServer = {};
+		client.wikiServer.guild = client.guilds.cache.get("621676630896672789");
 
 		// Bind slash commands for wiki server
-		client.wikiServer.commands.set([]);
+		client.wikiServer.guild.commands.set([]);
 		client.commands.each((data) => {
-			client.wikiServer.commands.create({
+			client.wikiServer.guild.commands.create({
 				name: data.name,
 				description: data.description,
 				options: data.options,
