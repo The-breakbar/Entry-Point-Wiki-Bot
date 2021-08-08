@@ -102,7 +102,8 @@ module.exports = [
 			freelanceheist: {
 				title: "Select mission and difficulty",
 				description: "This is for requesting a mission host, if you need a squad, please use the Stealth/Loud ping.",
-				missions: ["The Setup", "The Lockup", "The Score"]
+				missions: ["The Setup", "The Lockup", "The Score"],
+				method: ["Stealth", "Loud"]
 			},
 			daily: {
 				title: "Select difficulties",
@@ -116,7 +117,7 @@ module.exports = [
 			},
 			method: {
 				customId: "method",
-				placeholder: "Select Ironman method"
+				placeholder: "Select method"
 			},
 			difficulty: {
 				customId: "difficulty",

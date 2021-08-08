@@ -2,7 +2,7 @@ const { MessageEmbed, MessageActionRow, MessageSelectMenu } = require("discord.j
 const pages = require("../utils/squadPingData.js");
 
 // Build first page
-let getFirstMessage = (page1, states) => {
+const getFirstMessage = (page1, states) => {
 	const embed = new MessageEmbed().setTitle(page1.embed.title).setDescription(page1.embed.description);
 	const selectMenu = new MessageActionRow().addComponents(
 		new MessageSelectMenu()
