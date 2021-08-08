@@ -107,7 +107,7 @@ module.exports = [
 			},
 			daily: {
 				title: "Select difficulties",
-				description: "You can select any difficulties."
+				description: "You can select multiple difficulties."
 			}
 		},
 		selectMenu: {

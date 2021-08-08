@@ -18,9 +18,9 @@ module.exports = {
 
 			// Check if interaction deferred or replied to
 			if (interaction.deferred || interaction.replied) {
-				interaction.followUp(errorMessage);
+				await interaction.followUp(errorMessage);
 			} else {
-				interaction.reply(errorMessage);
+				await interaction.reply(errorMessage);
 			}
 		}
 	}
