@@ -17,7 +17,7 @@ module.exports = {
 
 		// Check for results
 		if (response[1].length == 0) {
-			await interaction.followUp({ content: `There were no search results for \`${query}\`` });
+			await interaction.editReply({ content: `There were no search results for \`${query}\`` });
 		} else {
 			const links = response[3];
 			const linkTitels = response[1];
