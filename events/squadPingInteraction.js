@@ -1,4 +1,10 @@
-const { MessageEmbed, MessageActionRow, MessageSelectMenu, MessageButton } = require("discord.js");
+const {
+	MessageEmbed,
+	MessageActionRow,
+	MessageSelectMenu,
+	MessageButton,
+	BaseGuildVoiceChannel
+} = require("discord.js");
 const pages = require("../utils/squadPingData.js");
 // Global variables accessed for cooldown
 global.pingStates = {
@@ -14,17 +20,12 @@ global.pingStates = {
 let pingMessages = {};
 
 // Build second page message
-const getSecondMessage = (
-	value,
-	missionSelect = false,
-	methodSelect = false,
-	difficultySelect = false,
-	missionSelectCount = 1
-) => {
+const getSecondMessage = (value, missionSelect = false, methodSelect = false, difficultySelect = false) => {
 	// Text embed
 	const embed = new MessageEmbed()
 		.setTitle(pages[1].embed[value].title)
-		.setDescription(pages[1].embed[value].description);
+		.setDescription(pages[1].embed[value].description)
+		.setColor(global.purple);
 
 	// Generate select menus if needed
 	let difficulties = ["Rookie", "Professional", "Operative", "Elite", "Legend"];
@@ -41,7 +42,7 @@ const getSecondMessage = (
 						return { label: mission, value: mission };
 					})
 				)
-				.setMaxValues(missionSelectCount)
+				.setMaxValues(value == "stealth" ? 3 : value == "loud" ? 3 : 1)
 		);
 	}
 
@@ -98,10 +99,13 @@ const validateSecondPage = (id) => {
 			if (missions && difficulties) output = true;
 			break;
 		case "ironman":
-			if (method && difficulties) output = true;
+			const legendStealth = method == "Stealth" && difficulties.includes("Legend");
+			if (method && difficulties && !legendStealth) output = true;
 			break;
 		case "freelanceheist":
-			if (missions && method && difficulties) output = true;
+			const setupLoud = missions[0] == "The Setup" && method == "Loud";
+			const scoreStealth = missions[0] == "The Score" && method == "Stealth";
+			if (missions && method && difficulties && !setupLoud && !scoreStealth) output = true;
 			break;
 		case "daily":
 			if (difficulties) output = true;
@@ -111,12 +115,71 @@ const validateSecondPage = (id) => {
 	return output;
 };
 
+const getThirdMessage = (id, isPing) => {
+	let type = pingMessages[id].type;
+	let missions = pingMessages[id].missions;
+	let method = pingMessages[id].method;
+	let difficulties = pingMessages[id].difficulties;
+
+	// Ping message
+	let embed = new MessageEmbed();
+	if (isPing) {
+		embed.setTitle(pages[2][type].title).setColor(pages[2][type].color);
+	} else {
+		embed
+			.setTitle(`Confirm ${pages[2][type].title}?`)
+			.setColor(global.purple)
+			.setFooter("Let people know if you have any additional info.");
+	}
+	let fields = [];
+	if (missions) {
+		fields.push({ name: `Mission${missions.length == 1 ? "" : "s"}`, value: missions.join("\n"), inline: true });
+	}
+	if (method) {
+		fields.push({ name: "Method", value: method, inline: true });
+	}
+	if (difficulties) {
+		fields.push({
+			name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`,
+			value: difficulties.join("\n"),
+			inline: true
+		});
+	}
+	embed.addFields(fields);
+
+	// Button
+	const row = new MessageActionRow();
+	if (isPing) {
+		row.addComponents(
+			new MessageButton()
+				.setStyle("LINK")
+				.setLabel("Private Server")
+				.setURL(
+					"https://www.roblox.com/games/740581508/Entry-Point?privateServerLinkCode=SGuBUOpnHBdk_QEEM6DKCX3F69B7ER2X"
+				)
+		);
+	} else {
+		row.addComponents(new MessageButton().setCustomId("send").setLabel("Send ping").setStyle("SUCCESS"));
+	}
+
+	return { embeds: [embed], components: [row], ephemeral: true };
+};
+
+const getPing = (id) => {
+	const type = pingMessages[id].type;
+	//pingStates[type] = false;
+	setTimeout(() => {
+		global.pingStates[type] = true;
+	}, 20000);
+	return getThirdMessage(id, true);
+};
+
 module.exports = {
 	name: "interactionCreate",
 	once: false,
 	async execute(interaction, client) {
 		if (!(interaction.isSelectMenu() || interaction.isButton())) return;
-		if (!["pingselect", "mission", "method", "difficulty", "next"].includes(interaction.customId)) return;
+		if (!["pingselect", "mission", "method", "difficulty", "next", "send"].includes(interaction.customId)) return;
 
 		try {
 			// First page ping select
@@ -127,12 +190,13 @@ module.exports = {
 				switch (value) {
 					case "stealth":
 					case "loud":
-						await interaction.update(getSecondMessage(value, true, false, true, 3));
+						await interaction.update(getSecondMessage(value, true, false, true));
 						break;
 					case "ironman":
 						await interaction.update(getSecondMessage(value, false, true, true));
 						break;
 					case "shadowwar":
+						await interaction.update(getThirdMessage(interaction.message.id, false));
 						break;
 					case "nightheist":
 						await interaction.update(getSecondMessage(value, true, false, true));
@@ -148,23 +212,33 @@ module.exports = {
 				const values = interaction.values;
 				pingMessages[interaction.message.id].missions = values;
 				if (!interaction.defferred) {
-					interaction.deferUpdate();
+					await interaction.deferUpdate();
 				}
 			} else if (interaction.customId == "method") {
 				const values = interaction.values;
 				pingMessages[interaction.message.id].method = values[0];
 				if (!interaction.defferred) {
-					interaction.deferUpdate();
+					await interaction.deferUpdate();
 				}
 			} else if (interaction.customId == "difficulty") {
 				const values = interaction.values;
 				pingMessages[interaction.message.id].difficulties = values;
 				if (!interaction.defferred) {
-					interaction.deferUpdate();
+					await interaction.deferUpdate();
 				}
 			} else if (interaction.customId == "next") {
 				if (validateSecondPage(interaction.message.id)) {
-					console.log(`Generating page 3 with this data: ${pingMessages[interaction.message.id]}`);
+					await interaction.update(getThirdMessage(interaction.message.id, false));
+				}
+			} else if (interaction.customId == "send") {
+				if (global.pingStates[pingMessages[interaction.message.id].type]) {
+					await interaction.update({
+						content: "The ping has been successfully sent.",
+						components: []
+					});
+					await interaction.followUp(getPing(interaction.message.id));
+				} else {
+					await interaction.update({ content: "The ping could not be sent, it is still on cooldown.", components: [] });
 				}
 			}
 		} catch (error) {

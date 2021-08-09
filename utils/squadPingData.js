@@ -91,7 +91,7 @@ module.exports = [
 			},
 			ironman: {
 				title: "Select method and difficulties",
-				description: "You can select multiple difficulties.",
+				description: "You can select multiple difficulties. You can not ping for Legend Stealth Ironman.",
 				method: ["Stealth", "Loud", "Mixed"]
 			},
 			nightheist: {
@@ -101,7 +101,8 @@ module.exports = [
 			},
 			freelanceheist: {
 				title: "Select mission and difficulty",
-				description: "This is for requesting a mission host, if you need a squad, please use the Stealth/Loud ping.",
+				description:
+					"This is for requesting a mission host, if you need a squad, please use the Stealth/Loud ping. You can not ping for Setup loud/Score stealth.",
 				missions: ["The Setup", "The Lockup", "The Score"],
 				method: ["Stealth", "Loud"]
 			},
@@ -123,6 +124,38 @@ module.exports = [
 				customId: "difficulty",
 				placeholder: "Select difficulty"
 			}
+		}
+	},
+
+	// Page 3
+	{
+		stealth: {
+			title: "Stealth ping",
+			color: ""
+		},
+		loud: {
+			title: "Loud ping",
+			color: ""
+		},
+		ironman: {
+			title: "Ironman ping",
+			color: ""
+		},
+		shadowwar: {
+			title: "Shadow War ping",
+			color: ""
+		},
+		nightheist: {
+			title: "Night Heist ping",
+			color: ""
+		},
+		freelanceheist: {
+			title: "Freelance Heist ping",
+			color: ""
+		},
+		daily: {
+			title: "Daily Challenge ping",
+			color: ""
 		}
 	}
 ];

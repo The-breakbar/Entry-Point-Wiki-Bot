@@ -3,7 +3,10 @@ const pages = require("../utils/squadPingData.js");
 
 // Build first page
 const getFirstMessage = (states) => {
-	const embed = new MessageEmbed().setTitle(pages[0].embed.title).setDescription(pages[0].embed.description);
+	const embed = new MessageEmbed()
+		.setTitle(pages[0].embed.title)
+		.setDescription(pages[0].embed.description)
+		.setColor(global.purple);
 	const selectMenu = new MessageActionRow().addComponents(
 		new MessageSelectMenu()
 			.setCustomId(pages[0].selectMenu.customId)
