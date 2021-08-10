@@ -131,31 +131,31 @@ module.exports = [
 	{
 		stealth: {
 			title: "Stealth ping",
-			color: ""
+			color: "BLUE"
 		},
 		loud: {
 			title: "Loud ping",
-			color: ""
+			color: "RED"
 		},
 		ironman: {
 			title: "Ironman ping",
-			color: ""
+			color: "ORANGE"
 		},
 		shadowwar: {
 			title: "Shadow War ping",
-			color: ""
+			color: "GREEN"
 		},
 		nightheist: {
 			title: "Night Heist ping",
-			color: ""
+			color: "DARK_BLUE"
 		},
 		freelanceheist: {
 			title: "Freelance Heist ping",
-			color: ""
+			color: "GOLD"
 		},
 		daily: {
 			title: "Daily Challenge ping",
-			color: ""
+			color: global.purple
 		}
 	}
 ];

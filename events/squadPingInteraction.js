@@ -103,9 +103,11 @@ const validateSecondPage = (id) => {
 			if (method && difficulties && !legendStealth) output = true;
 			break;
 		case "freelanceheist":
-			const setupLoud = missions[0] == "The Setup" && method == "Loud";
-			const scoreStealth = missions[0] == "The Score" && method == "Stealth";
-			if (missions && method && difficulties && !setupLoud && !scoreStealth) output = true;
+			if (missions && method && difficulties) {
+				const setupLoud = missions[0] == "The Setup" && method == "Loud";
+				const scoreStealth = missions[0] == "The Score" && method == "Stealth";
+				if (!setupLoud && !scoreStealth) output = true;
+			}
 			break;
 		case "daily":
 			if (difficulties) output = true;
@@ -125,6 +127,9 @@ const getThirdMessage = (id, isPing) => {
 	let embed = new MessageEmbed();
 	if (isPing) {
 		embed.setTitle(pages[2][type].title).setColor(pages[2][type].color);
+		if (type == "daily") {
+			embed.setFooter("Use the /dailychallenge command to check the current challenge.");
+		}
 	} else {
 		embed
 			.setTitle(`Confirm ${pages[2][type].title}?`)
@@ -162,16 +167,18 @@ const getThirdMessage = (id, isPing) => {
 		row.addComponents(new MessageButton().setCustomId("send").setLabel("Send ping").setStyle("SUCCESS"));
 	}
 
-	return { embeds: [embed], components: [row], ephemeral: true };
+	return { embeds: [embed], components: [row] };
 };
 
-const getPing = (id) => {
+const getPing = (id, author) => {
 	const type = pingMessages[id].type;
-	//pingStates[type] = false;
+	pingStates[type] = false;
 	setTimeout(() => {
 		global.pingStates[type] = true;
-	}, 20000);
-	return getThirdMessage(id, true);
+	}, 1800000);
+	let message = getThirdMessage(id, true);
+	message.content = `Ping ${author}`; // Add ping ids
+	return message;
 };
 
 module.exports = {
@@ -236,14 +243,19 @@ module.exports = {
 						content: "The ping has been successfully sent.",
 						components: []
 					});
-					await interaction.followUp(getPing(interaction.message.id));
+					await interaction.followUp(getPing(interaction.message.id, interaction.user));
 				} else {
 					await interaction.update({ content: "The ping could not be sent, it is still on cooldown.", components: [] });
 				}
 			}
 		} catch (error) {
 			console.log(error);
-			interaction.update({ content: `There was an error while executing the command.\n\`\`\`${error}\`\`\`` });
+			interaction.update({
+				content: `There was an error while executing the command.\n\`\`\`${error}\`\`\``,
+				embeds: [],
+				components: [],
+				ephemeral: true
+			});
 		}
 	}
 };

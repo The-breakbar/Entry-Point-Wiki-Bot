@@ -13,6 +13,8 @@ module.exports = {
 			console.error(error);
 			const errorMessage = {
 				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error}\`\`\``,
+				embeds: [],
+				components: [],
 				ephemeral: true
 			};
 
