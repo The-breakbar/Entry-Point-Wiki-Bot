@@ -249,7 +249,7 @@ module.exports = {
 				}
 			}
 		} catch (error) {
-			console.log(error);
+			console.error(error);
 			interaction.update({
 				content: `There was an error while executing the command.\n\`\`\`${error}\`\`\``,
 				embeds: [],

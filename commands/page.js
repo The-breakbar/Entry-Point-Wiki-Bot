@@ -13,7 +13,9 @@ module.exports = {
 		const query = interaction.options.getString("query");
 		const response = await fetch(
 			`https://entry-point.fandom.com/api.php?action=opensearch&format=json&search=${query}&namespace=0&limit=5&redirects=resolve`
-		).then((response) => response.json());
+		)
+			.then((response) => response.json())
+			.catch((error) => console.error(error));
 
 		// Check for results
 		if (response[1].length == 0) {
