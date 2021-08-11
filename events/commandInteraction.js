@@ -8,7 +8,16 @@ module.exports = {
 
 		// Execute command, notify user on error
 		try {
-			await client.commands.get(interaction.commandName).execute(interaction, client);
+			let command = client.commands.get(interaction.commandName);
+			if (command.channelWhitelist && !command.channelWhitelist.some((channelId) => command.channelId == channelId)) {
+				await interaction.reply({
+					content:
+						"This command can not be used in this channel, check the command description to see where it can be used.",
+					ephemeral: true
+				});
+			} else {
+				await command.execute(interaction, client);
+			}
 		} catch (error) {
 			console.error(error);
 			const errorMessage = {

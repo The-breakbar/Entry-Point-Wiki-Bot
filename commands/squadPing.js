@@ -17,11 +17,10 @@ const getFirstMessage = (states) => {
 	return { embeds: [embed], components: [selectMenu], ephemeral: true };
 };
 
-let users = {};
-
 module.exports = {
 	name: "squadping",
-	description: "Ping for a squad if you need players or request a host for an expansion mission.",
+	description: "Ping for a squad if you need players or request a host for an expansion mission. (#squadboard only)",
+	channelWhitelist: ["650016486064390145"], // Squad board
 	async execute(interaction, client) {
 		await interaction.reply(getFirstMessage(global.pingStates));
 	}
