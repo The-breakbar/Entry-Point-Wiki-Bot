@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 module.exports = {
 	name: "dailychallenge",
-	description: "Get the daily challenge.",
+	description: "Get the daily challenge",
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply();
