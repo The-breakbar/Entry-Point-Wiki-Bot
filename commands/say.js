@@ -2,7 +2,7 @@ let typingTarget = 0;
 
 module.exports = {
 	name: "say",
-	description: "A special command for Elite Operatives and Server Boosters",
+	description: "A special command for Elite Operatives and Financiers",
 	options: [{ name: "message", type: "STRING", description: "What Wiki Bot should say", required: true }],
 	defaultPermission: false,
 	permissions: ["742452037043748965", "668198708776665102", "621679404636176384", "621679757221822465"], // Elite Operative, Server Booster, Wiki Admin, Wiki Mod
