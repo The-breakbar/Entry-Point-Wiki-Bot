@@ -1,6 +1,5 @@
 module.exports = {
 	name: "interactionCreate",
-	once: false,
 	async execute(interaction, client) {
 		// Check if context menu is in available context menus
 		if (!interaction.isContextMenu()) return;

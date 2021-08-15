@@ -183,7 +183,6 @@ const getPing = (id, author) => {
 
 module.exports = {
 	name: "interactionCreate",
-	once: false,
 	async execute(interaction, client) {
 		if (!(interaction.isSelectMenu() || interaction.isButton())) return;
 		if (!["pingselect", "mission", "method", "difficulty", "next", "send"].includes(interaction.customId)) return;

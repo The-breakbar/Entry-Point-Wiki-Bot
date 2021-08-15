@@ -11,8 +11,8 @@ module.exports = (member) => {
 		"Daily Challenge Ping": false
 	};
 	member.roles.cache.each((role) => {
-		if (Object.keys(roles).includes(role)) {
-			roles[role] = true;
+		if (Object.keys(roles).includes(role.name)) {
+			roles[role.name] = true;
 		}
 	});
 
@@ -22,9 +22,9 @@ module.exports = (member) => {
 		let button = new MessageButton()
 			.setCustomId(role)
 			.setLabel(`${status ? "Disable" : "Enable"} ${role}`)
-			.setStyle(status ? "SUCCESS" : "DANGER");
+			.setStyle(status ? "DANGER" : "SUCCESS");
 		buttons.push(button);
 	});
 
-	return buttons;
+	return [buttons.slice(0, 4), buttons.slice(4)];
 };

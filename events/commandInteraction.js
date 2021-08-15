@@ -1,6 +1,5 @@
 module.exports = {
 	name: "interactionCreate",
-	once: false,
 	async execute(interaction, client) {
 		// Check if command is in available commands
 		if (!interaction.isCommand()) return;
