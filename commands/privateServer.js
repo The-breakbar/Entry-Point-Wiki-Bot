@@ -4,6 +4,7 @@ module.exports = {
 	name: "privateserver",
 	description: "Get the Wiki private server link",
 	async execute(interaction, client) {
+		await interaction.deferReply();
 		// Link Button
 		const row = new MessageActionRow().addComponents(
 			new MessageButton()
@@ -15,6 +16,6 @@ module.exports = {
 		);
 
 		// Reply with message
-		await interaction.reply({ content: "Click to play:", components: [row] });
+		await interaction.editReply({ content: "Click to play:", components: [row] });
 	}
 };

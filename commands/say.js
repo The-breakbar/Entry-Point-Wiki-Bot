@@ -8,13 +8,15 @@ module.exports = {
 	permissions: ["742452037043748965", "668198708776665102", "621679404636176384", "621679757221822465"], // Elite Operative, Server Booster, Wiki Admin, Wiki Mod
 	//channelWhitelist = ["621749314787737605"],
 	async execute(interaction, client) {
+		await interaction.deferReply();
+
 		let text = interaction.options.getString("message");
 		let textLength = (text.length / 6) * 1000;
 		let time = textLength > 10000 ? 10000 : textLength;
 		if (text.includes("@")) {
-			interaction.reply({ content: "Please do not include any pings in your message.", ephemeral: true });
+			interaction.editReply({ content: "Please do not include any pings in your message.", ephemeral: true });
 		} else {
-			interaction.reply({ content: "Your message is being sent.", ephemeral: true }).then(() => {
+			interaction.editReply({ content: "Your message is being sent.", ephemeral: true }).then(() => {
 				let finishTime = Date.now() + time;
 				typingTarget = finishTime > typingTarget ? finishTime : typingTarget;
 				interaction.channel.sendTyping().then(() => {

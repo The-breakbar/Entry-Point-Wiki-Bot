@@ -9,8 +9,8 @@ module.exports = {
 		// Embed color
 		global.purple = "#b33fe6";
 
-		// Bind slash commands for wiki server
 		client.wikiServer.guild.commands.set([]);
+		// Bind slash commands for wiki server
 		client.commands.each((data) => {
 			client.wikiServer.guild.commands
 				.create({
@@ -28,6 +28,23 @@ module.exports = {
 						command.permissions.set({ permissions });
 					}
 				});
+		});
+
+		// Bind context menus for wiki server
+		client.contextMenus.each((data) => {
+			// Message context menu
+			if (data.type.includes("MESSAGE")) {
+				client.wikiServer.guild.commands.create({
+					name: data.name,
+					type: "MESSAGE"
+				});
+			}
+			if (data.type.includes("USER")) {
+				client.wikiServer.guild.commands.create({
+					name: data.name,
+					type: "USER"
+				});
+			}
 		});
 
 		// Client has logged in
