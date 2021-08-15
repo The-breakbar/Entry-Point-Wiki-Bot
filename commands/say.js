@@ -8,7 +8,7 @@ module.exports = {
 	permissions: ["742452037043748965", "668198708776665102", "621679404636176384", "621679757221822465"], // Elite Operative, Server Booster, Wiki Admin, Wiki Mod
 	//channelWhitelist = ["621749314787737605"],
 	async execute(interaction, client) {
-		await interaction.deferReply();
+		await interaction.deferReply({ ephemeral: true });
 
 		let text = interaction.options.getString("message");
 		let textLength = (text.length / 6) * 1000;

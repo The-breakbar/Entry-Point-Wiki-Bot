@@ -22,7 +22,7 @@ module.exports = {
 	description: "Ping for a squad if you need players or request a host for an expansion mission (#squadboard only)",
 	channelWhitelist: ["650016486064390145"], // Squad board
 	async execute(interaction, client) {
-		await interaction.deferReply();
+		await interaction.deferReply({ ephemeral: true });
 		await interaction.editReply(getFirstMessage(global.pingStates));
 	}
 };
