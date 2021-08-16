@@ -1,7 +1,8 @@
-const { MessageActionRow, MessageButton } = require("discord.js");
+const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = {
+	enabled: true,
 	name: "search",
 	description: "Search for a wiki page.",
 	options: [{ name: "query", type: "STRING", description: "Term to search for on the wiki", required: true }],
@@ -19,7 +20,10 @@ module.exports = {
 
 		// Check for results
 		if (response[1].length == 0) {
-			await interaction.editReply({ content: `There were no search results for \`${query}\`` });
+			const failEmbed = new MessageEmbed()
+				.setColor(global.purple)
+				.setDescription(`There were no search results for "${query.length > 50 ? query.slice(0, 50) + "..." : query}"`);
+			await interaction.editReply({ embeds: [failEmbed] });
 		} else {
 			const links = response[3];
 			const linkTitels = response[1];
@@ -31,9 +35,13 @@ module.exports = {
 				})
 			);
 
+			const embed = new MessageEmbed()
+				.setColor(global.purple)
+				.setDescription(`Search results for "${query.length > 50 ? query.slice(0, 50) + "..." : query}"`);
+
 			// Reply with links
 			await interaction.editReply({
-				content: `Here are the search results for \`${query}\``,
+				embeds: [embed],
 				components: [row]
 			});
 		}

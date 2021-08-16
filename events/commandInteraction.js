@@ -18,9 +18,9 @@ module.exports = {
 				await command.execute(interaction, client);
 			}
 		} catch (error) {
-			console.error(error);
+			console.log(error);
 			const errorMessage = {
-				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error}\`\`\``,
+				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
 				embeds: [],
 				components: [],
 				ephemeral: true

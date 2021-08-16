@@ -244,7 +244,7 @@ module.exports = {
 		} catch (error) {
 			console.error(error);
 			interaction.update({
-				content: `There was an error while executing the command.\n\`\`\`${error}\`\`\``,
+				content: `There was an error while executing the command. Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
 				embeds: [],
 				components: [],
 				ephemeral: true

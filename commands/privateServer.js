@@ -1,6 +1,7 @@
-const { MessageActionRow, MessageButton } = require("discord.js");
+const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js");
 
 module.exports = {
+	// enabled: true,
 	name: "privateserver",
 	description: "Get the Wiki private server link",
 	async execute(interaction, client) {
@@ -15,7 +16,10 @@ module.exports = {
 				)
 		);
 
+		// Embed
+		const embed = new MessageEmbed().setColor(global.purple).setDescription("Click to play:");
+
 		// Reply with message
-		await interaction.editReply({ content: "Click to play:", components: [row] });
+		await interaction.editReply({ embeds: [embed], components: [row] });
 	}
 };
