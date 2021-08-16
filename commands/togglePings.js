@@ -1,7 +1,7 @@
 const { MessageActionRow, MessageEmbed } = require("discord.js");
 
 module.exports = {
-	// enabled: true,
+	enabled: true,
 	name: "togglepings",
 	description: "Enable or disable the ping roles for #squadboard",
 	async execute(interaction, client) {
