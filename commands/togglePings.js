@@ -6,7 +6,7 @@ module.exports = {
 	description: "Enable or disable the ping roles for #squadboard",
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
-		const getButtons = require("../utils/pingRolesData.js");
+		const getButtons = require("../utils/togglePingsData.js");
 		let buttons = getButtons(interaction.member);
 		let row1 = new MessageActionRow().addComponents(buttons[0]);
 		let row2 = new MessageActionRow().addComponents(buttons[1]);

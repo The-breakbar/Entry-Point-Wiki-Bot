@@ -1,5 +1,5 @@
 const { MessageActionRow } = require("discord.js");
-const getButtons = require("../utils/pingRolesData.js");
+const getButtons = require("../utils/togglePingsData.js");
 
 module.exports = {
 	name: "interactionCreate",
@@ -21,13 +21,19 @@ module.exports = {
 
 		let member = interaction.member;
 		let pingRole = interaction.customId;
+		let buttons;
 		if (member.roles.cache.some((role) => role.name == pingRole)) {
-			await member.roles.remove(member.guild.roles.cache.find((role) => role.name == pingRole));
+			await member.roles
+				.remove(member.guild.roles.cache.find((role) => role.name == pingRole))
+				.then((updatedMember) => {
+					buttons = getButtons(updatedMember);
+				});
 		} else {
-			await member.roles.add(member.guild.roles.cache.find((role) => role.name == pingRole));
+			await member.roles.add(member.guild.roles.cache.find((role) => role.name == pingRole)).then((updatedMember) => {
+				buttons = getButtons(updatedMember);
+			});
 		}
 
-		let buttons = getButtons(interaction.member);
 		let row1 = new MessageActionRow().addComponents(buttons[0]);
 		let row2 = new MessageActionRow().addComponents(buttons[1]);
 		await interaction.update({

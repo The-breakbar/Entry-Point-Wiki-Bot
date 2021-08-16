@@ -1,10 +1,4 @@
-const {
-	MessageEmbed,
-	MessageActionRow,
-	MessageSelectMenu,
-	MessageButton,
-	BaseGuildVoiceChannel
-} = require("discord.js");
+const { MessageEmbed, MessageActionRow, MessageSelectMenu, MessageButton } = require("discord.js");
 const pages = require("../utils/squadPingData.js");
 // Global variables accessed for cooldown
 global.pingStates = {
