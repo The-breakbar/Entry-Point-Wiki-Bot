@@ -2,7 +2,7 @@ const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = {
-	enabled: true,
+	// enabled: true,
 	name: "search",
 	description: "Search for a wiki page.",
 	options: [{ name: "query", type: "STRING", description: "Term to search for on the wiki", required: true }],
