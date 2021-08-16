@@ -1,6 +1,6 @@
 # About
 
-A simple discord bot created with [discord.js](https://github.com/discordjs/discord.js/), designed to help out users with Entry Point related commands. Currently the bot is still in development.
+A simple discord bot created with [discord.js](https://github.com/discordjs/discord.js/), designed to help out users with [Entry Point](https://www.roblox.com/games/740581508/Entry-Point) related commands. Currently the bot is still in development.
 
 # Functionality
 
