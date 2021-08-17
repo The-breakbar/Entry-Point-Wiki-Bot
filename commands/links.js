@@ -1,6 +1,22 @@
-const { MessageEmbed } = require("discord.js");
+// COMMAND: links
+// Send a list of useful links
 
-const linkEmbed = new MessageEmbed().setTitle("Useful links").setDescription(`
+module.exports = {
+	enabled: false,
+	global: false,
+	name: "links",
+	description: "Get a list of useful Entry Point related links",
+	async execute(interaction, client) {
+		// Reply with embed
+		await interaction.deferReply();
+		await interaction.editReply({ embeds: [linkEmbed] });
+	}
+};
+
+const linkEmbed = {
+	color: global.purple,
+	title: "Useful links",
+	description: `
 	[Play Entry Point](https://www.roblox.com/games/740581508/Entry-Point)
 	[Private Server](https://www.roblox.com/games/740581508/Entry-Point?privateServerLinkCode=SGuBUOpnHBdk_QEEM6DKCX3F69B7ER2X)
 	[Entry Point Wiki](https://entry-point.fandom.com/wiki/Entry_Point_Wiki)
@@ -14,13 +30,5 @@ const linkEmbed = new MessageEmbed().setTitle("Useful links").setDescription(`
 	[Halcyon and Phoenix Picnic](https://www.roblox.com/games/4701103583/Halcyon-and-Phoenix-Enemies-for-Life-Picnic-2020)
 	[r/entrypoint](https://www.reddit.com/r/entrypoint/)
 	[r/freefallsoftworks](https://www.reddit.com/r/entrypoint/)
-`);
-
-module.exports = {
-	// enabled: true,
-	name: "links",
-	description: "Get a list of useful Entry Point related links",
-	async execute(interaction, client) {
-		interaction.reply({ embeds: [linkEmbed.setColor(global.purple)] });
-	}
+	`
 };

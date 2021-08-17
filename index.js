@@ -7,6 +7,9 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 client.commands = new Collection();
 client.contextMenus = new Collection();
 
+// Embed color used in various commands
+global.purple = "#b33fe6";
+
 // Bind event handlers
 const eventFiles = fs.readdirSync("./events").filter((file) => file.endsWith(".js"));
 eventFiles.forEach((file) => {

@@ -1,7 +1,11 @@
-const { MessageEmbed } = require("discord.js");
+// COMMAND: dailychallenge
+// Get wikitext from Template:DailyChallenge wiki page and send current challenge
+
 const fetch = require("node-fetch");
 
 module.exports = {
+	enabled: false,
+	global: false,
 	name: "dailychallenge",
 	description: "Get the daily challenge",
 	async execute(interaction, client) {
@@ -9,9 +13,7 @@ module.exports = {
 		await interaction.deferReply();
 
 		// Get daily challenge
-		const response = await fetch(
-			`https://entry-point.fandom.com/api.php?action=parse&format=json&page=Template%3ADailyChallenge&prop=wikitext&formatversion=2`
-		)
+		const response = await fetch(`https://entry-point.fandom.com/api.php?action=parse&format=json&page=Template%3ADailyChallenge&prop=wikitext&formatversion=2`)
 			.then((response) => response.json())
 			.catch((error) => console.error(error));
 		let wikitext = response.parse.wikitext;
@@ -51,15 +53,27 @@ module.exports = {
 		const seconds = delta;
 
 		// Create embed
-		const embed = new MessageEmbed()
-			.setTitle(title)
-			.addFields({ name: modTitle1, value: mod1 }, { name: modTitle2, value: mod2 }, { name: modTitle3, value: mod3 })
-			.setFooter(
-				`${hours} hour${hours != 1 ? "s" : ""} and ${minutes} minute${
-					minutes != 1 ? "s" : ""
-				} left until next challenge.`
-			)
-			.setColor(global.purple);
+		const embed = {
+			color: global.purple,
+			title: title,
+			fields: [
+				{
+					name: modTitle1,
+					value: mod1
+				},
+				{
+					name: modTitle2,
+					value: mod2
+				},
+				{
+					name: modTitle3,
+					value: mod3
+				}
+			],
+			footer: {
+				text: `${hours} hour${hours != 1 ? "s" : ""} and ${minutes} minute${minutes != 1 ? "s" : ""} left until next challenge.`
+			}
+		};
 
 		// Reply
 		await interaction.editReply({ embeds: [embed] });
