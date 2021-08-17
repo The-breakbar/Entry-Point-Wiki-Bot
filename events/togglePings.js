@@ -1,5 +1,5 @@
-// COMMAND: toggleping
-// Send a menu to toggle ping roles
+// EVENT: interactionCreate
+// Interacton handler for the togglepings command, updates menu with new buttons
 
 const { MessageActionRow, MessageButton } = require("discord.js");
 
@@ -12,15 +12,33 @@ const embed = {
 };
 
 module.exports = {
-	enabled: true,
-	global: false,
-	name: "togglepings",
-	description: "Enable or disable the ping roles for #squadboard",
+	name: "interactionCreate",
 	async execute(interaction, client) {
-		// Reply with toggle menu
-		await interaction.deferReply({ ephemeral: true });
-		const rows = getButtons(interaction.member);
-		await interaction.editReply({ embeds: [embed], components: rows, ephemeral: true });
+		// Check if interaction is from togglepings command
+		const pingRole = interaction.customId;
+		const validIds = ["Stealth Ping", "Loud Ping", "Ironman Ping", "Shadow War Ping", "Night Heist Ping", "Freelance Heist Ping", "Daily Challenge Ping"];
+		if (!interaction.isButton()) return;
+		if (!validIds.includes(pingRole)) return;
+
+		const member = interaction.member;
+		let added = false;
+		let rows;
+
+		if (member.roles.cache.some((role) => role.name == pingRole)) {
+			// Remove role if user has it
+			await member.roles.remove(member.guild.roles.cache.find((role) => role.name == pingRole)).then((updatedMember) => {
+				rows = getButtons(updatedMember);
+			});
+		} else {
+			// Add role if user doesn't have it
+			added = true;
+			await member.roles.add(member.guild.roles.cache.find((role) => role.name == pingRole)).then((updatedMember) => {
+				rows = getButtons(updatedMember);
+			});
+		}
+
+		// Update menu
+		await interaction.update({ embeds: [embed], components: rows, ephemeral: true });
 	}
 };
 

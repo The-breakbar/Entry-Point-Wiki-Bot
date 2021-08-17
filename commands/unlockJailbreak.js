@@ -2,7 +2,7 @@
 // Send a gif of Wren dancing, only for Server Boosters
 
 module.exports = {
-	enabled: true,
+	enabled: false,
 	global: false,
 	name: "unlockjailbreak",
 	description: "A special command for Financiers",

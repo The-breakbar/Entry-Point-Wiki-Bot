@@ -1,3 +1,6 @@
+// EVENT: interactionCreate
+// Main context menu interaction event, executes commands and handles command error
+
 module.exports = {
 	name: "interactionCreate",
 	async execute(interaction, client) {
@@ -5,11 +8,12 @@ module.exports = {
 		if (!interaction.isContextMenu()) return;
 		if (!client.contextMenus.has(interaction.commandName)) return;
 
-		// Attempt to execute context menu function
 		try {
+			// Execute context menu function
 			const contextMenu = client.contextMenus.get(interaction.commandName);
 			await contextMenu.execute(interaction, client);
 		} catch (error) {
+			// Notify user on error
 			console.error(error);
 			const errorMessage = {
 				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
@@ -18,7 +22,7 @@ module.exports = {
 				ephemeral: true
 			};
 
-			// Check if interaction deferred or replied to
+			// Check if interaction has been deferred or replied to
 			if (interaction.deferred || interaction.replied) {
 				await interaction.followUp(errorMessage);
 			} else {
