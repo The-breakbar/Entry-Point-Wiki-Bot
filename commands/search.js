@@ -1,12 +1,7 @@
-// COMMAND: search
-// Search for a term on the wiki, return up to 5 pages
-
 const { MessageActionRow, MessageButton } = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = {
-	enabled: false,
-	global: false,
 	name: "search",
 	description: "Search for a wiki page.",
 	options: [{ name: "query", type: "STRING", description: "Term to search for on the wiki", required: true }],

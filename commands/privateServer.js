@@ -1,6 +1,3 @@
-// COMMAND: privateserver
-// Send a link to the Entry Point Wiki private server
-
 const { MessageActionRow, MessageButton } = require("discord.js");
 
 const embed = {
@@ -15,8 +12,6 @@ const button = {
 };
 
 module.exports = {
-	enabled: false,
-	global: false,
 	name: "privateserver",
 	description: "Get the Wiki private server link",
 	async execute(interaction, client) {

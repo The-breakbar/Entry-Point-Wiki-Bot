@@ -1,56 +1,10 @@
-// EVENT: ready
-// Bot startup, fetch Wiki Server and important channels, create all commands and context menus, set bot status
-
 module.exports = {
 	name: "ready",
 	once: true,
-	execute(client) {
+	async execute(client) {
 		// Fetch wiki server info
 		client.wikiServer = {};
 		client.wikiServer.guild = client.guilds.cache.get("621676630896672789");
-
-		client.wikiServer.guild.commands.set([]);
-		// Create slash commands for wiki server
-		client.commands.each((data) => {
-			if (data.enabled) {
-				client.wikiServer.guild.commands
-					.create({
-						name: data.name,
-						description: data.description,
-						options: data.options,
-						defaultPermission: data.defaultPermission
-					})
-					.then((command) => {
-						// Set role permissions
-						if (data.permissions) {
-							const permissions = data.permissions.map((roleId) => {
-								return { id: roleId, type: "ROLE", permission: true };
-							});
-							command.permissions.set({ permissions });
-						}
-					});
-			}
-		});
-
-		// Create context menus for wiki server
-		client.contextMenus.each((data) => {
-			if (data.enabled) {
-				// Message context menu
-				if (data.type.includes("MESSAGE")) {
-					client.wikiServer.guild.commands.create({
-						name: data.name,
-						type: "MESSAGE"
-					});
-				}
-				// User context menu
-				if (data.type.includes("USER")) {
-					client.wikiServer.guild.commands.create({
-						name: data.name,
-						type: "USER"
-					});
-				}
-			}
-		});
 
 		// Set status, change status every hour
 		// const startingStatus = activities[Math.floor(Math.random() * activities.length)];
@@ -65,6 +19,7 @@ module.exports = {
 	}
 };
 
+// Playing / Watching / Listening to / Competing in
 const activities = [
 	["PLAYING", "Ironman legend stealth"],
 	["PLAYING", "with a Thumper in the Shooting Range"],

@@ -1,9 +1,4 @@
-// COMMAND: links
-// Send a list of useful links
-
 module.exports = {
-	enabled: false,
-	global: false,
 	name: "links",
 	description: "Get a list of useful Entry Point related links",
 	async execute(interaction, client) {

@@ -1,11 +1,6 @@
-// COMMAND: dailychallenge
-// Get wikitext from Template:DailyChallenge wiki page and send current challenge
-
 const fetch = require("node-fetch");
 
 module.exports = {
-	enabled: false,
-	global: false,
 	name: "dailychallenge",
 	description: "Get the daily challenge",
 	async execute(interaction, client) {

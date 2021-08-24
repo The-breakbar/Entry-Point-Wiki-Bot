@@ -1,12 +1,7 @@
-// COMMAND: say
-// Make the bot say a message, simulate typing depending on message length, only for Elite Operatives and Server Boosters
-
 // For typing event
 let typingTarget = 0;
 
 module.exports = {
-	enabled: false,
-	global: false,
 	name: "say",
 	description: "A special command for Elite Operatives and Financiers",
 	options: [{ name: "message", type: "STRING", description: "What Wiki Bot should say", required: true }],

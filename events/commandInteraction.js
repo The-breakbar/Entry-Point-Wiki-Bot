@@ -1,6 +1,3 @@
-// EVENT: interactionCreate
-// Main command interaction event, executes commands and handles command error
-
 module.exports = {
 	name: "interactionCreate",
 	async execute(interaction, client) {
