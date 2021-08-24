@@ -1,21 +1,4 @@
-const { MessageEmbed, MessageActionRow, MessageSelectMenu } = require("discord.js");
-const pages = require("../utils/squadPingData.js");
-
-// Build first page
-const getFirstMessage = (states) => {
-	const embed = new MessageEmbed()
-		.setTitle(pages[0].embed.title)
-		.setDescription(pages[0].embed.description)
-		.setColor(global.purple);
-	const selectMenu = new MessageActionRow().addComponents(
-		new MessageSelectMenu()
-			.setCustomId(pages[0].selectMenu.customId)
-			.setPlaceholder(pages[0].selectMenu.placeholder)
-			.addOptions(pages[0].selectMenu.options.filter((option) => states[option.value]))
-	);
-
-	return { embeds: [embed], components: [selectMenu], ephemeral: true };
-};
+const { MessageActionRow, MessageSelectMenu } = require("discord.js");
 
 module.exports = {
 	name: "squadping",
@@ -23,6 +6,71 @@ module.exports = {
 	channelWhitelist: ["650016486064390145"], // Squad board
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
-		await interaction.editReply(getFirstMessage(global.pingStates));
+
+		// Create first page, include ping types which aren't on cooldown
+		const embed = {
+			title: pageData.title,
+			description: pageData.description,
+			color: global.purple
+		};
+
+		const row = new MessageActionRow({
+			components: [
+				new MessageSelectMenu({
+					customId: pageData.customId,
+					placeholder: pageData.placeholder,
+					options: pageData.options.filter((option) => {
+						return global.pingStates[option.value];
+					})
+				})
+			]
+		});
+
+		await interaction.editReply({ embeds: [embed], components: [row], ephemeral: true });
 	}
+};
+
+const pageData = {
+	title: "Select ping type",
+	description:
+		"Please select what you want to ping for. The expansion pings are for requesting a host, if you can host and just need a squad, please use the Stealth/Loud ping.",
+	customId: "pingselect",
+	placeholder: "Select ping type",
+	options: [
+		{
+			label: "Stealth ping",
+			description: "For any stealth mission (including expansions)",
+			value: "stealth"
+		},
+		{
+			label: "Loud ping",
+			description: "For any loud mission (including expansions)",
+			value: "loud"
+		},
+		{
+			label: "Ironman ping",
+			description: "For Ironman",
+			value: "ironman"
+		},
+		{
+			label: "Shadow War ping",
+			description: "For Shadow War in the private server",
+			value: "shadowwar"
+		},
+		{
+			label: "Night Heist ping",
+			description: "Request a host for a Night Heist mission",
+			value: "nightheist"
+		},
+		{
+			label: "Freelance Heist ping",
+			description: "Request a host for a Freelance Heist mission",
+			value: "freelanceheist"
+		},
+		{
+			label: "Daily Challenge ping",
+			description: "For the daily challenge",
+			value: "daily"
+		}
+	]
 };

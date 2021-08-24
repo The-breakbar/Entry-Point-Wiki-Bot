@@ -8,7 +8,7 @@ module.exports = {
 		try {
 			// Execute command
 			const command = client.commands.get(interaction.commandName);
-			if (command.channelWhitelist && !command.channelWhitelist.some((channelId) => command.channelId == channelId)) {
+			if (command.channelWhitelist && !command.channelWhitelist.includes(interaction.channelId)) {
 				await interaction.reply({
 					content: "This command can not be used in this channel, check the command description to see where it can be used.",
 					ephemeral: true

@@ -38,5 +38,6 @@ const activities = [
 	["LISTENING", "the Cache alt track"],
 	["LISTENING", "breakbar's commands"],
 	["LISTENING", "the Gala speech"],
-	["COMPETING", "a Shadow War 1v1"]
+	["COMPETING", "a Shadow War 1v1"],
+	["COMPETING", "Band Hero"]
 ];
