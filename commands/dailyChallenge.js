@@ -7,20 +7,35 @@ module.exports = {
 		// Defer reply
 		await interaction.deferReply();
 
+		// // Get daily challenge
+		// const response = await fetch(`https://entry-point.fandom.com/api.php?action=parse&format=json&page=Template%3ADailyChallenge&prop=wikitext&formatversion=2`)
+		// 	.then((response) => response.json())
+		// 	.catch((error) => console.error(error));
+		// let wikitext = response.parse.wikitext;
+
+		// // Parse wikitext
+		// const title = wikitext.split("|")[2].replace("{{Robux}}", "").trim();
+		// const modTitle1 = wikitext.split('class="challenge')[1].split(">")[1].split("<")[0].trim();
+		// const modTitle2 = wikitext.split('class="challenge')[2].split(">")[1].split("<")[0].trim();
+		// const modTitle3 = wikitext.split('class="challenge')[3].split(">")[1].split("<")[0].trim();
+		// const mod1 = wikitext.split("33%")[1].split("|")[1].trim();
+		// const mod2 = wikitext.split("33%")[2].split("|")[1].trim();
+		// const mod3 = wikitext.split("33%")[2].split("|")[2].trim();
+
 		// Get daily challenge
-		const response = await fetch(`https://entry-point.fandom.com/api.php?action=parse&format=json&page=Template%3ADailyChallenge&prop=wikitext&formatversion=2`)
+		const response = await fetch(`https://entry-point.fandom.com/api.php?action=parse&format=json&page=Template%3ADailyChallenge&prop=text&formatversion=2`)
 			.then((response) => response.json())
 			.catch((error) => console.error(error));
-		let wikitext = response.parse.wikitext;
+		let text = response.parse.text;
 
-		// Parse wikitext
-		const title = wikitext.split("|")[2].replace("{{Robux}}", "").trim();
-		const modTitle1 = wikitext.split('class="challenge')[1].split(">")[1].split("<")[0].trim();
-		const modTitle2 = wikitext.split('class="challenge')[2].split(">")[1].split("<")[0].trim();
-		const modTitle3 = wikitext.split('class="challenge')[3].split(">")[1].split("<")[0].trim();
-		const mod1 = wikitext.split("33%")[1].split("|")[1].trim();
-		const mod2 = wikitext.split("33%")[2].split("|")[1].trim();
-		const mod3 = wikitext.split("33%")[2].split("|")[2].trim();
+		// Parse text
+		const title = text.split("</th>")[0].split(" ").slice(-3).join(" ").split("\n")[0];
+		const modTitle1 = text.split("challenge-")[1].split(">")[1].split("<")[0].trim();
+		const modTitle2 = text.split("challenge-")[2].split(">")[1].split("<")[0].trim();
+		const modTitle3 = text.split("challenge-")[3].split(">")[1].split("<")[0].trim();
+		const mod1 = text.split("33%")[1].split(">")[1].split("\n")[0].trim();
+		const mod2 = text.split("33%")[2].split(">")[1].split("\n")[0].trim();
+		const mod3 = text.split("33%")[2].split("<td>")[1].split("\n")[0].trim();
 
 		// Get remaining challenge time
 		const now = new Date();
