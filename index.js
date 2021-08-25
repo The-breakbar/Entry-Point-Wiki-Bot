@@ -13,11 +13,12 @@ client.contextMenus = new Collection();
 global.purple = "#b33fe6";
 
 // Get all event handlers
-const globalEvents = getJsFiles("./events");
-const commandEvents = getJsFiles("./events/command-events");
-const wikiServerEvents = getJsFiles("./events/wiki-server-events");
-const logEvents = getJsFiles("./events/log-events");
-const allEvents = [...globalEvents, ...commandEvents, ...wikiServerEvents, ...logEvents];
+const allEvents = [
+	...getJsFiles("./events"),
+	...getJsFiles("./events/command-events"),
+	...getJsFiles("./events/wiki-server-events"),
+	...getJsFiles("./events/log-events")
+];
 
 // Bind event handlers
 allEvents.forEach((file) => {
@@ -30,9 +31,7 @@ allEvents.forEach((file) => {
 });
 
 // Get commands
-const globalCommands = getJsFiles("./commands");
-const wikiServerCommands = getJsFiles("./commands/wiki-server-commands");
-const allCommands = [...globalCommands, ...wikiServerCommands];
+const allCommands = [...getJsFiles("./commands"), ...getJsFiles("./commands/wiki-server-commands")];
 
 // Store commands in client
 allCommands.forEach((file) => {
@@ -41,9 +40,7 @@ allCommands.forEach((file) => {
 });
 
 // Get context menus
-const globalContextMenus = getJsFiles("./context-menus");
-const wikiServerContextMenus = getJsFiles("./context-menus/wiki-server-context-menus");
-const allContextMenus = [...globalContextMenus, ...wikiServerContextMenus];
+const allContextMenus = [...getJsFiles("./context-menus"), ...getJsFiles("./context-menus/wiki-server-context-menus")];
 
 // Store context menus in client
 allContextMenus.forEach((file) => {
