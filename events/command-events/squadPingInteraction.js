@@ -1,4 +1,4 @@
-const { page2, page3, page4, validateInput } = require("../utils/squadPingComponents.js");
+const { page2, page3, page4, validateInput } = require("../../utils/squadPingComponents.js");
 
 // Global variables accessed for cooldown
 global.pingStates = {

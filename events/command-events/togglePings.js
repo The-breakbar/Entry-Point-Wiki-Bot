@@ -1,4 +1,4 @@
-const { embed, getButtons } = require("../utils/togglePingsComponents.js");
+const { embed, getButtons } = require("../../utils/togglePingsComponents.js");
 
 module.exports = {
 	name: "interactionCreate",

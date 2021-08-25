@@ -1,6 +1,8 @@
 // Imports
 const { Client, Intents, Collection } = require("discord.js");
+const { getJsFiles } = require("./utils/fileUtils");
 const fs = require("fs");
+const path = require("path");
 
 // Configure client
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
@@ -10,10 +12,16 @@ client.contextMenus = new Collection();
 // Embed color used in various commands
 global.purple = "#b33fe6";
 
+// Get all event handlers
+const globalEvents = getJsFiles("./events");
+const commandEvents = getJsFiles("./events/command-events");
+const wikiServerEvents = getJsFiles("./events/wiki-server-events");
+const logEvents = getJsFiles("./events/log-events");
+const allEvents = [...globalEvents, ...commandEvents, ...wikiServerEvents, ...logEvents];
+
 // Bind event handlers
-const eventFiles = fs.readdirSync("./events").filter((file) => file.endsWith(".js"));
-eventFiles.forEach((file) => {
-	const event = require(`./events/${file}`);
+allEvents.forEach((file) => {
+	const event = require(`./${file}`);
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args, client));
 	} else {
@@ -22,16 +30,24 @@ eventFiles.forEach((file) => {
 });
 
 // Get commands
-const commandFiles = fs.readdirSync("./commands").filter((file) => file.endsWith(".js"));
-commandFiles.forEach((file) => {
-	const command = require(`./commands/${file}`);
+const globalCommands = getJsFiles("./commands");
+const wikiServerCommands = getJsFiles("./commands/wiki-server-commands");
+const allCommands = [...globalCommands, ...wikiServerCommands];
+
+// Store commands in client
+allCommands.forEach((file) => {
+	const command = require(`./${file}`);
 	client.commands.set(command.name, command);
 });
 
 // Get context menus
-const contextMenus = fs.readdirSync("./context-menus").filter((file) => file.endsWith(".js"));
-contextMenus.forEach((file) => {
-	const contextMenu = require(`./context-menus/${file}`);
+const globalContextMenus = getJsFiles("./context-menus");
+const wikiServerContextMenus = getJsFiles("./context-menus/wiki-server-context-menus");
+const allContextMenus = [...globalContextMenus, ...wikiServerContextMenus];
+
+// Store context menus in client
+allContextMenus.forEach((file) => {
+	const contextMenu = require(`./${file}`);
 	client.contextMenus.set(contextMenu.name, contextMenu);
 });
 
