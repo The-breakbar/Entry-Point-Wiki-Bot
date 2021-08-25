@@ -1,8 +1,6 @@
 // Imports
 const { Client, Intents, Collection } = require("discord.js");
 const { getJsFiles } = require("./utils/fileUtils");
-const fs = require("fs");
-const path = require("path");
 
 // Configure client
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
