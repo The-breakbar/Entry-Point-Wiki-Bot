@@ -5,6 +5,7 @@ module.exports = {
 		// Fetch wiki server info
 		client.wikiServer = {};
 		client.wikiServer.guild = client.guilds.cache.get("621676630896672789");
+		client.wikiServer.reports = client.wikiServer.guild.channels.cache.get("880560423915642991");
 
 		// Set status, change status every hour
 		// const startingStatus = activities[Math.floor(Math.random() * activities.length)];

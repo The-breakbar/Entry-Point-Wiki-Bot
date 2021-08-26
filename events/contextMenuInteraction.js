@@ -13,7 +13,7 @@ module.exports = {
 			// Notify user on error
 			console.error(error);
 			const errorMessage = {
-				content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
+				content: `There was an error while executing the \`${interaction.commandName}\` context menu! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
 				embeds: [],
 				components: [],
 				ephemeral: true
