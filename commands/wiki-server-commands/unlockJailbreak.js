@@ -11,7 +11,7 @@ module.exports = {
 			color: global.purple,
 			title: `${interaction.member.displayName} has unlocked Jailbreak!`,
 			image: {
-				url: "https://cdn.discordapp.com/attachments/630879753448062986/666655767822073895/acbb6381acff10af1be6f389b7f81a52.gif"
+				url: "https://cdn.discordapp.com/attachments/880536394399891476/880545645608464424/meme60.gif"
 			}
 		};
 
