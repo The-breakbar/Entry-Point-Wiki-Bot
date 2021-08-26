@@ -22,9 +22,21 @@ const allEvents = [
 allEvents.forEach((file) => {
 	const event = require(`./${file}`);
 	if (event.once) {
-		client.once(event.name, (...args) => event.execute(...args, client));
+		client.once(event.name, (...args) => {
+			try {
+				event.execute(...args, client);
+			} catch (error) {
+				console.error(error);
+			}
+		});
 	} else {
-		client.on(event.name, (...args) => event.execute(...args, client));
+		client.on(event.name, (...args) => {
+			try {
+				event.execute(...args, client);
+			} catch (error) {
+				console.error(error);
+			}
+		});
 	}
 });
 

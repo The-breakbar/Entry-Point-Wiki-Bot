@@ -29,7 +29,7 @@ module.exports = {
 		let text = response.parse.text;
 
 		// Parse text
-		const title = text.split("</th>")[0].split(" ").slice(-3).join(" ").split("\n")[0];
+		const title = text.split("</th>")[0].split(">").slice(-1)[0].split(" ").slice(-3).join(" ").split("\n")[0];
 		const modTitle1 = text.split("challenge-")[1].split(">")[1].split("<")[0].trim();
 		const modTitle2 = text.split("challenge-")[2].split(">")[1].split("<")[0].trim();
 		const modTitle3 = text.split("challenge-")[3].split(">")[1].split("<")[0].trim();
