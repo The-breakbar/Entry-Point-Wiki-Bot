@@ -16,10 +16,6 @@ redisClient.on("error", (error) => {
 redisClient.on("ready", () => {
 	redisClient.keys("*", (error, result) => {
 		console.log(`Connected to Redis database, found ${result.length} active mutes`);
-		// TEMP
-		result.forEach((key) => {
-			redisClient.del(key);
-		});
 	});
 });
 
