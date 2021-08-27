@@ -43,7 +43,7 @@ module.exports = {
 
 			const typeText = type == "m" ? "minute" : type == "h" ? "hour" : "day";
 			const embed = {
-				description: `Muted ${member.user} for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}`,
+				description: `Muted ${member.user} for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
 				color: global.purple
 			};
 
