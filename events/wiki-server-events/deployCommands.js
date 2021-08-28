@@ -2,7 +2,7 @@ module.exports = {
 	name: "messageCreate",
 	async execute(message, client) {
 		// Update all commands and context menus
-		if (message.author.id == client.wikiServer.guild.ownerId && message.content == "!deploy") {
+		if (message.content == "!deploy" && message.author.id == client.wikiServer.guild.ownerId) {
 			// Reset all commands
 			client.application.commands.set([]);
 			client.wikiServer.guild.commands.set([]);
