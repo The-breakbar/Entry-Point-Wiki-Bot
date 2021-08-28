@@ -3,7 +3,7 @@ const { Client, Intents, Collection } = require("discord.js");
 const { getJsFiles } = require("./utils/fileUtils");
 
 // Configure client
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_BANS] });
 client.commands = new Collection();
 client.contextMenus = new Collection();
 
