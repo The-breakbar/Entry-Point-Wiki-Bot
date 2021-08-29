@@ -1,3 +1,5 @@
+const { checkMute } = require("../../utils/muteUtils");
+
 module.exports = {
 	name: "guildMemberAdd",
 	async execute(member, client) {
@@ -22,6 +24,9 @@ module.exports = {
 				text: `ID: ${member.user.id}`
 			}
 		};
+
+		// Check if user is supposed to be muted
+		checkMute(member);
 
 		await client.wikiServer.log.send({ embeds: [embed] });
 	}
