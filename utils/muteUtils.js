@@ -94,7 +94,8 @@ module.exports = {
 		const endTime = get(newMember.user.id);
 
 		if (endTime) {
-			unmuteTimeout(newMember, endTime, endTime - now);
+			mutedMember = await newMember.roles.add(newMember.guild.roles.cache.find((role) => role.name == "Muted"));
+			unmuteTimeout(mutedMember, endTime, endTime - now);
 		}
 	}
 };
