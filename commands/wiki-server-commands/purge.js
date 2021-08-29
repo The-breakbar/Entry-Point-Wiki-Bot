@@ -15,8 +15,8 @@ module.exports = {
 
 		// Delete messages in channel
 		let count = interaction.options.getInteger("count");
-		count = count > 100 ? 100 : count;
-		if (count > 0) await interaction.channel.bulkDelete(count);
+		count = Math.min(Math.max(count, 1), 100);
+		await interaction.channel.bulkDelete(count);
 
 		await interaction.editReply({ content: `Purged ${count} message${count == 1 ? "" : "s"}.` });
 	}
