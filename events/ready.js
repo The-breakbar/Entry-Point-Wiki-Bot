@@ -1,3 +1,5 @@
+const { syncMuted } = require("../utils/muteUtils");
+
 module.exports = {
 	name: "ready",
 	once: true,
@@ -5,8 +7,14 @@ module.exports = {
 		// Fetch wiki server info
 		client.wikiServer = {};
 		client.wikiServer.guild = await client.guilds.fetch("621676630896672789");
-		client.wikiServer.reports = await client.wikiServer.guild.channels.fetch("880560423915642991");
-		client.wikiServer.log = await client.wikiServer.guild.channels.fetch("880574055026139157");
+		client.wikiServer.reports = await client.wikiServer.guild.channels.cache.get("880560423915642991");
+		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get("880574055026139157");
+
+		// Sync unmutes on bot restart
+		client.wikiServer.guild.members.fetch().then((allMembers) => {
+			const mutedMembers = allMembers.filter((member) => member.roles.cache.some((role) => role.name == "Muted"));
+			syncMuted(mutedMembers);
+		});
 
 		// Set status, change status every hour
 		// const startingStatus = activities[Math.floor(Math.random() * activities.length)];
