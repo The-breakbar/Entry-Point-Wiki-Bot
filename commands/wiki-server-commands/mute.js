@@ -46,9 +46,14 @@ module.exports = {
 				description: `Muted ${member.user} for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
 				color: global.purple
 			};
+			const muteEmbed = {
+				description: `You were muted for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
+				color: global.purple
+			};
 
 			await mute(member, time);
 			await interaction.reply({ embeds: [embed] });
+			await member.send({ embeds: [muteEmbed] }).catch((error) => console.error(error));
 		} else {
 			await interaction.reply({ content: "Invalid mute length, see description for proper usage (e.g. 15m / 6h / 1d).", ephemeral: true });
 		}
