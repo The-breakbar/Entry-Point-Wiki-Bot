@@ -88,7 +88,7 @@ module.exports = {
 	},
 
 	// Check if new member is supposed to be muted
-	checkMute(member) {
+	async checkMute(member) {
 		const now = Date.now();
 		const newMember = member;
 		const endTime = get(newMember.user.id);
