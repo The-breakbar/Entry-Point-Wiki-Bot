@@ -10,6 +10,9 @@ client.contextMenus = new Collection();
 // Embed color used in various commands
 global.purple = "#b33fe6";
 
+// Error logging
+process.on("uncaughtException", (error) => console.error(error));
+
 // Get all event handlers
 const allEvents = [
 	...getJsFiles("./events"),
