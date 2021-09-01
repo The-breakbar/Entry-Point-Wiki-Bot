@@ -42,6 +42,7 @@ const activities = [
 	["PLAYING", "Band Hero"],
 	["PLAYING", "Notoriety"],
 	["PLAYING", "Entry Point 2"],
+	["PLAYING", "The Freelancer Legend Loud"],
 	["WATCHING", "@Xx_SparrowPlays_xX"],
 	["WATCHING", "@PhoenixRising"],
 	["WATCHING", "people die in Ironman"],
