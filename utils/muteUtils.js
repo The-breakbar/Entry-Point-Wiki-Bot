@@ -1,37 +1,11 @@
-const redis = require("redis");
-const { promisify } = require("util");
-
-// Connect to redis database which holds mute durations
-const redisClient = redis.createClient({
-	host: process.env.REDIS_HOST,
-	port: process.env.REDIS_PORT,
-	password: process.env.REDIS_PASSWORD
-});
-
-// Promisify redis commands
-const set = promisify(redisClient.set).bind(redisClient);
-const del = promisify(redisClient.del).bind(redisClient);
-const keys = promisify(redisClient.keys).bind(redisClient);
-const get = promisify(redisClient.get).bind(redisClient);
-const mget = promisify(redisClient.mget).bind(redisClient);
-
-// Client events
-redisClient.on("error", (error) => {
-	console.error(error);
-});
-
-redisClient.on("ready", () => {
-	keys("*").then((entries) => {
-		console.log(`✅ Connected to Redis database, found ${entries.length} database entr${entries.length > 1 ? "ies" : "y"}`);
-	});
-});
+const redis = require("./redisClient");
 
 module.exports = {
 	async mute(member, time) {
 		let endTime = Date.now() + time;
 
 		// Add mute in database
-		await set(member.user.id, endTime);
+		await redis.set(member.user.id, endTime);
 
 		// Add muted role
 		let mutedMember = member;
@@ -48,10 +22,10 @@ module.exports = {
 		const now = Date.now();
 
 		// Get all mute entries from database
-		let mutedIds = await keys("[0-9]*");
+		let mutedIds = await redis.keys("[0-9]*");
 		let muteTimes;
-		if (mutedIds.length > 1) muteTimes = await mget(mutedIds);
-		else if (mutedIds.length == 1) muteTimes = [await get(mutedIds[0])];
+		if (mutedIds.length > 1) muteTimes = await redis.mget(mutedIds);
+		else if (mutedIds.length == 1) muteTimes = [await redis.get(mutedIds[0])];
 		// If there are no mute values, unmute all members
 		else {
 			mutedMembers.each((mutedMember) => {
@@ -69,7 +43,7 @@ module.exports = {
 					// If mute is already over, unmute immediately
 					if (now > endTime) {
 						// Remove from database
-						del(mutedId);
+						redis.del(mutedId);
 
 						unmute(mutedMember);
 					} else {
@@ -78,7 +52,7 @@ module.exports = {
 					}
 				} else {
 					// If user isn't muted delete db value
-					del(id);
+					redis.del(id);
 				}
 			});
 		}
@@ -90,7 +64,7 @@ module.exports = {
 	async checkMute(member) {
 		const now = Date.now();
 		const newMember = member;
-		const endTime = get(newMember.user.id);
+		const endTime = redis.get(newMember.user.id);
 
 		if (endTime) {
 			mutedMember = await newMember.roles.add(newMember.guild.roles.cache.find((role) => role.name == "Muted"));
@@ -107,11 +81,11 @@ const unmute = (member) => {
 
 const unmuteTimeout = (member, endTime, time) => {
 	setTimeout(() => {
-		get(member.user.id).then((resultTime) => {
+		redis.get(member.user.id).then((resultTime) => {
 			// Only unmute if mute hasn't been updated to a longer time
 			if (resultTime <= endTime) {
 				// Remove from database
-				del(member.user.id);
+				redis.del(member.user.id);
 
 				unmute(member);
 			}
