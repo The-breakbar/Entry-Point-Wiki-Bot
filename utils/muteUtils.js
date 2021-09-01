@@ -22,8 +22,7 @@ redisClient.on("error", (error) => {
 
 redisClient.on("ready", () => {
 	keys("*").then((entries) => {
-		console.log(`Connected to Redis database, found ${entries.length} database entr${entries.length > 1 ? "ies" : "y"}:`);
-		console.table(entries);
+		console.log(`✅ Connected to Redis database, found ${entries.length} database entr${entries.length > 1 ? "ies" : "y"}`);
 	});
 });
 
@@ -84,7 +83,7 @@ module.exports = {
 			});
 		}
 
-		console.log(`Successfully synced ${mutedIds.length} mute${mutedIds.length == 1 ? "" : "s"}`);
+		console.log(`✅ Successfully synced ${mutedIds.length} mute${mutedIds.length == 1 ? "" : "s"}`);
 	},
 
 	// Check if new member is supposed to be muted

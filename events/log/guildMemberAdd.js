@@ -4,7 +4,7 @@ module.exports = {
 	name: "guildMemberAdd",
 	async execute(member, client) {
 		// Only log for wiki server
-		if (message.guild != client.wikiServer.guild) return;
+		if (member.guild != client.wikiServer.guild) return;
 
 		const embed = {
 			color: "GREEN",
