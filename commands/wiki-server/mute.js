@@ -48,8 +48,9 @@ module.exports = {
 				color: global.purple
 			};
 			const muteEmbed = {
-				description: `You were muted for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
-				color: global.purple
+				description: `You have been muted for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
+				color: global.purple,
+				timestamp: new Date()
 			};
 
 			await mute(member, time);

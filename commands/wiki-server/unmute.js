@@ -1,3 +1,5 @@
+const redis = require("../../utils/redisClient");
+
 module.exports = {
 	name: "unmute",
 	description: "Unmute command for server staff",
@@ -12,7 +14,8 @@ module.exports = {
 
 		// Only unmute if user is muted
 		if (member.roles.cache.some((role) => role.name == "Muted")) {
-			member.roles.remove(member.guild.roles.cache.find((role) => role.name == "Muted"));
+			await redis.del(member.user.id);
+			await member.roles.remove(member.guild.roles.cache.find((role) => role.name == "Muted"));
 			await interaction.editReply({ content: `${member.user} was unmuted.` });
 		} else {
 			await interaction.editReply({ content: "The user is not muted." });
