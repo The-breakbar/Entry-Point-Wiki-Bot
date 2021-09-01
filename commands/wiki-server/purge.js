@@ -27,13 +27,17 @@ module.exports = {
 		if (member) {
 			// Delete messages of specific member, only checks last 100 messages
 			let deletedMessageCount = 0;
+			let messagesToDelete = new Collection();
+
 			const currentMessages = await interaction.channel.messages.fetch({ limit: 100 });
 			currentMessages.each((message) => {
 				if (message.author.id == member.user.id && deletedMessageCount < count) {
-					message.delete().catch((error) => console.error(error));
+					messagesToDelete.set(message.id, message);
 					deletedMessageCount++;
 				}
 			});
+
+			await interaction.channel.bulkDelete(messagesToDelete);
 		} else {
 			// Just bulk delete
 			await interaction.channel.bulkDelete(count);
