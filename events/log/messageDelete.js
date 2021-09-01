@@ -16,7 +16,10 @@ module.exports = {
 				**Message sent by ${author} deleted in ${channel}**${content != "" ? "\n" + content : ""}${
 				attachments.size > 0 ? "\n" + `[Attachment (.${attachments.first().url.split("/").slice(-1)[0].split(".").slice(-1)})](${attachments.first().url})` : ""
 			}`,
-			timestamp: new Date()
+			timestamp: new Date(),
+			footer: {
+				text: `ID: ${message.member.user.id}`
+			}
 		};
 
 		await client.wikiServer.log.send({ embeds: [embed] });
