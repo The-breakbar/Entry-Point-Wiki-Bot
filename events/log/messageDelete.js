@@ -2,7 +2,7 @@ module.exports = {
 	name: "messageDelete",
 	async execute(message, client) {
 		// Only log for wiki server
-		if (message.guild != client.wikiServer.guild) return;
+		if (message.guild != client.wikiServer.guild || message.author.bot) return;
 
 		let { author, channel, content, attachments } = message;
 
