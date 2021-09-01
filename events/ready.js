@@ -31,6 +31,7 @@ module.exports = {
 
 		// Client has logged in
 		console.log(`Logged in as ${client.user.tag}`);
+		console.log(`Connected to ${client.guilds.cache.size} guilds`);
 	}
 };
 

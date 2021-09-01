@@ -14,12 +14,7 @@ global.purple = "#b33fe6";
 process.on("uncaughtException", (error) => console.error(error));
 
 // Get all event handlers
-const allEvents = [
-	...getJsFiles("./events"),
-	...getJsFiles("./events/command-events"),
-	...getJsFiles("./events/wiki-server-events"),
-	...getJsFiles("./events/log-events")
-];
+const allEvents = [...getJsFiles("./events"), ...getJsFiles("./events/command"), ...getJsFiles("./events/wiki-server"), ...getJsFiles("./events/log")];
 
 // Bind event handlers
 allEvents.forEach((file) => {
@@ -44,7 +39,7 @@ allEvents.forEach((file) => {
 });
 
 // Get commands
-const allCommands = [...getJsFiles("./commands"), ...getJsFiles("./commands/wiki-server-commands")];
+const allCommands = [...getJsFiles("./commands"), ...getJsFiles("./commands/wiki-server")];
 
 // Store commands in client
 allCommands.forEach((file) => {
@@ -53,7 +48,7 @@ allCommands.forEach((file) => {
 });
 
 // Get context menus
-const allContextMenus = [...getJsFiles("./context-menus"), ...getJsFiles("./context-menus/wiki-server-context-menus")];
+const allContextMenus = [...getJsFiles("./context-menus"), ...getJsFiles("./context-menus/wiki-server")];
 
 // Store context menus in client
 allContextMenus.forEach((file) => {

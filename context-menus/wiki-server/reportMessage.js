@@ -20,7 +20,8 @@ module.exports = {
 					name: member.displayName,
 					value: message?.content == "" ? "Empty message" : message.content
 				}
-			]
+			],
+			timestamp: new Date()
 		};
 
 		// Close report button
