@@ -2,6 +2,7 @@ module.exports = {
 	name: "unmute",
 	description: "Unmute command for server staff",
 	options: [{ name: "user", type: "USER", description: "A user ping, or their user id", required: true }],
+	defaultPermission: false,
 	permissions: ["621679404636176384", "718954666032889866", "621679757221822465"], // Wiki admin, Server mod, Wiki mod
 	async execute(interaction, client) {
 		// Defer reply

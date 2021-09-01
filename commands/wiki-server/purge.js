@@ -16,6 +16,7 @@ module.exports = {
 			description: "If specified, will only purge messages from that user"
 		}
 	],
+	defaultPermission: false,
 	permissions: ["621679404636176384", "718954666032889866", "621679757221822465"],
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });

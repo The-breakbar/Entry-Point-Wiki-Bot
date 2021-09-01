@@ -17,6 +17,7 @@ module.exports = {
 			required: true
 		}
 	],
+	defaultPermission: false,
 	permissions: ["621679404636176384", "718954666032889866", "621679757221822465"], // Wiki admin, Server mod, Wiki mod
 	async execute(interaction, client) {
 		const member = interaction.options.getMember("user");
