@@ -4,6 +4,7 @@ const { Collection } = require("discord.js");
 
 let spamMessages = {};
 let warnings = {};
+let badMessageCount = {};
 
 let badWords = [];
 redis.get("filter").then((badWordString) => {
@@ -108,11 +109,50 @@ module.exports = {
 			}, 2000);
 		}
 
-		// // Filter for bad words
-		// if (isBad) {
-		// 	// handle bad word
-		// } else {
-		// 	// channel specific reacts
-		// }
+		// Filter for bad words
+		if (badWords.some((regex) => regex.test(message.content))) {
+			// Increase count by one
+			if (badMessageCount[authorId]) badMessageCount[authorId]++;
+			else badMessageCount[authorId] = 1;
+
+			if (badMessageCount[authorId] > 2) {
+				// If count reaches 3, mute for 6 hours
+				delete badMessageCount[authorId];
+				await mute(message.member, 21600000);
+
+				// Notify user of mute
+				const embed = {
+					color: global.purple,
+					description: "You have been muted for 6 hours for inappropriate language.",
+					timestamp: new Date()
+				};
+				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
+
+				// Log spam mute
+				const logEmbed = {
+					color: global.purple,
+					description: `${message.member} was muted for 6 hours for inappropriate language.`,
+					timestamp: new Date()
+				};
+				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
+			} else if (badMessageCount[authorId] == 2) {
+				// Warn user on second message
+				const embed = {
+					color: global.purple,
+					description: "Please do not use inappropriate language in the server."
+				};
+				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
+			}
+
+			// Always delete message and remove count after 5 min
+			message.delete().catch((error) => console.error(error));
+			setTimeout(() => {
+				if (badMessageCount[authorId] && badMessageCount[authorId] > 0) {
+					badMessageCount[authorId]--;
+				}
+			}, 300000);
+		} else {
+			// channel specific reacts
+		}
 	}
 };
