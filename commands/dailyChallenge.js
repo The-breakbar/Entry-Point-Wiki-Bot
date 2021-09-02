@@ -35,7 +35,7 @@ module.exports = {
 		const modTitle3 = text.split("challenge-")[3].split(">")[1].split("<")[0].trim();
 		const mod1 = text.split("33%")[1].split(">")[1].split("\n")[0].trim().replace("<br />", "\n");
 		const mod2 = text.split("33%")[2].split(">")[1].split("\n")[0].trim().replace("<br />", "\n");
-		const mod3 = text.split("33%")[2].split("<td>")[1].split("\n")[0].trim().replace("<br />", "\n");
+		const mod3 = text.split("33%")[3].split(">")[1].split("\n")[0].trim().replace("<br />", "\n");
 
 		// Get remaining challenge time
 		const now = new Date();
