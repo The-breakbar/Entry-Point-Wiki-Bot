@@ -45,7 +45,8 @@ module.exports = {
 			const typeText = type == "m" ? "minute" : type == "h" ? "hour" : "day";
 			const embed = {
 				description: `Muted ${member.user} for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
-				color: global.purple
+				color: global.purple,
+				timestamp: new Date()
 			};
 			const muteEmbed = {
 				description: `You have been muted for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
@@ -56,6 +57,9 @@ module.exports = {
 			await mute(member, time);
 			await interaction.reply({ embeds: [embed] });
 			await member.send({ embeds: [muteEmbed] }).catch((error) => console.error(error));
+
+			// Log command usage
+			await client.wikiServer.log.send({ embeds: [embed] }).catch((error) => console.error(error));
 		} else {
 			await interaction.reply({ content: "Invalid mute length, see description for proper usage (e.g. 15m / 6h / 1d).", ephemeral: true });
 		}

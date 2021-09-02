@@ -9,7 +9,7 @@ module.exports = {
 
 		// Create report embed
 		const message = interaction.options.getMessage("message");
-		const member = await interaction.guild.members.fetch(message.author.id);
+		const member = message.member;
 
 		const embed = {
 			title: `Report from ${interaction.member.displayName}`,

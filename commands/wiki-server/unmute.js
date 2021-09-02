@@ -17,6 +17,14 @@ module.exports = {
 			await redis.del(member.user.id);
 			await member.roles.remove(member.guild.roles.cache.find((role) => role.name == "Muted"));
 			await interaction.editReply({ content: `${member.user} was unmuted.` });
+
+			// Log command usage
+			const embed = {
+				color: global.purple,
+				description: `${member.user} was unmuted.`,
+				timestamp: new Date()
+			};
+			await client.wikiServer.log.send({ embeds: [embed] }).catch((error) => console.error(error));
 		} else {
 			await interaction.editReply({ content: "The user is not muted." });
 		}
