@@ -115,8 +115,8 @@ module.exports = {
 			if (badMessageCount[authorId]) badMessageCount[authorId]++;
 			else badMessageCount[authorId] = 1;
 
-			if (badMessageCount[authorId] > 2) {
-				// If count reaches 3, mute for 6 hours
+			if (badMessageCount[authorId] > 3) {
+				// If count reaches 4, mute for 6 hours
 				delete badMessageCount[authorId];
 				await mute(message.member, 21600000);
 
@@ -135,7 +135,7 @@ module.exports = {
 					timestamp: new Date()
 				};
 				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
-			} else if (badMessageCount[authorId] == 2) {
+			} else if (badMessageCount[authorId] == 3) {
 				// Warn user on second message
 				const embed = {
 					color: global.purple,
