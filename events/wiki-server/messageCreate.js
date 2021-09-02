@@ -84,15 +84,25 @@ module.exports = {
 					description: "Please do not spam messages."
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
+
+				// Log spam warning
+				const logEmbed = {
+					color: global.purple,
+					description: `${message.member} was warned for spamming.`,
+					timestamp: new Date()
+				};
+				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
 			}
 		} else {
 			// Remove message from list after 2 seconds
 			setTimeout(() => {
-				const index = spamMessages[authorId].indexOf(messageId);
-				if (index >= 0) {
-					spamMessages[authorId].splice(index, 1);
-					if (spamMessages[authorId].length == 0) {
-						delete spamMessages[authorId];
+				if (spamMessages[authorId]) {
+					const index = spamMessages[authorId].indexOf(messageId);
+					if (index >= 0) {
+						spamMessages[authorId].splice(index, 1);
+						if (spamMessages[authorId].length == 0) {
+							delete spamMessages[authorId];
+						}
 					}
 				}
 			}, 2000);
