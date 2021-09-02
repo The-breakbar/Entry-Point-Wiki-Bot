@@ -152,7 +152,10 @@ module.exports = {
 				}
 			}, 300000);
 		} else {
-			// channel specific reacts
+			// ep-art, art
+			if (message.channel.id == "696752880165847061" || message.channel.id == "880574055026139157" /* "823484477954064386" */) {
+				if (message.attachments.size > 0 || message.content.includes("http")) message.react("❤️");
+			}
 		}
 	}
 };

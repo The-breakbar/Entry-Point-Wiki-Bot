@@ -3,7 +3,12 @@ const { Client, Intents, Collection } = require("discord.js");
 const { getJsFiles } = require("./utils/fileUtils");
 
 // Configure client
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_BANS] });
+const client = new Client({
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_BANS],
+	allowedMentions: {
+		roles: ["800287767850123275", "800287808857178172", "800287853111148544", "800287894660579348", "800287936347635722", "829379381977415692", "876557575271878746"]
+	}
+});
 client.commands = new Collection();
 client.contextMenus = new Collection();
 
