@@ -36,8 +36,8 @@ module.exports = {
 				delete spamMessages[authorId];
 				delete warnings[authorId];
 
-				// If user has been warned before, mute them for 30 min
-				await mute(message.member, 1800000);
+				// If user has been warned before, mute them for 6 hours
+				await mute(message.member, 21600000);
 
 				// Delete spammed messages
 				let collectionToBeDeleted = new Collection();
@@ -51,10 +51,18 @@ module.exports = {
 				// Notify user of mute
 				const embed = {
 					color: global.purple,
-					description: "You have been muted for 30 minutes for spamming.",
+					description: "You have been muted for 6 hours for spamming.",
 					timestamp: new Date()
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
+
+				// Log spam mute
+				const logEmbed = {
+					color: global.purple,
+					description: `${message.member} was muted for 6 hours for spamming.`,
+					timestamp: new Date()
+				};
+				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
 			} else {
 				// Else send them a warning and reset counter
 				let spamMessagesCopy = spamMessages[authorId].slice();
