@@ -11,7 +11,9 @@ module.exports = {
 			const command = client.commands.get(interaction.commandName);
 			if (command.channelWhitelist && !command.channelWhitelist.includes(interaction.channelId)) {
 				await interaction.reply({
-					content: "This command can not be used in this channel, check the command description to see where it can be used.",
+					content: `This command can only be used in the following channels: ${command.channelWhitelist
+						.map((id) => client.wikiServer.guild.channels.cache.get(id))
+						.join(" ")}`,
 					ephemeral: true
 				});
 			} else {
