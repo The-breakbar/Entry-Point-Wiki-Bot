@@ -24,7 +24,7 @@ module.exports = {
 			try {
 				// Notify user on error
 				const errorMessage = {
-					content: `There was an error while executing the \`${interaction.commandName}\` command! Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
+					content: `There was an error while executing the \`${interaction.commandName}\` command!`,
 					embeds: [],
 					components: [],
 					ephemeral: true

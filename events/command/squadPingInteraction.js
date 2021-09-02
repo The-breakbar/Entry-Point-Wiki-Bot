@@ -92,7 +92,7 @@ module.exports = {
 			// Catch any errors and notify users
 			console.error(error);
 			i.update({
-				content: `There was an error while executing the command. Please send this message or a screenshot of it to <@${client.wikiServer.guild.ownerId}>.\n\`\`\`${error.stack}\`\`\``,
+				content: `There was an error while executing the command!`,
 				embeds: [],
 				components: [],
 				ephemeral: true
