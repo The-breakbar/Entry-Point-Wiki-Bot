@@ -81,7 +81,24 @@ module.exports = {
 
 						// Send squad ping
 						let message = page4(pingMessages[id]);
-						message.content = `Ping ${i.user}`;
+						let pingMention;
+						switch (pingMessages[id].type) {
+							case "stealth":
+								pingMention = "<@&800287767850123275>";
+							case "loud":
+								pingMention = "<@&800287808857178172>";
+							case "ironman":
+								pingMention = "<@&800287853111148544>";
+							case "shadowwar":
+								pingMention = "<@&800287894660579348>";
+							case "freelanceheist":
+								pingMention = "<@&800287936347635722>";
+							case "nightheist":
+								pingMention = "<@&829379381977415692>";
+							case "daily":
+								pingMention = "<@&876557575271878746>";
+						}
+						message.content = `${pingMention} ${i.user}`;
 						await i.followUp(message);
 					} else {
 						await i.update({ content: "The ping could not be sent, it is still on cooldown.", embeds: [], components: [] });

@@ -7,33 +7,39 @@ module.exports = {
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
 
-		// Create first page, include ping types which aren't on cooldown
-		const embed = {
-			title: pageData.title,
-			description: pageData.description,
-			color: global.purple
-		};
+		if (Object.keys(global.pingStates).some((key) => global.pingStates[key])) {
+			// Create first page, include ping types which aren't on cooldown
+			const embed = {
+				title: pageData.title,
+				description: pageData.description,
+				color: global.purple
+			};
 
-		const row = new MessageActionRow({
-			components: [
-				new MessageSelectMenu({
-					customId: pageData.customId,
-					placeholder: pageData.placeholder,
-					options: pageData.options.filter((option) => {
-						return global.pingStates[option.value];
+			const row = new MessageActionRow({
+				components: [
+					new MessageSelectMenu({
+						customId: pageData.customId,
+						placeholder: pageData.placeholder,
+						options: pageData.options.filter((option) => {
+							return global.pingStates[option.value];
+						})
 					})
-				})
-			]
-		});
+				]
+			});
 
-		await interaction.editReply({ embeds: [embed], components: [row], ephemeral: true });
+			await interaction.editReply({ embeds: [embed], components: [row], ephemeral: true });
+		} else {
+			// If all pings are on cooldown
+			await interaction.editReply({ content: "All pings are on cooldown, please try again later." });
+		}
 	}
 };
 
 const pageData = {
 	title: "Select ping type",
-	description:
-		"Please select what you want to ping for. The expansion pings are for requesting a host, if you can host and just need a squad, please use the Stealth/Loud ping.",
+	description: `Please select what you want to ping for. The expansion pings are for requesting a host, if you can host and just need a squad, please use the Stealth/Loud ping.
+		
+		If a ping type is not shown in the selection list, it is still on cooldown.`,
 	customId: "pingselect",
 	placeholder: "Select ping type",
 	options: [
