@@ -13,10 +13,7 @@ module.exports = {
 		client.wikiServer.editLog = await client.wikiServer.guild.channels.cache.get("699925459923632220");
 
 		// Sync unmutes on bot restart
-		client.wikiServer.guild.members.fetch().then((allMembers) => {
-			const mutedMembers = allMembers.filter((member) => member.roles.cache.some((role) => role.name == "Muted"));
-			syncMuted(mutedMembers);
-		});
+		syncMuted(client);
 
 		// Checks wiki for new edits periodically
 		recentChanges(20000, client);

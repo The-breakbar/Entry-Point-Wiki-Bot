@@ -18,22 +18,28 @@ module.exports = {
 	},
 
 	// On bot restart, reinitialize unmutes for muted users
-	async syncMuted(mutedMembers) {
+	async syncMuted(client) {
 		const now = Date.now();
+
+		// Fetch all currently muted users
+		const mutedMembers = await client.wikiServer.guild.members.fetch().then((allMembers) => {
+			return allMembers.filter((member) => member.roles.cache.some((role) => role.name == "Muted"));
+		});
 
 		// Get all mute entries from database
 		let mutedIds = await redis.keys("[0-9]*");
 		let muteTimes;
 		if (mutedIds.length > 1) muteTimes = await redis.mget(mutedIds);
 		else if (mutedIds.length == 1) muteTimes = [await redis.get(mutedIds[0])];
-		// If there are no mute values, unmute all members
-		else {
-			mutedMembers.each((mutedMember) => {
-				unmute(mutedMember);
-			});
-		}
 
 		if (muteTimes) {
+			// Unmute those that are not in db
+			mutedMembers.forEach((mutedMember) => {
+				if (!mutedIds.includes(mutedMember.id)) {
+					unmute(mutedMember);
+				}
+			});
+
 			// Set unmute time for each database entry if user is muted
 			mutedIds.forEach((id, index) => {
 				const mutedMember = mutedMembers.get(id);
@@ -42,18 +48,28 @@ module.exports = {
 				if (mutedMember) {
 					// If mute is already over, unmute immediately
 					if (now > endTime) {
-						// Remove from database
+						// Remove mute
 						redis.del(mutedId);
-
 						unmute(mutedMember);
 					} else {
 						// Set unmute timeout
 						unmuteTimeout(mutedMember, endTime, endTime - now);
 					}
 				} else {
-					// If user isn't muted delete db value
-					redis.del(id);
+					// If user isn't muted check if they're in the server
+					client.wikiServer.guild.members.fetch(mutedId).then((notMutedMember) => {
+						if (notMutedMember) {
+							notMutedMember.roles.add(notMutedMember.guild.roles.cache.find((role) => role.name == "Muted")).then((nowMutedMember) => {
+								unmuteTimeout(nowMutedMember, endTime, endTime - now);
+							});
+						}
+					});
 				}
+			});
+		} else {
+			// If no mutes in db, unmute everyone
+			mutedMembers.each((mutedMember) => {
+				unmute(mutedMember);
 			});
 		}
 
