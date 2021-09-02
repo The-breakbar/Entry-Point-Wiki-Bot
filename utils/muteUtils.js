@@ -95,7 +95,7 @@ module.exports = {
 };
 
 const unmute = (member) => {
-	if (member.roles.cache.some((role) => role.name == "Muted")) {
+	if (member.guild.members.cache.has(member.id) && member.roles.cache.some((role) => role.name == "Muted")) {
 		member.roles.remove(member.guild.roles.cache.find((role) => role.name == "Muted"));
 	}
 };
