@@ -5,11 +5,15 @@ const { Collection } = require("discord.js");
 let spamMessages = {};
 let warnings = {};
 
-let badWords;
+let badWords = [];
 redis.get("filter").then((badWordString) => {
-	badWords = badWordString.split(",").map((regexString) => {
-		return new RegExp(regexString, "i");
-	});
+	if (badWordString == null) {
+		console.log("⚠️  Failed to get filter string");
+	} else {
+		badWords = badWordString.split(",").map((regexString) => {
+			return new RegExp(regexString, "i");
+		});
+	}
 });
 
 module.exports = {
