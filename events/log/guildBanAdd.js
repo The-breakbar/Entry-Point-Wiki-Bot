@@ -9,7 +9,7 @@ module.exports = {
 				name: "Member banned",
 				icon_url: ban.user.displayAvatarURL()
 			},
-			description: ban.user,
+			description: `${ban.user} ${ban.user.tag}`,
 			fields: [
 				{
 					name: "Reason",
