@@ -1,4 +1,5 @@
 module.exports = {
+	global: true,
 	name: "links",
 	description: "Get a list of useful Entry Point related links",
 	async execute(interaction, client) {

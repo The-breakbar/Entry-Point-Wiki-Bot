@@ -12,6 +12,7 @@ const button = {
 };
 
 module.exports = {
+	global: true,
 	name: "privateserver",
 	description: "Get the Wiki private server link",
 	async execute(interaction, client) {

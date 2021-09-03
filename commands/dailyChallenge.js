@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
 module.exports = {
+	global: true,
 	name: "dailychallenge",
 	description: "Get the daily challenge",
 	async execute(interaction, client) {
