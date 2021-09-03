@@ -85,7 +85,7 @@ module.exports = {
 	async checkMute(member) {
 		const now = Date.now();
 		const newMember = member;
-		const endTime = redis.get(newMember.user.id);
+		const endTime = await redis.get(newMember.user.id);
 
 		if (endTime) {
 			mutedMember = await newMember.roles.add(newMember.guild.roles.cache.find((role) => role.id == global.wConfig.roles["Muted"]));
