@@ -6,7 +6,15 @@ const { getJsFiles } = require("./utils/fileUtils");
 const client = new Client({
 	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_BANS],
 	allowedMentions: {
-		roles: ["800287767850123275", "800287808857178172", "800287853111148544", "800287894660579348", "800287936347635722", "829379381977415692", "876557575271878746"]
+		roles: [
+			global.wConfig.roles["Stealth Ping"],
+			global.wConfig.roles["Loud Ping"],
+			global.wConfig.roles["Ironman Ping"],
+			global.wConfig.roles["Shadow War Ping"],
+			global.wConfig.roles["Freelance Heist Ping"],
+			global.wConfig.roles["Night Heist Ping"],
+			global.wConfig.roles["Daily Challenge Ping"]
+		]
 	}
 });
 client.commands = new Collection();
