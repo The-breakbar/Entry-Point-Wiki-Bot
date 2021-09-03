@@ -6,7 +6,7 @@ module.exports = {
 	description: "A special command for Elite Operatives and Financiers",
 	options: [{ name: "message", type: "STRING", description: "What Wiki Bot should say", required: true }],
 	defaultPermission: false,
-	permissions: ["742452037043748965", "668198708776665102", "621679404636176384", "621679757221822465"], // Elite Operative, Server Booster, Wiki Admin, Wiki Mod
+	permissions: [global.wConfig.roles["Elite Operative"], global.wConfig.roles["The Financiers"], global.wConfig["Wiki Administrator"], global.wConfig["Wiki Moderator"]],
 	// channelWhitelist = ["621749314787737605"], // #broom-closet
 	async execute(interaction, client) {
 		// Defer reply

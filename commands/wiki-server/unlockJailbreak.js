@@ -2,7 +2,7 @@ module.exports = {
 	name: "unlockjailbreak",
 	description: "A special command for Financiers",
 	defaultPermission: false,
-	permissions: ["621679404636176384", "621679757221822465", "668198708776665102"], // Wiki Admin, Wiki Mod, Server Booster
+	permissions: [global.wConfig.roles["The Financiers"], global.wConfig.roles["Wiki Administrator"], global.wConfig.roles["Wiki Moderator"]],
 	async execute(interaction, client) {
 		// Reply with gif
 		await interaction.deferReply();

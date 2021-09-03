@@ -9,8 +9,8 @@ module.exports = {
 
 		// Add muted role
 		let mutedMember = member;
-		if (!mutedMember.roles.cache.some((role) => role.name == "Muted")) {
-			mutedMember = await member.roles.add(member.guild.roles.cache.find((role) => role.name == "Muted"));
+		if (!mutedMember.roles.cache.some((role) => role.id == global.wConfig.roles["Muted"])) {
+			mutedMember = await member.roles.add(member.guild.roles.cache.find((role) => role.id == global.wConfig.roles["Muted"]));
 		}
 
 		// Set unmute timeout
@@ -23,7 +23,7 @@ module.exports = {
 
 		// Fetch all currently muted users
 		const mutedMembers = await client.wikiServer.guild.members.fetch().then((allMembers) => {
-			return allMembers.filter((member) => member.roles.cache.some((role) => role.name == "Muted"));
+			return allMembers.filter((member) => member.roles.cache.some((role) => role.id == global.wConfig.roles["Muted"]));
 		});
 
 		// Get all mute entries from database
@@ -63,7 +63,7 @@ module.exports = {
 						// If user isn't muted and mute is still active, check if they're in the server and mute
 						client.wikiServer.guild.members.fetch(mutedId).then((notMutedMember) => {
 							if (notMutedMember) {
-								notMutedMember.roles.add(notMutedMember.guild.roles.cache.find((role) => role.name == "Muted")).then((nowMutedMember) => {
+								notMutedMember.roles.add(notMutedMember.guild.roles.cache.find((role) => role.id == global.wConfig.roles["Muted"])).then((nowMutedMember) => {
 									unmuteTimeout(nowMutedMember, endTime, endTime - now);
 								});
 							}
@@ -88,15 +88,15 @@ module.exports = {
 		const endTime = redis.get(newMember.user.id);
 
 		if (endTime) {
-			mutedMember = await newMember.roles.add(newMember.guild.roles.cache.find((role) => role.name == "Muted"));
+			mutedMember = await newMember.roles.add(newMember.guild.roles.cache.find((role) => role.id == global.wConfig.roles["Muted"]));
 			unmuteTimeout(mutedMember, endTime, endTime - now);
 		}
 	}
 };
 
 const unmute = (member) => {
-	if (member.guild.members.cache.has(member.id) && member.roles.cache.some((role) => role.name == "Muted")) {
-		member.roles.remove(member.guild.roles.cache.find((role) => role.name == "Muted"));
+	if (member.guild.members.cache.has(member.id) && member.roles.cache.some((role) => role.id == global.wConfig.roles["Muted"])) {
+		member.roles.remove(member.guild.roles.cache.find((role) => role.id == global.wConfig.roles["Muted"]));
 	}
 };
 

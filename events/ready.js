@@ -7,10 +7,10 @@ module.exports = {
 	async execute(client) {
 		// Fetch wiki server info
 		client.wikiServer = {};
-		client.wikiServer.guild = await client.guilds.fetch("621676630896672789");
-		client.wikiServer.reports = await client.wikiServer.guild.channels.cache.get("880560423915642991");
-		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get("880574055026139157");
-		client.wikiServer.editLog = await client.wikiServer.guild.channels.cache.get("699925459923632220");
+		client.wikiServer.guild = await client.guilds.fetch(global.wConfig.guild);
+		client.wikiServer.reports = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.reports);
+		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.log);
+		client.wikiServer.editLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["wiki-edits"]);
 
 		// Sync unmutes on bot restart
 		syncMuted(client);

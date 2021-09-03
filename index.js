@@ -12,7 +12,10 @@ const client = new Client({
 client.commands = new Collection();
 client.contextMenus = new Collection();
 
-// Embed color used in various commands
+const bingus = require("./config.json");
+
+// Store wiki server ids and embed color in global for ease of access, won't overwrite anything in the environment
+global.wConfig = require("./config.json");
 global.purple = "#b33fe6";
 
 // Error logging

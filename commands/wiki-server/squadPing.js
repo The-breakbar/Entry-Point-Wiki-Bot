@@ -3,7 +3,7 @@ const { MessageActionRow, MessageSelectMenu } = require("discord.js");
 module.exports = {
 	name: "squadping",
 	description: "Ping for a squad if you need players or request a host for an expansion mission (#squadboard only)",
-	channelWhitelist: ["650016486064390145"], // Squad board
+	channelWhitelist: [global.wConfig.channels["squad-board"]],
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
 

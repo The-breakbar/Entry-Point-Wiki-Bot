@@ -84,19 +84,19 @@ module.exports = {
 						let pingMention;
 						switch (pingMessages[id].type) {
 							case "stealth":
-								pingMention = "<@&800287767850123275>";
+								pingMention = `<@&${global.wConfig.roles["Stealth Ping"]}>`;
 							case "loud":
-								pingMention = "<@&800287808857178172>";
+								pingMention = `<@&${global.wConfig.roles["Loud Ping"]}>`;
 							case "ironman":
-								pingMention = "<@&800287853111148544>";
+								pingMention = `<@&${global.wConfig.roles["Ironman Ping"]}>`;
 							case "shadowwar":
-								pingMention = "<@&800287894660579348>";
+								pingMention = `<@&${global.wConfig.roles["Shadow War Ping"]}>`;
 							case "freelanceheist":
-								pingMention = "<@&800287936347635722>";
+								pingMention = `<@&${global.wConfig.roles["Freelance Heist Ping"]}>`;
 							case "nightheist":
-								pingMention = "<@&829379381977415692>";
+								pingMention = `<@&${global.wConfig.roles["Night Heist Ping"]}>`;
 							case "daily":
-								pingMention = "<@&876557575271878746>";
+								pingMention = `<@&${global.wConfig.roles["Daily Challenge Ping"]}>`;
 						}
 						message.content = `${pingMention} ${i.user}`;
 						await i.followUp(message);

@@ -17,7 +17,7 @@ module.exports = {
 		}
 	],
 	defaultPermission: false,
-	permissions: ["621679404636176384", "718954666032889866", "621679757221822465"], // Wiki admin, Server mod, Wiki mod
+	permissions: [global.wConfig.roles["Wiki Administrator"], global.wConfig.roles["Server Moderator"], global.wConfig.roles["Wiki Moderator"]],
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
 

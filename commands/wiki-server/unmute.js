@@ -5,7 +5,7 @@ module.exports = {
 	description: "Unmute command for server staff",
 	options: [{ name: "user", type: "USER", description: "A user ping, or their user id", required: true }],
 	defaultPermission: false,
-	permissions: ["621679404636176384", "718954666032889866", "621679757221822465"], // Wiki admin, Server mod, Wiki mod
+	permissions: [global.wConfig.roles["Wiki Administrator"], global.wConfig.roles["Server Moderator"], global.wConfig.roles["Wiki Moderator"]],
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply({ ephemeral: true });
