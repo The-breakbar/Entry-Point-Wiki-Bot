@@ -19,7 +19,7 @@ module.exports = {
 			fields: [
 				{
 					name: "Roles",
-					value: userRoles
+					value: userRoles.length == 0 ? "No roles" : userRoles
 				}
 			],
 			timestamp: new Date(),
