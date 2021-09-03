@@ -19,12 +19,12 @@ module.exports = {
 		recentChanges(20000, client);
 
 		// Set status, change status every hour
-		// const startingStatus = activities[Math.floor(Math.random() * activities.length)];
-		// client.user.setActivity(startingStatus[1], { type: startingStatus[0] });
-		// setInterval(() => {
-		// 	const randomStatus = activities[Math.floor(Math.random() * activities.length)];
-		// 	client.user.setActivity(randomStatus[1], { type: randomStatus[0] });
-		// }, 3600000);
+		const startingStatus = activities[Math.floor(Math.random() * activities.length)];
+		client.user.setActivity(startingStatus[1], { type: startingStatus[0] });
+		setInterval(() => {
+			const randomStatus = activities[Math.floor(Math.random() * activities.length)];
+			client.user.setActivity(randomStatus[1], { type: randomStatus[0] });
+		}, 3600000);
 
 		// Client has logged in
 		console.log(`✅ Logged in as ${client.user.tag}, connected to ${client.guilds.cache.size} guilds`);

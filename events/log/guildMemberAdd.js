@@ -16,7 +16,7 @@ module.exports = {
 			fields: [
 				{
 					name: "Account creation",
-					value: `<t:${member.user.createdTimestamp}:R>`
+					value: `<t:${member.user.createdTimestamp.slice(0, -3)}:R>`
 				}
 			],
 			timestamp: new Date(),
