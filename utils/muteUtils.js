@@ -42,7 +42,8 @@ module.exports = {
 
 			// Set unmute time for each database entry if user is muted
 			mutedIds.forEach((id, index) => {
-				const mutedMember = mutedMembers.get(id);
+				let mutedMember;
+				if (mutedMembers.has(id)) mutedMember = mutedMembers.get(id);
 				const mutedId = id;
 				const endTime = muteTimes[index];
 				if (mutedMember) {
