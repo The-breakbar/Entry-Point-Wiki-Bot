@@ -62,13 +62,13 @@ module.exports = {
 						redis.del(mutedId);
 					} else {
 						// If user isn't muted and mute is still active, check if they're in the server and mute
-						client.wikiServer.guild.members.fetch(mutedId).then((notMutedMember) => {
-							if (notMutedMember) {
+						if (client.wikiServer.guild.members.cache.has(mutedId)) {
+							client.wikiServer.guild.members.cache.get(mutedId).then((notMutedMember) => {
 								notMutedMember.roles.add(notMutedMember.guild.roles.cache.find((role) => role.id == global.wConfig.roles["Muted"])).then((nowMutedMember) => {
 									unmuteTimeout(nowMutedMember, endTime, endTime - now);
 								});
-							}
-						});
+							});
+						}
 					}
 				}
 			});
