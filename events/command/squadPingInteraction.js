@@ -82,24 +82,31 @@ module.exports = {
 						// Send squad ping
 						let message = page4(pingMessages[id]);
 						let pingMention;
-						switch (pingMessages[id].type) {
+						switch (type) {
 							case "stealth":
 								pingMention = `<@&${global.wConfig.roles["Stealth Ping"]}>`;
+								break;
 							case "loud":
 								pingMention = `<@&${global.wConfig.roles["Loud Ping"]}>`;
+								break;
 							case "ironman":
 								pingMention = `<@&${global.wConfig.roles["Ironman Ping"]}>`;
+								break;
 							case "shadowwar":
 								pingMention = `<@&${global.wConfig.roles["Shadow War Ping"]}>`;
+								break;
 							case "freelanceheist":
 								pingMention = `<@&${global.wConfig.roles["Freelance Heist Ping"]}>`;
+								break;
 							case "nightheist":
 								pingMention = `<@&${global.wConfig.roles["Night Heist Ping"]}>`;
+								break;
 							case "daily":
 								pingMention = `<@&${global.wConfig.roles["Daily Challenge Ping"]}>`;
+								break;
 						}
 						message.content = `${pingMention} ${i.user}`;
-						await i.followUp(message);
+						await i.channel.send(message).catch((error) => console.error(error));
 					} else {
 						await i.update({ content: "The ping could not be sent, it is still on cooldown.", embeds: [], components: [] });
 					}
