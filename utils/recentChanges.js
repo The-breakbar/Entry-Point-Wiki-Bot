@@ -40,9 +40,9 @@ const processChanges = (response, client) => {
 				wikiTextLinks.forEach((match) => {
 					let matchUrl = match.slice(2, -2);
 					if (matchUrl.includes("|")) {
-						matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0]})`;
+						matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0].replace(" ", "_")})`;
 					} else {
-						matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl})`;
+						matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl.replace(" ", "_")})`;
 					}
 					comment = comment.replace(match, matchUrl);
 				});
