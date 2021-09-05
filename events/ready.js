@@ -11,6 +11,7 @@ module.exports = {
 		client.wikiServer.reports = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.reports);
 		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.log);
 		client.wikiServer.editLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["wiki-edits"]);
+		client.wikiServer.submitMeme = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["submitted-memes"]);
 
 		// Sync unmutes on bot restart
 		syncMuted(client);
@@ -39,6 +40,7 @@ const activities = [
 	["PLAYING", "Band Hero"],
 	["PLAYING", "Notoriety"],
 	["PLAYING", "Entry Point 2"],
+	["PLAYING", "Entry Point 2: Electric Boogaloo"],
 	["PLAYING", "The Freelancer Legend Loud"],
 	["WATCHING", "@Xx_SparrowPlays_xX"],
 	["WATCHING", "@PhoenixRising"],
