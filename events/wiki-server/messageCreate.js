@@ -63,7 +63,7 @@ module.exports = {
 					description: `${message.member} was muted for 6 hours for spamming.`,
 					timestamp: new Date()
 				};
-				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
+				client.wikiServer.reports.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
 			} else {
 				// Else send them a warning and reset counter
 				let spamMessagesCopy = spamMessages[authorId].slice();
@@ -85,14 +85,6 @@ module.exports = {
 					description: "Please do not spam messages."
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
-
-				// Log spam warning
-				const logEmbed = {
-					color: global.purple,
-					description: `${message.member} was warned for spamming.`,
-					timestamp: new Date()
-				};
-				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
 			}
 		} else {
 			// Remove message from list after 2 seconds
@@ -134,7 +126,7 @@ module.exports = {
 					description: `${message.member} was muted for 6 hours for inappropriate language.`,
 					timestamp: new Date()
 				};
-				client.wikiServer.log.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
+				client.wikiServer.reports.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
 			} else if (badMessageCount[authorId] == 3) {
 				// Warn user on second message
 				const embed = {
@@ -152,8 +144,11 @@ module.exports = {
 				}
 			}, 300000);
 		} else {
+			// Channel/message specific processes
 			if (message.channel.id == global.wConfig.channels["ep-art"] || message.channel.id == global.wConfig.channels["art"]) {
-				if (message.attachments.size > 0 || message.content.includes("http")) message.react("❤️");
+				if (message.attachments.size > 0 || message.content.includes("http")) message.react("❤️").catch((error) => console.error(error));
+			} else if (message.type == "USER_PREMIUM_GUILD_SUBSCRIPTION") {
+				message.react("❤️").catch((error) => console.error(error));
 			}
 		}
 	}
