@@ -22,6 +22,6 @@ module.exports = {
 			}
 		};
 
-		await client.wikiServer.log.send({ embeds: [embed] }).catch((error) => console.error(error));
+		await client.wikiServer.reports.send({ embeds: [embed] }).catch((error) => console.error(error));
 	}
 };

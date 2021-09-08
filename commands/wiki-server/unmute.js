@@ -24,7 +24,7 @@ module.exports = {
 				description: `${member.user} was unmuted.`,
 				timestamp: new Date()
 			};
-			await client.wikiServer.log.send({ embeds: [embed] }).catch((error) => console.error(error));
+			await client.wikiServer.reports.send({ embeds: [embed] }).catch((error) => console.error(error));
 		} else {
 			await interaction.editReply({ content: "The user is not muted." });
 		}

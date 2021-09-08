@@ -59,7 +59,7 @@ module.exports = {
 			await member.send({ embeds: [muteEmbed] }).catch((error) => console.error(error));
 
 			// Log command usage
-			await client.wikiServer.log.send({ embeds: [embed] }).catch((error) => console.error(error));
+			await client.wikiServer.reports.send({ embeds: [embed] }).catch((error) => console.error(error));
 		} else {
 			await interaction.reply({ content: "Invalid mute length, see description for proper usage (e.g. 15m / 6h / 1d).", ephemeral: true });
 		}
