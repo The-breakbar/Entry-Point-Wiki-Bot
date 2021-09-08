@@ -30,8 +30,8 @@ const processChanges = (response, client) => {
 		if (edit.type == "edit") {
 			let { title, user, comment, revid, old_revid, oldlen, newlen } = edit;
 			// Underscores for valid links
-			title = title.replace(" ", "_");
-			user = user.replace(" ", "_");
+			title = title.replaceAll(" ", "_");
+			user = user.replaceAll(" ", "_");
 
 			// Parse links in edit summary
 			comment = comment.replace("User talk", "Message_Wall");
@@ -40,9 +40,9 @@ const processChanges = (response, client) => {
 				wikiTextLinks.forEach((match) => {
 					let matchUrl = match.slice(2, -2);
 					if (matchUrl.includes("|")) {
-						matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0].replace(" ", "_")})`;
+						matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0].replaceAll(" ", "_")})`;
 					} else {
-						matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl.replace(" ", "_")})`;
+						matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl.replaceAll(" ", "_")})`;
 					}
 					comment = comment.replace(match, matchUrl);
 				});
@@ -50,10 +50,11 @@ const processChanges = (response, client) => {
 			// Create embed
 			const delta = (newlen - oldlen < 0 ? "" : "+") + (newlen - oldlen);
 			const description =
-				`New edit by [${user.replace("_", " ")}](${url}/wiki/User:${user})` + ` (${delta}) ([diff](${url}/wiki/${title}?type=revision&diff=${revid}&oldid=${old_revid}))`;
+				`New edit by [${user.replaceAll("_", " ")}](${url}/wiki/User:${user})` +
+				` (${delta}) ([diff](${url}/wiki/${title}?type=revision&diff=${revid}&oldid=${old_revid}))`;
 			const embed = {
 				color: global.purple,
-				title: title.replace("_", " "),
+				title: title.replaceAll("_", " "),
 				url: `${url}/wiki/${title}`,
 				description: description,
 				fields: [

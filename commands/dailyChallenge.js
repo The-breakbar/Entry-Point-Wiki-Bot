@@ -23,6 +23,8 @@ module.exports = {
 		// const mod2 = wikitext.split("33%")[2].split("|")[1].trim();
 		// const mod3 = wikitext.split("33%")[2].split("|")[2].trim();
 
+		// \"So flashbangs explode now.\"<br />\"Haven't they always?\"<br />\"No, you don't understand. They EXPLODE now.\"\n
+
 		// Get daily challenge
 		const response = await fetch(`https://entry-point.fandom.com/api.php?action=parse&format=json&page=Template%3ADailyChallenge&prop=text&formatversion=2`)
 			.then((response) => response.json())
@@ -34,9 +36,9 @@ module.exports = {
 		const modTitle1 = text.split("challenge-")[1].split(">")[1].split("<")[0].trim();
 		const modTitle2 = text.split("challenge-")[2].split(">")[1].split("<")[0].trim();
 		const modTitle3 = text.split("challenge-")[3].split(">")[1].split("<")[0].trim();
-		const mod1 = text.split("33%")[1].split(`">`)[1].split("\n")[0].trim().replace("<br />", "\n");
-		const mod2 = text.split("33%")[2].split(`">`)[1].split("\n")[0].trim().replace("<br />", "\n");
-		const mod3 = text.split("33%")[3].split(`">`)[1].split("\n")[0].trim().replace("<br />", "\n");
+		const mod1 = text.split("33%")[1].split(`">`)[1].split("\n")[0].trim().replaceAll("<br />", "\n");
+		const mod2 = text.split("33%")[2].split(`">`)[1].split("\n")[0].trim().replaceAll("<br />", "\n");
+		const mod3 = text.split("33%")[3].split(`">`)[1].split("\n")[0].trim().replaceAll("<br />", "\n");
 
 		// Get remaining challenge time
 		const now = new Date();

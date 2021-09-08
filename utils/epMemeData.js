@@ -142,5 +142,9 @@ module.exports = [
 	"https://cdn.discordapp.com/attachments/880536394399891476/880559253801283624/meme140.png",
 	"https://cdn.discordapp.com/attachments/880536394399891476/881649335325032538/meme141.mp4",
 	"https://cdn.discordapp.com/attachments/880536394399891476/881654828001030215/meme142.png",
-	"https://cdn.discordapp.com/attachments/880536394399891476/884058611356143646/meme143.gif"
+	"https://cdn.discordapp.com/attachments/880536394399891476/884058611356143646/meme143.gif",
+	"https://cdn.discordapp.com/attachments/880536394399891476/885126879844139098/meme144.png",
+	"https://cdn.discordapp.com/attachments/880536394399891476/885126882620747776/meme145.png",
+	"https://cdn.discordapp.com/attachments/880536394399891476/885126886227857460/meme146.png",
+	"https://cdn.discordapp.com/attachments/880536394399891476/885126886580178997/meme147.jpg"
 ];
