@@ -33,7 +33,7 @@ module.exports = {
 		// Return if message has ping
 		if (text.includes("@")) {
 			interaction.editReply({ content: "Please do not include any pings in your message.", ephemeral: true });
-		} else if (!/^\d+$/.test(replyId) || !interaction.channel.messages.cache.has(replyId)) {
+		} else if (replyId && (!/^\d+$/.test(replyId) || !interaction.channel.messages.cache.has(replyId))) {
 			interaction.editReply({ content: "Couldn't find message to reply to.", ephemeral: true });
 		} else {
 			interaction.editReply({ content: "Your message is being sent.", ephemeral: true }).then(() => {
