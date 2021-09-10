@@ -22,7 +22,7 @@ module.exports = {
 
 		// Parse user input
 		let text = interaction.options.getString("message");
-		let textLength = (text.length / 6) * 1000;
+		let textLength = (text.length / 3) * 1000;
 		let time = textLength > 10000 ? 10000 : textLength;
 
 		// Parse user input for replies
