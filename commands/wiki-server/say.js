@@ -4,7 +4,10 @@ let typingTarget = 0;
 module.exports = {
 	name: "say",
 	description: "A special command for Elite Operatives and Financiers",
-	options: [{ name: "message", type: "STRING", description: "What Wiki Bot should say", required: true }],
+	options: [
+		{ name: "message", type: "STRING", description: "What Wiki Bot should say", required: true },
+		{ name: "reply-url", type: "STRING", description: "Link of the message to reply to (right-click, copy message link)", required: false }
+	],
 	defaultPermission: false,
 	permissions: [
 		global.wConfig.roles["Elite Operative"],
@@ -22,9 +25,16 @@ module.exports = {
 		let textLength = (text.length / 6) * 1000;
 		let time = textLength > 10000 ? 10000 : textLength;
 
+		// Parse user input for replies
+		let replyLink = interaction.options.getString("reply-url");
+		let replyId;
+		if (replyLink) replyId = replyLink.split("/").pop();
+
 		// Return if message has ping
 		if (text.includes("@")) {
 			interaction.editReply({ content: "Please do not include any pings in your message.", ephemeral: true });
+		} else if (!/^\d+$/.test(replyId) || !interaction.channel.messages.cache.has(replyId)) {
+			interaction.editReply({ content: "Couldn't find message to reply to.", ephemeral: true });
 		} else {
 			interaction.editReply({ content: "Your message is being sent.", ephemeral: true }).then(() => {
 				// Update time until which it should type
@@ -34,15 +44,30 @@ module.exports = {
 				// Start typing and then send message
 				interaction.channel.sendTyping().then(() => {
 					setTimeout(() => {
-						interaction.channel
-							.send(text)
-							.then(() => {
-								// Continue typing if still needed
-								if (Date.now() < typingTarget) {
-									interaction.channel.sendTyping();
-								}
-							})
-							.catch((error) => console.error(error));
+						// Reply if link is specified
+						if (replyId) {
+							interaction.channel.messages.cache
+								.get(replyId)
+								.reply(text)
+								.then(() => {
+									// Continue typing if still needed
+									if (Date.now() < typingTarget) {
+										interaction.channel.sendTyping();
+									}
+								})
+								.catch((error) => console.error(error));
+						} else {
+							// Else just send message
+							interaction.channel
+								.send(text)
+								.then(() => {
+									// Continue typing if still needed
+									if (Date.now() < typingTarget) {
+										interaction.channel.sendTyping();
+									}
+								})
+								.catch((error) => console.error(error));
+						}
 					}, time);
 				});
 			});
