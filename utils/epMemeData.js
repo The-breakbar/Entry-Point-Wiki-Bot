@@ -146,5 +146,7 @@ module.exports = [
 	"https://cdn.discordapp.com/attachments/880536394399891476/885126879844139098/meme144.png",
 	"https://cdn.discordapp.com/attachments/880536394399891476/885126882620747776/meme145.png",
 	"https://cdn.discordapp.com/attachments/880536394399891476/885126886227857460/meme146.png",
-	"https://cdn.discordapp.com/attachments/880536394399891476/885126886580178997/meme147.jpg"
+	"https://cdn.discordapp.com/attachments/880536394399891476/885126886580178997/meme147.jpg",
+	"https://cdn.discordapp.com/attachments/880536394399891476/894244303763800214/meme148.png",
+	"https://cdn.discordapp.com/attachments/880536394399891476/894244314048233542/meme149.png"
 ];
