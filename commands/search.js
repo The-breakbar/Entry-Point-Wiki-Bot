@@ -22,7 +22,7 @@ module.exports = {
 						color: global.purple,
 						description: `There were no search results for "${queryDisplay}"`
 					};
-					await interaction.editReply({ embeds: [failEmbed] });
+					interaction.editReply({ embeds: [failEmbed] });
 				} else {
 					// Parse response
 					const links = response[3];
@@ -44,7 +44,7 @@ module.exports = {
 					};
 
 					// Reply with links
-					await interaction.editReply({ embeds: [embed], components: [row] });
+					interaction.editReply({ embeds: [embed], components: [row] });
 				}
 			})
 			.catch((error) => {
@@ -54,7 +54,7 @@ module.exports = {
 					color: global.purple,
 					description: "There was an error while searching, please try again."
 				};
-				await interaction.editReply({ embeds: [errorEmbed] });
+				interaction.editReply({ embeds: [errorEmbed] });
 			});
 	}
 };
