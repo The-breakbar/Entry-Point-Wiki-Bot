@@ -25,48 +25,54 @@ module.exports = {
 	}
 };
 
+let previousChanges = [];
+
 const processChanges = (response, client) => {
-	response.query.recentchanges.reverse().forEach((edit) => {
-		if (edit.type == "edit") {
-			let { title, user, comment, revid, old_revid, oldlen, newlen } = edit;
-			// Underscores for valid links
-			title = title.replaceAll(" ", "_");
-			user = user.replaceAll(" ", "_");
+	// Prevent duplicate logging
+	let editList = response.query.recentchanges.reverse().filter((edit) => {
+		return edit.type == "edit" && !previousChanges.includes(edit);
+	});
+	previousChanges = editList.slice();
 
-			// Parse links in edit summary
-			comment = comment.replace("User talk", "Message_Wall");
-			let wikiTextLinks = comment.match(/\[\[[^\]]+]]/g);
-			if (wikiTextLinks)
-				wikiTextLinks.forEach((match) => {
-					let matchUrl = match.slice(2, -2);
-					if (matchUrl.includes("|")) {
-						matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0].replaceAll(" ", "_")})`;
-					} else {
-						matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl.replaceAll(" ", "_")})`;
-					}
-					comment = comment.replace(match, matchUrl);
-				});
+	editList.forEach((edit) => {
+		let { title, user, comment, revid, old_revid, oldlen, newlen } = edit;
+		// Underscores for valid links
+		title = title.replaceAll(" ", "_");
+		user = user.replaceAll(" ", "_");
 
-			// Create embed
-			const delta = (newlen - oldlen < 0 ? "" : "+") + (newlen - oldlen);
-			const description =
-				`New edit by [${user.replaceAll("_", " ")}](${url}/wiki/User:${user})` +
-				` (${delta}) ([diff](${url}/wiki/${title}?type=revision&diff=${revid}&oldid=${old_revid}))`;
-			const embed = {
-				color: global.purple,
-				title: title.replaceAll("_", " "),
-				url: `${url}/wiki/${title}`,
-				description: description,
-				fields: [
-					{
-						name: "Edit summary",
-						value: comment ? comment : "No edit summary"
-					}
-				],
-				timestamp: new Date()
-			};
+		// Parse links in edit summary
+		comment = comment.replace("User talk", "Message_Wall");
+		let wikiTextLinks = comment.match(/\[\[[^\]]+]]/g);
+		if (wikiTextLinks)
+			wikiTextLinks.forEach((match) => {
+				let matchUrl = match.slice(2, -2);
+				if (matchUrl.includes("|")) {
+					matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0].replaceAll(" ", "_")})`;
+				} else {
+					matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl.replaceAll(" ", "_")})`;
+				}
+				comment = comment.replace(match, matchUrl);
+			});
 
-			client.wikiServer.editLog.send({ embeds: [embed] }).catch((error) => console.error(error));
-		}
+		// Create embed
+		const delta = (newlen - oldlen < 0 ? "" : "+") + (newlen - oldlen);
+		const description =
+			`New edit by [${user.replaceAll("_", " ")}](${url}/wiki/User:${user})` +
+			` (${delta}) ([diff](${url}/wiki/${title}?type=revision&diff=${revid}&oldid=${old_revid}))`;
+		const embed = {
+			color: global.purple,
+			title: title.replaceAll("_", " "),
+			url: `${url}/wiki/${title}`,
+			description: description,
+			fields: [
+				{
+					name: "Edit summary",
+					value: comment ? comment : "No edit summary"
+				}
+			],
+			timestamp: new Date()
+		};
+
+		client.wikiServer.editLog.send({ embeds: [embed] }).catch((error) => console.error(error));
 	});
 };
