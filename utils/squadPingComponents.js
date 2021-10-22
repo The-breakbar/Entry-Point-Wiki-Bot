@@ -75,9 +75,9 @@ module.exports = {
 			}
 		};
 
-		if (missions) embed.fields.push({ name: `Mission${missions.length == 1 ? "" : "s"}`, value: missions.join(", ") });
-		if (method) embed.fields.push({ name: "Method", value: method });
-		if (difficulties) embed.fields.push({ name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`, value: difficulties.join(", ") });
+		if (missions) embed.fields.push({ name: `Mission${missions.length == 1 ? "" : "s"}`, value: missions.join(", "), inline: true });
+		if (method) embed.fields.push({ name: "Method", value: method, inline: true });
+		if (difficulties) embed.fields.push({ name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`, value: difficulties.join(", "), inline: true });
 
 		const button = new MessageButton({
 			style: "SUCCESS",
@@ -102,9 +102,9 @@ module.exports = {
 			}
 		};
 
-		if (missions) embed.fields.push({ name: `Mission${missions.length == 1 ? "" : "s"}`, value: missions.join(", ") });
-		if (method) embed.fields.push({ name: "Method", value: method });
-		if (difficulties) embed.fields.push({ name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`, value: difficulties.join(", ") });
+		if (missions) embed.fields.push({ name: `Mission${missions.length == 1 ? "" : "s"}`, value: missions.join(", "), inline: true });
+		if (method) embed.fields.push({ name: "Method", value: method, inline: true });
+		if (difficulties) embed.fields.push({ name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`, value: difficulties.join(", "), inline: true });
 
 		const button = new MessageButton({
 			style: "LINK",
@@ -178,7 +178,8 @@ const page2Data = {
 			"The Gala",
 			"The Cache",
 			"The Setup",
-			"The Lockup"
+			"The Lockup",
+			"Concept"
 		]
 	},
 	loud: {
