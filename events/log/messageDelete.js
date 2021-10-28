@@ -18,7 +18,7 @@ module.exports = {
 			}`,
 			timestamp: new Date(),
 			footer: {
-				text: `ID: ${message.member.user.id}`
+				text: `ID: ${message.author.id}`
 			}
 		};
 
