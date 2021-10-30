@@ -79,7 +79,7 @@ module.exports = {
 					color: global.purple,
 					description: "The daily challenge command is currently unavailable.",
 					footer: {
-						text: `${hours} hour${hours != 1 ? "s" : ""} and ${minutes} minute${minutes != 1 ? "s" : ""} left until next challenge.`
+						text: `${hours} hour${hours != 1 ? "s" : ""} and ${minutes} minute${minutes != 1 ? "s" : ""} left until the next challenge.`
 					}
 				};
 				await interaction.editReply({ embeds: [errorEmbed] });
