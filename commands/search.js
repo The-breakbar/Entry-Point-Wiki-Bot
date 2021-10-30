@@ -13,13 +13,12 @@ module.exports = {
 		// Make API call to wiki
 		const query = interaction.options.getString("query");
 		const queryDisplay = query.length > 50 ? query.slice(0, 50) + "..." : query;
-		const response = await fetch(`https://entry-point.fandom.com/api.php?action=opensearch&format=json&search=${query}&namespace=0&limit=5&redirects=resolve`).catch(
-			(error) => {
-				console.error(error);
-			}
-		);
+		const URI = encodeURI(`https://entry-point.fandom.com/api.php?action=opensearch&format=json&search=${query}&namespace=0&limit=5&redirects=resolve`);
+		const response = await fetch(URI).catch((error) => {
+			console.error(error);
+		});
 
-		if (response.ok) {
+		if (response?.ok) {
 			const data = await response.json();
 			if (data[1].length == 0) {
 				const failEmbed = {
