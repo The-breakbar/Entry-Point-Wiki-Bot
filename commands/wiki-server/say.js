@@ -76,7 +76,7 @@ module.exports = {
 			const embed = {
 				title: `/say command`,
 				color: global.purple,
-				description: `${interaction.member.user} - ${text}`,
+				description: `${interaction.member.user} ${interaction.channel} - ${text}`,
 				timestamp: new Date()
 			};
 			client.wikiServer.log.send({ embeds: [embed] }).catch((error) => console.error(error));

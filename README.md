@@ -11,5 +11,3 @@ The bot has 5 global commands that can be used in your own server:
 - links (get a list of useful links)
 - dailychallenge (get the current daily challenge)
 - epmeme (get a random Entry Point meme)
-
-The bot also has various other functionalities, such as spam protection, chat filters, wiki edit logging and moderation commands, but for now these are exclusive to the Entry Point Wiki server.
