@@ -38,7 +38,8 @@ module.exports = {
 				delete warnings[authorId];
 
 				// If user has been warned before, mute them for 6 hours
-				await mute(message.member, 21600000);
+				// await mute(message.member, 21600000);
+				await message.member.timeout(6 * 60 * 60 * 1000, "Message spam").catch((error) => console.error(error));
 
 				// Delete spammed messages
 				let collectionToBeDeleted = new Collection();
@@ -52,7 +53,7 @@ module.exports = {
 				// Notify user of mute
 				const embed = {
 					color: global.purple,
-					description: "You have been muted for 6 hours for spamming.",
+					description: "You have been timed out for 6 hours for spamming.",
 					timestamp: new Date()
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
@@ -60,7 +61,7 @@ module.exports = {
 				// Log spam mute
 				const logEmbed = {
 					color: global.purple,
-					description: `${message.member} was muted for 6 hours for spamming.`,
+					description: `${message.member} was timed out for 6 hours for spamming.`,
 					timestamp: new Date()
 				};
 				client.wikiServer.reports.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
@@ -110,12 +111,13 @@ module.exports = {
 			if (badMessageCount[authorId] > 3) {
 				// If count reaches 4, mute for 6 hours
 				delete badMessageCount[authorId];
-				await mute(message.member, 21600000);
+				// await mute(message.member, 21600000);
+				message.member.timeout(6 * 60 * 60 * 1000, "Inappropriate language").catch((error) => console.error(error));
 
 				// Notify user of mute
 				const embed = {
 					color: global.purple,
-					description: "You have been muted for 6 hours for inappropriate language.",
+					description: "You have been timed out for 6 hours for inappropriate language.",
 					timestamp: new Date()
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
@@ -123,7 +125,7 @@ module.exports = {
 				// Log spam mute
 				const logEmbed = {
 					color: global.purple,
-					description: `${message.member} was muted for 6 hours for inappropriate language.`,
+					description: `${message.member} was timed out for 6 hours for inappropriate language.`,
 					timestamp: new Date()
 				};
 				client.wikiServer.reports.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
@@ -143,11 +145,36 @@ module.exports = {
 					badMessageCount[authorId]--;
 				}
 			}, 300000);
+		} else if (/@everyone/i.test(message.content) && /nitro/i.test(message.content) && /http/i.test(message.content)) {
+			// Nitro scam link filter
+			message.delete().catch((error) => console.error(error));
+			message.member.timeout(24 * 60 * 60 * 1000, "Scam link").catch((error) => console.error(error));
+
+			// Notify user of mute
+			const embed = {
+				color: global.purple,
+				description: "You have been timed out for sending messages with possible malicious intent.",
+				timestamp: new Date()
+			};
+			message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
+
+			// Log spam mute
+			const logEmbed = {
+				color: global.purple,
+				description: `${message.member} was timed out for 24 hours for sending a nitro scam link.`,
+				timestamp: new Date()
+			};
+			client.wikiServer.reports.send({ embeds: [logEmbed] }).catch((error) => console.error(error));
 		} else {
 			// Channel/message specific processes
 			if (message.channel.id == global.wConfig.channels["ep-art"] || message.channel.id == global.wConfig.channels["art"]) {
 				if (message.attachments.size > 0 || message.content.includes("http")) message.react("❤️").catch((error) => console.error(error));
-			} else if (message.type == "USER_PREMIUM_GUILD_SUBSCRIPTION") {
+			} else if (
+				message.type == "USER_PREMIUM_GUILD_SUBSCRIPTION" ||
+				message.type == "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1" ||
+				message.type == "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2" ||
+				message.type == "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3"
+			) {
 				message.react("❤️").catch((error) => console.error(error));
 			}
 		}
