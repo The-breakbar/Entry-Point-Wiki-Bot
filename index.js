@@ -58,7 +58,7 @@ const allCommands = [...getJsFiles("./commands"), ...getJsFiles("./commands/wiki
 // Store commands in client
 allCommands.forEach((file) => {
 	const command = require(`./${file}`);
-	client.commands.set(command.name, command);
+	if (!command?.disabled) client.commands.set(command.name, command);
 });
 
 // Get context menus

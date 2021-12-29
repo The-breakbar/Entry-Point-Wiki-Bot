@@ -1,6 +1,7 @@
 const redis = require("../../utils/redisClient");
 
 module.exports = {
+	disabled: true,
 	name: "unmute",
 	description: "Unmute command for server staff",
 	options: [{ name: "user", type: "USER", description: "A user ping, or their user id", required: true }],

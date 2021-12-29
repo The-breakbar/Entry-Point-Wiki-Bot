@@ -1,6 +1,7 @@
 const { mute } = require("../../utils/muteUtils");
 
 module.exports = {
+	disabled: true,
 	name: "mute",
 	description: "Mute command for server staff",
 	options: [
