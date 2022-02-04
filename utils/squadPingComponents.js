@@ -109,7 +109,7 @@ module.exports = {
 		const button = new MessageButton({
 			style: "LINK",
 			label: "Private server",
-			url: "https://www.roblox.com/games/740581508/Entry-Point?privateServerLinkCode=SGuBUOpnHBdk_QEEM6DKCX3F69B7ER2X"
+			url: "https://www.roblox.com/games/740581508?privateServerLinkCode=07225942152546546599064025460286"
 		});
 
 		return { embeds: [embed], components: [new MessageActionRow({ components: [button] })] };
