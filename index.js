@@ -61,14 +61,5 @@ allCommands.forEach((file) => {
 	if (!command?.disabled) client.commands.set(command.name, command);
 });
 
-// Get context menus
-const allContextMenus = [...getJsFiles("./context-menus"), ...getJsFiles("./context-menus/wiki-server")];
-
-// Store context menus in client
-allContextMenus.forEach((file) => {
-	const contextMenu = require(`./${file}`);
-	client.contextMenus.set(contextMenu.name, contextMenu);
-});
-
 // Client login
 client.login(process.env.TOKEN);
