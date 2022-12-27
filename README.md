@@ -1,6 +1,6 @@
 ## About
 
-A simple discord bot created with [discord.js](https://github.com/discordjs/discord.js/), designed to help out users with commands related to the game [Entry Point](https://www.roblox.com/games/740581508/Entry-Point). You can invite the bot to your own server with this [link](https://discord.com/api/oauth2/authorize?client_id=653309766164283442&permissions=0&scope=bot%20applications.commands). Report any issues with the bot in the Entry Point Wiki [Discord Server](https://discord.gg/wacqqFb).
+A simple discord bot created with [discord.js](https://github.com/discordjs/discord.js/), designed to help out users with commands related to the game [Entry Point](https://www.roblox.com/games/740581508/Entry-Point). You can invite the bot to your own server with this [link](https://discord.com/api/oauth2/authorize?client_id=653309766164283442&scope=applications.commands). Report any issues with the bot in the Entry Point Wiki [Discord Server](https://discord.gg/wacqqFb).
 
 ## Commands
 
