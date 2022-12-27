@@ -4,7 +4,7 @@ A simple discord bot created with [discord.js](https://github.com/discordjs/disc
 
 ## Commands
 
-The bot has 5 global commands that can be used in your own server:
+The bot has 4 global commands that can be used in your own server:
 
 - search (search for a wiki page)
 - privateserver (get the link to the Entry Point Wiki private server)
