@@ -8,6 +8,5 @@ The bot has 5 global commands that can be used in your own server:
 
 - search (search for a wiki page)
 - privateserver (get the link to the Entry Point Wiki private server)
-- links (get a list of useful links)
 - dailychallenge (get the current daily challenge)
 - epmeme (get a random Entry Point meme)
