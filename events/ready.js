@@ -1,5 +1,6 @@
 const { syncMuted } = require("../utils/muteUtils");
 const { recentChanges } = require("../utils/recentChanges");
+const { ActivityType } = require("discord.js");
 
 module.exports = {
 	name: "ready",
@@ -34,25 +35,25 @@ module.exports = {
 
 // Playing / Watching / Listening to / Competing in
 const activities = [
-	["PLAYING", "Ironman legend stealth"],
-	["PLAYING", "with a Thumper in the Shooting Range"],
-	["PLAYING", "PvP Deathmatch completely alone"],
-	["PLAYING", "Band Hero"],
-	["PLAYING", "Notoriety"],
-	["PLAYING", "Entry Point 2"],
-	["PLAYING", "Entry Point 2: Electric Boogaloo"],
-	["PLAYING", "The Freelancer Legend Loud"],
-	["WATCHING", "@Xx_SparrowPlays_xX"],
-	["WATCHING", "@PhoenixRising"],
-	["WATCHING", "people die in Ironman"],
-	["WATCHING", "Ryan Ross fall down a skyscraper"],
-	["WATCHING", "the EP Wiki"],
-	["WATCHING", "a legend stealth tutorial"],
-	["WATCHING", "bars break"],
-	["LISTENING", "Full Force"],
-	["LISTENING", "the Cache alt track"],
-	["LISTENING", "breakbar's commands"],
-	["LISTENING", "the Gala speech"],
-	["COMPETING", "a Shadow War 1v1"],
-	["COMPETING", "Band Hero"]
+	[ActivityType.Playing, "Ironman legend stealth"],
+	[ActivityType.Playing, "with a Thumper in the Shooting Range"],
+	[ActivityType.Playing, "PvP Deathmatch completely alone"],
+	[ActivityType.Playing, "Band Hero"],
+	[ActivityType.Playing, "Notoriety"],
+	[ActivityType.Playing, "Entry Point 2"],
+	[ActivityType.Playing, "Entry Point 2: Electric Boogaloo"],
+	[ActivityType.Playing, "The Freelancer Legend Loud"],
+	[ActivityType.Watching, "@Xx_SparrowPlays_xX"],
+	[ActivityType.Watching, "@PhoenixRising"],
+	[ActivityType.Watching, "people die in Ironman"],
+	[ActivityType.Watching, "Ryan Ross fall down a skyscraper"],
+	[ActivityType.Watching, "the EP Wiki"],
+	[ActivityType.Watching, "a legend stealth tutorial"],
+	[ActivityType.Watching, "bars break"],
+	[ActivityType.Listening, "Full Force"],
+	[ActivityType.Listening, "the Cache alt track"],
+	[ActivityType.Listening, "breakbar's commands"],
+	[ActivityType.Listening, "the Gala speech"],
+	[ActivityType.Competing, "a Shadow War 1v1"],
+	[ActivityType.Competing, "Band Hero"]
 ];

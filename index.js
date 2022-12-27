@@ -1,14 +1,22 @@
 // Imports
-const { Client, Intents, Collection } = require("discord.js");
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
 const { getJsFiles } = require("./utils/fileUtils");
 
 // Store wiki server ids and embed color in global for ease of access, won't overwrite anything in the environment
 global.wConfig = require("./config.json");
-global.purple = "#b33fe6";
+global.colors = {
+	purple: 0xb33fe6,
+	red: 0xed4245,
+	blue: 0x3498db,
+	orange: 0xe67e22,
+	green: 0x57f287,
+	darkBlue: 0x71368a,
+	gold: 0xf1c40f
+};
 
 // Configure client
 const client = new Client({
-	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_BANS],
+	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildBans],
 	allowedMentions: {
 		roles: [
 			global.wConfig.roles["Stealth Ping"],

@@ -1,8 +1,8 @@
-const { MessageActionRow, MessageButton } = require("discord.js");
+const { ButtonBuilder, ActionRowBuilder, ButtonStyle } = require("discord.js");
 
 module.exports = {
 	embed: {
-		color: global.purple,
+		color: global.colors.purple,
 		title: "Enable / Disable Ping Roles",
 		description: `Enable or disable pings for specific mission types. Enabling a ping will give you a role and you will be pinged in <#650016486064390145> if somebody needs a squad for that mission type.
 		
@@ -30,15 +30,17 @@ module.exports = {
 		let buttons = [];
 		Object.keys(memberRoles).forEach((role) => {
 			const status = memberRoles[role];
-			const button = {
-				customId: role,
-				label: `${status ? "Disable" : "Enable"} ${role}`,
-				style: status ? "DANGER" : "SUCCESS"
-			};
-			buttons.push(new MessageButton(button));
+			buttons.push(
+				new ButtonBuilder()
+					.setCustomId(role)
+					.setLabel(`${status ? "Disable" : "Enable"} ${role}`)
+					.setStyle(status ? ButtonStyle.Danger : ButtonStyle.Success)
+			);
 		});
 
 		// Return buttons in 2 rows
-		return [new MessageActionRow({ components: buttons.slice(0, 4) }), new MessageActionRow({ components: buttons.slice(4) })];
+		const row1 = new ActionRowBuilder().addComponents(buttons.slice(0, 4));
+		const row2 = new ActionRowBuilder().addComponents(buttons.slice(4));
+		return [row1, row2];
 	}
 };

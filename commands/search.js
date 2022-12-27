@@ -1,11 +1,11 @@
-const { MessageActionRow, MessageButton } = require("discord.js");
+const { MessageActionRow, MessageButton, ButtonBuilder, ActionRowBuilder, ButtonStyle, ApplicationCommandOptionType } = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = {
 	global: true,
 	name: "search",
 	description: "Search for a wiki page",
-	options: [{ name: "query", type: "STRING", description: "Term to search for on the wiki", required: true }],
+	options: [{ name: "query", type: ApplicationCommandOptionType.String, description: "Term to search for on the wiki", required: true }],
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply();
@@ -22,7 +22,7 @@ module.exports = {
 			const data = await response.json();
 			if (data[1].length == 0) {
 				const failEmbed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: `There were no search results for "${queryDisplay}"`
 				};
 				interaction.editReply({ embeds: [failEmbed] });
@@ -31,18 +31,14 @@ module.exports = {
 				const links = data[3];
 				const linkTitels = data[1];
 
-				const row = new MessageActionRow({
-					components: links.map((link, index) => {
-						return new MessageButton({
-							style: "LINK",
-							label: linkTitels[index],
-							url: link
-						});
+				const row = new ActionRowBuilder().addComponents(
+					links.map((link, index) => {
+						return new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(linkTitels[index]).setURL(link);
 					})
-				});
+				);
 
 				const embed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: `Search results for "${queryDisplay}"`
 				};
 
@@ -51,7 +47,7 @@ module.exports = {
 			}
 		} else {
 			const errorEmbed = {
-				color: global.purple,
+				color: global.colors.purple,
 				description: "There was an error while searching, please try again."
 			};
 			interaction.editReply({ embeds: [errorEmbed] });

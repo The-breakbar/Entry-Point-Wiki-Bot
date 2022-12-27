@@ -1,3 +1,4 @@
+const { ApplicationCommandOptionType } = require("discord.js");
 const { mute } = require("../../utils/muteUtils");
 
 module.exports = {
@@ -7,19 +8,17 @@ module.exports = {
 	options: [
 		{
 			name: "user",
-			type: "USER",
+			type: ApplicationCommandOptionType.User,
 			description: "A user ping, or their user id",
 			required: true
 		},
 		{
 			name: "length",
-			type: "STRING",
+			type: ApplicationCommandOptionType.String,
 			description: "A number and a letter (m = minute, h = hour, d = day) e.g. 15m / 6h / 1d",
 			required: true
 		}
 	],
-	defaultPermission: false,
-	permissions: [global.wConfig.roles["Wiki Administrator"], global.wConfig.roles["Server Moderator"], global.wConfig.roles["Wiki Moderator"]],
 	async execute(interaction, client) {
 		const member = interaction.options.getMember("user");
 		const muteLength = interaction.options.getString("length");
@@ -46,12 +45,12 @@ module.exports = {
 			const typeText = type == "m" ? "minute" : type == "h" ? "hour" : "day";
 			const embed = {
 				description: `Muted ${member.user} for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
-				color: global.purple,
+				color: global.colors.purple,
 				timestamp: new Date()
 			};
 			const muteEmbed = {
 				description: `You have been muted for ${timeNumber} ${typeText}${timeNumber == 1 ? "" : "s"}.`,
-				color: global.purple,
+				color: global.colors.purple,
 				timestamp: new Date()
 			};
 

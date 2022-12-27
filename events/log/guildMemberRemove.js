@@ -10,7 +10,7 @@ module.exports = {
 			.join(" ");
 
 		const embed = {
-			color: "RED",
+			color: global.colors.red,
 			author: {
 				name: "Member left",
 				icon_url: member.user.displayAvatarURL()

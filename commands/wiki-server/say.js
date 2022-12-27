@@ -1,3 +1,5 @@
+const { ApplicationCommandOptionType } = require("discord.js");
+
 // For typing event
 let typingTarget = 0;
 
@@ -5,17 +7,9 @@ module.exports = {
 	name: "say",
 	description: "A special command for Elite Operatives and Financiers",
 	options: [
-		{ name: "message", type: "STRING", description: "What Wiki Bot should say", required: true },
-		{ name: "reply-url", type: "STRING", description: "Link of the message to reply to (right-click, copy message link)", required: false }
+		{ name: "message", type: ApplicationCommandOptionType.String, description: "What Wiki Bot should say", required: true },
+		{ name: "reply-url", type: ApplicationCommandOptionType.String, description: "Link of the message to reply to (right-click, copy message link)", required: false }
 	],
-	defaultPermission: false,
-	permissions: [
-		global.wConfig.roles["Elite Operative"],
-		global.wConfig.roles["The Financiers"],
-		global.wConfig.roles["Wiki Administrator"],
-		global.wConfig.roles["Wiki Moderator"]
-	],
-	// channelWhitelist = ["621749314787737605"], // #broom-closet
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply({ ephemeral: true });
@@ -75,7 +69,7 @@ module.exports = {
 			// Log command usage
 			const embed = {
 				title: `/say command`,
-				color: global.purple,
+				color: global.colors.purple,
 				description: `${interaction.member.user} ${interaction.channel} - ${text}`,
 				timestamp: new Date()
 			};

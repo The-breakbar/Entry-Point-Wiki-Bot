@@ -1,4 +1,4 @@
-const { Collection } = require("discord.js");
+const { Collection, ApplicationCommandOptionType } = require("discord.js");
 
 module.exports = {
 	name: "purge",
@@ -6,18 +6,16 @@ module.exports = {
 	options: [
 		{
 			name: "count",
-			type: "INTEGER",
+			type: ApplicationCommandOptionType.Integer,
 			description: "Amount of messages to purge",
 			required: true
 		},
 		{
 			name: "user",
-			type: "USER",
+			type: ApplicationCommandOptionType.User,
 			description: "If specified, will only purge messages from that user"
 		}
 	],
-	defaultPermission: false,
-	permissions: [global.wConfig.roles["Wiki Administrator"], global.wConfig.roles["Server Moderator"], global.wConfig.roles["Wiki Moderator"]],
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
 

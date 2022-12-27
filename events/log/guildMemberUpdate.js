@@ -11,7 +11,7 @@ module.exports = {
 			length = Math.round((length / (60 * 60 * 1000)) * 100) / 100;
 
 			const timeoutAddEmbed = {
-				color: "RED",
+				color: global.colors.red,
 				author: {
 					name: "Time out",
 					icon_url: oldMember.user.displayAvatarURL()

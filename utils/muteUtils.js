@@ -1,4 +1,4 @@
-const redis = require("./redisClient");
+const redis = require("./redisClient.js");
 
 module.exports = {
 	async mute(member, time) {

@@ -1,102 +1,35 @@
 module.exports = {
 	name: "messageCreate",
 	async execute(message, client) {
-		// Update all commands and context menus
-		if (message.content == "!deploy" && message.author.id == client.wikiServer.guild.ownerId) {
-			let commandCount = 0;
-			let contextMenuCount = 0;
+		if (!(message.content == "!deploy" && message.author.id == client.wikiServer.guild.ownerId)) return;
 
-			// Reset all commands
-			client.wikiServer.guild.commands.set([]);
+		// Update commands
+		client.commands.forEach(async (data) => {
+			let commandData = {
+				name: data.name,
+				description: data.description,
+				options: data.options
+			};
 
-			// Slash commands
-			client.commands.each((data) => {
-				if (!data.global) {
-					// Create wiki server commands
-					client.wikiServer.guild.commands
-						.create({
-							name: data.name,
-							description: data.description,
-							options: data.options,
-							defaultPermission: data.defaultPermission
-						})
-						.then((command) => {
-							// Set role permissions
-							if (data.permissions) {
-								const permissions = data.permissions.map((roleId) => {
-									return { id: roleId, type: "ROLE", permission: true };
-								});
-								command.permissions.set({ permissions });
-							}
-						});
-					commandCount++;
+			if (data.global) {
+				let command = await client.application.commands.fetch().then((commands) => commands.find((cmd) => cmd.name == data.name));
+				if (command) {
+					command.edit(commandData);
+					console.log(`Updated global command ${data.name}.`);
+				} else {
+					client.application.commands.create(commandData);
+					console.log(`Created global command ${data.name}.`);
 				}
-			});
-
-			// Create context menus
-			client.contextMenus.each((data) => {
-				if (!data.global) {
-					// Create wiki server context menus
-					if (data.type.includes("MESSAGE")) {
-						client.wikiServer.guild.commands.create({
-							name: data.name,
-							type: "MESSAGE"
-						});
-						contextMenuCount++;
-					}
-					if (data.type.includes("USER")) {
-						client.wikiServer.guild.commands.create({
-							name: data.name,
-							type: "USER"
-						});
-						contextMenuCount++;
-					}
+			} else {
+				let command = await client.wikiServer.guild.commands.fetch().then((commands) => commands.find((cmd) => cmd.name == data.name));
+				if (command) {
+					command.edit(commandData);
+					console.log(`Updated server command ${data.name}.`);
+				} else {
+					client.wikiServer.guild.commands.create(commandData);
+					console.log(`Created server command ${data.name}.`);
 				}
-			});
-
-			console.log(`Deployed ${commandCount} commands and ${contextMenuCount} context menus.`);
-		} else if (message.content == "!deployglobal" && message.author.id == client.wikiServer.guild.ownerId) {
-			let commandCount = 0;
-			let contextMenuCount = 0;
-
-			// Reset all commands
-			client.application.commands.set([]);
-
-			// Slash commands
-			client.commands.each((data) => {
-				if (data.global) {
-					// Create global commands
-					client.application.commands.create({
-						name: data.name,
-						description: data.description,
-						options: data.options
-					});
-					commandCount++;
-				}
-			});
-
-			// Create context menus
-			client.contextMenus.each((data) => {
-				if (data.global) {
-					// Create global context menus
-					if (data.type.includes("MESSAGE")) {
-						client.application.commands.create({
-							name: data.name,
-							type: "MESSAGE"
-						});
-						contextMenuCount++;
-					}
-					if (data.type.includes("USER")) {
-						client.application.commands.create({
-							name: data.name,
-							type: "USER"
-						});
-						contextMenuCount++;
-					}
-				}
-			});
-
-			console.log(`Deployed ${commandCount} global commands and ${contextMenuCount} global context menus.`);
-		}
+			}
+		});
 	}
 };

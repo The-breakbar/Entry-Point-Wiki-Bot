@@ -60,7 +60,7 @@ const processChanges = (response, client) => {
 			`New edit by [${user.replaceAll("_", " ")}](${url}/wiki/User:${user})` +
 			` (${delta}) ([diff](${url}/wiki/${title}?type=revision&diff=${revid}&oldid=${old_revid}))`;
 		const embed = {
-			color: global.purple,
+			color: global.colors.purple,
 			title: title.replaceAll("_", " "),
 			url: `${url}/wiki/${title}`,
 			description: description,

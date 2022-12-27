@@ -52,7 +52,7 @@ module.exports = {
 
 			// Create embed
 			const embed = {
-				color: global.purple,
+				color: global.colors.purple,
 				title: title,
 				fields: [
 					{
@@ -76,7 +76,7 @@ module.exports = {
 			// Reply
 			if (/unavailable/i.test(title)) {
 				const errorEmbed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: "The daily challenge command is currently unavailable.",
 					footer: {
 						text: `${hours} hour${hours != 1 ? "s" : ""} and ${minutes} minute${minutes != 1 ? "s" : ""} left until the next challenge.`
@@ -88,7 +88,7 @@ module.exports = {
 			}
 		} else {
 			const errorEmbed = {
-				color: global.purple,
+				color: global.colors.purple,
 				description: "There was an error while getting the daily challenge, please try again."
 			};
 			interaction.editReply({ embeds: [errorEmbed] });

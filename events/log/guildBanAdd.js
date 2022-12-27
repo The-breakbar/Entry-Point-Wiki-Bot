@@ -4,7 +4,7 @@ module.exports = {
 		if (ban.guild != client.wikiServer.guild) return;
 
 		const embed = {
-			color: "RED",
+			color: global.colors.red,
 			author: {
 				name: "Member banned",
 				icon_url: ban.user.displayAvatarURL()

@@ -7,7 +7,7 @@ module.exports = {
 		if (member.guild != client.wikiServer.guild) return;
 
 		const embed = {
-			color: "GREEN",
+			color: global.colors.green,
 			author: {
 				name: "Member joined",
 				icon_url: member.user.displayAvatarURL()

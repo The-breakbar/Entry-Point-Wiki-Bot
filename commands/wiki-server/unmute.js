@@ -1,12 +1,11 @@
+const { ApplicationCommandOptionType } = require("discord.js");
 const redis = require("../../utils/redisClient");
 
 module.exports = {
 	disabled: true,
 	name: "unmute",
 	description: "Unmute command for server staff",
-	options: [{ name: "user", type: "USER", description: "A user ping, or their user id", required: true }],
-	defaultPermission: false,
-	permissions: [global.wConfig.roles["Wiki Administrator"], global.wConfig.roles["Server Moderator"], global.wConfig.roles["Wiki Moderator"]],
+	options: [{ name: "user", type: ApplicationCommandOptionType.User, description: "A user ping, or their user id", required: true }],
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply({ ephemeral: true });
@@ -21,7 +20,7 @@ module.exports = {
 
 			// Log command usage
 			const embed = {
-				color: global.purple,
+				color: global.colors.purple,
 				description: `${member.user} was unmuted.`,
 				timestamp: new Date()
 			};

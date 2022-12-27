@@ -1,9 +1,8 @@
-const { MessageActionRow, MessageSelectMenu } = require("discord.js");
+const { MessageActionRow, MessageSelectMenu, StringSelectMenuBuilder, ActionRowBuilder } = require("discord.js");
 
 module.exports = {
 	name: "squadping",
 	description: "Ping for a squad if you need players or request a host for an expansion mission (#squadboard only)",
-	channelWhitelist: [global.wConfig.channels["squad-board"]],
 	async execute(interaction, client) {
 		await interaction.deferReply({ ephemeral: true });
 
@@ -12,20 +11,15 @@ module.exports = {
 			const embed = {
 				title: pageData.title,
 				description: pageData.description,
-				color: global.purple
+				color: global.colors.purple
 			};
 
-			const row = new MessageActionRow({
-				components: [
-					new MessageSelectMenu({
-						customId: pageData.customId,
-						placeholder: pageData.placeholder,
-						options: pageData.options.filter((option) => {
-							return global.pingStates[option.value];
-						})
-					})
-				]
-			});
+			const row = new ActionRowBuilder().addComponents(
+				new StringSelectMenuBuilder()
+					.setCustomId(pageData.customId)
+					.setPlaceholder(pageData.placeholder)
+					.addOptions(pageData.options.filter((option) => global.pingStates[option.value]))
+			);
 
 			await interaction.editReply({ embeds: [embed], components: [row], ephemeral: true });
 		} else {

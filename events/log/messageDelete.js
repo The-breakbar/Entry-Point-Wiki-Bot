@@ -7,7 +7,7 @@ module.exports = {
 		let { author, channel, content, attachments } = message;
 
 		const embed = {
-			color: "RED",
+			color: global.colors.red,
 			author: {
 				name: author.tag,
 				icon_url: author.displayAvatarURL()

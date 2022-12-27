@@ -1,4 +1,4 @@
-const { MessageButton, MessageActionRow, MessageSelectMenu } = require("discord.js");
+const { ButtonBuilder, ButtonStyle, ActionRowBuilder, StringSelectMenuBuilder } = require("discord.js");
 
 module.exports = {
 	// Generate page 2 with appropriate select menus (missions/method/difficulties)
@@ -10,54 +10,51 @@ module.exports = {
 		const embed = {
 			title: data.title,
 			description: data.description,
-			color: global.purple
+			color: global.colors.purple
 		};
 
 		if (data.missions) {
 			rows.push(
-				new MessageSelectMenu({
-					customId: page2Data.selectMenu.mission.customId,
-					placeholder: page2Data.selectMenu.mission.placeholder,
-					options: data.missions.map((mission) => {
-						return { label: mission, value: mission };
-					}),
-					maxValues: type == "stealth" ? 3 : type == "loud" ? 3 : 1
-				})
+				new StringSelectMenuBuilder()
+					.setCustomId(page2Data.selectMenu.mission.customId)
+					.setPlaceholder(page2Data.selectMenu.mission.placeholder)
+					.addOptions(
+						data.missions.map((mission) => {
+							return { label: mission, value: mission };
+						})
+					)
+					.setMaxValues(type == "stealth" ? 3 : type == "loud" ? 3 : 1)
 			);
 		}
 
 		if (data.method) {
 			rows.push(
-				new MessageSelectMenu({
-					customId: page2Data.selectMenu.method.customId,
-					placeholder: page2Data.selectMenu.method.placeholder,
-					options: data.method.map((method) => {
-						return { label: method, value: method };
-					})
-				})
+				new StringSelectMenuBuilder()
+					.setCustomId(page2Data.selectMenu.method.customId)
+					.setPlaceholder(page2Data.selectMenu.method.placeholder)
+					.addOptions(
+						data.method.map((method) => {
+							return { label: method, value: method };
+						})
+					)
 			);
 		}
 
 		rows.push(
-			new MessageSelectMenu({
-				customId: page2Data.selectMenu.difficulty.customId,
-				placeholder: page2Data.selectMenu.difficulty.placeholder,
-				options: difficulties.map((difficulty) => {
-					return { label: difficulty, value: difficulty };
-				}),
-				maxValues: type == "nightheist" ? 1 : type == "freelanceheist" ? 1 : difficulties.length
-			})
+			new StringSelectMenuBuilder()
+				.setCustomId(page2Data.selectMenu.difficulty.customId)
+				.setPlaceholder(page2Data.selectMenu.difficulty.placeholder)
+				.addOptions(
+					difficulties.map((difficulty) => {
+						return { label: difficulty, value: difficulty };
+					})
+				)
+				.setMaxValues(type == "nightheist" ? 1 : type == "freelanceheist" ? 1 : difficulties.length)
 		);
 
-		rows.push(
-			new MessageButton({
-				style: "PRIMARY",
-				label: "Next",
-				customId: "next"
-			})
-		);
+		rows.push(new ButtonBuilder().setStyle(ButtonStyle.Primary).setLabel("Next").setCustomId("next"));
 
-		rows = rows.map((component) => new MessageActionRow({ components: [component] }));
+		rows = rows.map((component) => new ActionRowBuilder().addComponents(component));
 		return { embeds: [embed], components: rows };
 	},
 
@@ -68,7 +65,7 @@ module.exports = {
 
 		let embed = {
 			title: title,
-			color: global.purple,
+			color: global.colors.purple,
 			fields: [],
 			footer: {
 				text: "Let people know if you have any additional info."
@@ -79,13 +76,9 @@ module.exports = {
 		if (method) embed.fields.push({ name: "Method", value: method, inline: true });
 		if (difficulties) embed.fields.push({ name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`, value: difficulties.join(", "), inline: true });
 
-		const button = new MessageButton({
-			style: "SUCCESS",
-			label: "Send ping",
-			customId: "send"
-		});
+		const button = new ButtonBuilder().setStyle(ButtonStyle.Success).setLabel("Send ping").setCustomId("send");
 
-		return { embeds: [embed], components: [new MessageActionRow({ components: [button] })] };
+		return { embeds: [embed], components: [new ActionRowBuilder().addComponents(button)] };
 	},
 
 	// Generate page 4, final ping message (without ping)
@@ -98,7 +91,7 @@ module.exports = {
 			color: color,
 			fields: [],
 			footer: {
-				text: type == "daily" ? "Use the /dailychallenge command to check the current challenge." : undefined
+				text: "Use /togglepings to manage ping notifications."
 			}
 		};
 
@@ -106,13 +99,12 @@ module.exports = {
 		if (method) embed.fields.push({ name: "Method", value: method, inline: true });
 		if (difficulties) embed.fields.push({ name: `Difficult${difficulties.length == 1 ? "y" : "ies"}`, value: difficulties.join(", "), inline: true });
 
-		const button = new MessageButton({
-			style: "LINK",
-			label: "Private server",
-			url: "https://www.roblox.com/games/740581508?privateServerLinkCode=07225942152546546599064025460286"
-		});
+		const button = new ButtonBuilder()
+			.setStyle(ButtonStyle.Link)
+			.setLabel("Private server")
+			.setURL("https://www.roblox.com/games/740581508?privateServerLinkCode=07225942152546546599064025460286");
 
-		return { embeds: [embed], components: [new MessageActionRow({ components: [button] })] };
+		return { embeds: [embed], components: [new ActionRowBuilder().addComponents(button)] };
 	},
 
 	// Check if selected missions/method/difficulties are valid
@@ -224,30 +216,30 @@ const page2Data = {
 const page3Data = {
 	stealth: {
 		title: "Stealth ping",
-		color: "BLUE"
+		color: global.colors.blue
 	},
 	loud: {
 		title: "Loud ping",
-		color: "RED"
+		color: global.colors.red
 	},
 	ironman: {
 		title: "Ironman ping",
-		color: "ORANGE"
+		color: global.colors.orange
 	},
 	shadowwar: {
 		title: "Shadow War ping",
-		color: "GREEN"
+		color: global.colors.green
 	},
 	nightheist: {
 		title: "Night Heist ping",
-		color: "DARK_BLUE"
+		color: global.colors.darkBlue
 	},
 	freelanceheist: {
 		title: "Freelance Heist ping",
-		color: "GOLD"
+		color: global.colors.gold
 	},
 	daily: {
 		title: "Daily Challenge ping",
-		color: global.purple
+		color: global.colors.purple
 	}
 };

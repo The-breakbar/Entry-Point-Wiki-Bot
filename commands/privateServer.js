@@ -1,15 +1,16 @@
-const { MessageActionRow, MessageButton } = require("discord.js");
+const { ButtonBuilder, ButtonStyle, ActionRowBuilder } = require("discord.js");
 
 const embed = {
-	color: global.purple,
+	color: global.colors.purple,
 	description: "Click to play:"
 };
 
-const button = {
-	style: "LINK",
-	label: "Private Server",
-	url: "https://www.roblox.com/games/740581508?privateServerLinkCode=07225942152546546599064025460286"
-};
+const button = new ButtonBuilder()
+	.setStyle(ButtonStyle.Link)
+	.setLabel("Private Server")
+	.setURL("https://www.roblox.com/games/740581508?privateServerLinkCode=07225942152546546599064025460286");
+
+const row = new ActionRowBuilder().addComponents(button);
 
 module.exports = {
 	global: true,
@@ -18,7 +19,6 @@ module.exports = {
 	async execute(interaction, client) {
 		// Reply with link
 		await interaction.deferReply();
-		const row = new MessageActionRow({ components: [new MessageButton(button)] });
 		await interaction.editReply({ embeds: [embed], components: [row] });
 	}
 };

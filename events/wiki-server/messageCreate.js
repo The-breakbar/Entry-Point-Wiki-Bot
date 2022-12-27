@@ -1,4 +1,4 @@
-const redis = require("../../utils/redisClient");
+const redisClient = require("../../utils/redisClient.js");
 const { mute } = require("../../utils/muteUtils");
 const { Collection } = require("discord.js");
 
@@ -7,7 +7,7 @@ let warnings = {};
 let badMessageCount = {};
 
 let badWords = [];
-redis.get("filter").then((badWordString) => {
+redisClient.get("filter").then((badWordString) => {
 	if (badWordString == null) {
 		console.log("⚠️  Failed to get filter string");
 	} else {
@@ -52,7 +52,7 @@ module.exports = {
 
 				// Notify user of mute
 				const embed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: "You have been timed out for 6 hours for spamming.",
 					timestamp: new Date()
 				};
@@ -60,7 +60,7 @@ module.exports = {
 
 				// Log spam mute
 				const logEmbed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: `${message.member} was timed out for 6 hours for spamming.`,
 					timestamp: new Date()
 				};
@@ -82,7 +82,7 @@ module.exports = {
 
 				// Message user
 				const embed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: "Please do not spam messages."
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
@@ -116,7 +116,7 @@ module.exports = {
 
 				// Notify user of mute
 				const embed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: "You have been timed out for 6 hours for inappropriate language.",
 					timestamp: new Date()
 				};
@@ -124,7 +124,7 @@ module.exports = {
 
 				// Log spam mute
 				const logEmbed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: `${message.member} was timed out for 6 hours for inappropriate language.`,
 					timestamp: new Date()
 				};
@@ -132,7 +132,7 @@ module.exports = {
 			} else if (badMessageCount[authorId] == 3) {
 				// Warn user on second message
 				const embed = {
-					color: global.purple,
+					color: global.colors.purple,
 					description: "Please do not use inappropriate language in the server."
 				};
 				message.member.send({ embeds: [embed] }).catch((error) => console.error(error));
@@ -152,7 +152,7 @@ module.exports = {
 
 			// Notify user of mute
 			const embed = {
-				color: global.purple,
+				color: global.colors.purple,
 				description: "You have been timed out for sending messages with possible malicious intent.",
 				timestamp: new Date()
 			};
@@ -160,7 +160,7 @@ module.exports = {
 
 			// Log spam mute
 			const logEmbed = {
-				color: global.purple,
+				color: global.colors.purple,
 				description: `${message.member} was timed out for 24 hours for sending a nitro scam link.`,
 				timestamp: new Date()
 			};

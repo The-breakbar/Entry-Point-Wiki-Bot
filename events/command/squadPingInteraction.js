@@ -18,7 +18,7 @@ module.exports = {
 	name: "interactionCreate",
 	async execute(i, client) {
 		// Handles all interaction events related to the squad ping command
-		if (!(i.isSelectMenu() || i.isButton())) return;
+		if (!(i.isStringSelectMenu() || i.isButton())) return;
 		if (!["pingselect", "mission", "method", "difficulty", "next", "send"].includes(i.customId)) return;
 
 		// Interaction info
