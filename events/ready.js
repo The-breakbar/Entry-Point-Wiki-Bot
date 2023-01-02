@@ -1,6 +1,7 @@
 const { syncMuted } = require("../utils/muteUtils");
 const { recentChanges } = require("../utils/recentChanges");
 const { ActivityType } = require("discord.js");
+const { initDaily } = require("../utils/dailyService");
 
 module.exports = {
 	name: "ready",
@@ -13,6 +14,9 @@ module.exports = {
 		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.log);
 		client.wikiServer.editLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["wiki-edits"]);
 		client.wikiServer.submitMeme = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["submitted-memes"]);
+
+		// Initialize daily service
+		initDaily();
 
 		// Sync unmutes on bot restart
 		syncMuted(client);

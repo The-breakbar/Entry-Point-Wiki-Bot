@@ -1,0 +1,1011 @@
+2022-12-11,The Deposit,Stealth,G,No Safecracking,P,No Lockpicks,R,No Moving Bodies
+2022-12-12,The Blacksite,Stealth,G,No Suppressors,P,Hidden Detection Bars,P,Inexperienced
+2022-12-13,The Score,Loud,B,Flashbang Frenzy,B,Criminal Arsenal,P,Weaker Medkits
+2022-12-14,The Lakehouse,Stealth,B,Unskilled,P,No Lockpicks,P,Faster Detection
+2022-12-15,The Killhouse,Loud,B,Glass Cannon,P,Aegis Academy,R,Explosive Revenge
+2022-12-16,The SCRS,Loud,B,No Equipment Bags,P,One Shot,R,Shield Swarm
+2022-12-17,The Blacksite,Loud,B,Reinforced Doors,P,Weaker Medkits,R,No Explosives
+2022-12-18,The Auction,Stealth,G,Fog,P,Reinforced Cameras,R,No Moving Bodies
+2022-12-19,The Deposit,Stealth,B,Weapon Scanners,B,Reinforced Locks,P,Unintimidating
+2022-12-20,The Withdrawal,Stealth,B,No Scrambler,B,Cascade Arsenal,P,Hidden UI
+2022-12-21,Black Dusk,Loud,G,No Aegis Armor,B,Flashbang Frenzy,B,Criminal Arsenal
+2022-12-22,The Scientist,Loud,B,Mandatory Headshots,B,Small Arms Only,P,Less Health
+2022-12-23,The Setup,Stealth,G,No Safecracking,P,Hidden Detection Bars,P,Fifteen Minutes
+2022-12-24,The Scientist,Loud,B,No Heavy Armor,B,No Hybrid Classes,R,Explosive Flashbangs
+2022-12-25,The SCRS,Stealth,G,No Safecracking,B,Extra Cameras,P,Hidden Detection Bars
+2022-12-26,The Lakehouse,Stealth,G,No Suppressors,P,Reinforced Cameras,R,No Moving Bodies
+2022-12-27,The Blacksite,Stealth,B,No Scrambler,B,Cascade Arsenal,P,Fifteen Minutes
+2022-12-28,The Cache,Stealth,B,Bloodless,B,Reinforced Locks,P,Hidden UI
+2022-12-29,Black Dusk,Loud,B,Armera Arsenal,R,Shield Swarm,R,No Explosives
+2022-12-30,The Deposit,Stealth,G,Misplaced Gear,P,No Lockpicks,P,Faster Detection
+2022-12-31,The Killhouse,Loud,B,Reinforced Doors,P,Less Health,R,Explosive Revenge
+2023-01-01,The Withdrawal,Loud,G,Boarded Up,B,Criminal Arsenal,P,One Shot
+2023-01-02,The Score,Loud,G,No Aegis Armor,B,Mandatory Headshots,P,Flashbang Revenge
+2023-01-03,The Killhouse,Stealth,G,Fog,B,Reinforced Locks,P,Unintimidating
+2023-01-04,The Financier,Loud,P,Weaker Medkits,P,Aegis Academy,R,Explosive Flashbangs
+2023-01-05,Black Dusk,Loud,G,No Aegis Armor,B,Criminal Arsenal,R,Explosive Revenge
+2023-01-06,The SCRS,Stealth,B,Reinforced Doors,P,No Lockpicks,P,Faster Detection
+2023-01-07,The Cache,Stealth,G,No Suppressors,B,No Hybrid Classes,P,Hidden Detection Bars
+2023-01-08,The Withdrawal,Stealth,B,No Scrambler,P,Fifteen Minutes,R,Takedown Limit
+2023-01-09,The Scientist,Loud,B,Small Arms Only,P,Hidden UI,P,Less Health
+2023-01-10,The Deposit,Stealth,G,Misplaced Gear,P,Faster Detection,P,Reinforced Cameras
+2023-01-11,The Blacksite,Loud,B,Mandatory Headshots,B,No Heavy Armor,P,Flashbang Revenge
+2023-01-12,The Setup,Stealth,G,No Suppressors,B,Cascade Arsenal,R,No Moving Bodies
+2023-01-13,The Financier,Loud,B,Cascade Arsenal,P,Flashbang Revenge,P,Less Health
+2023-01-14,The Killhouse,Stealth,G,Fog,B,Bloodless,P,Hidden UI
+2023-01-15,The Scientist,Stealth,B,Heavy Bags,P,Hidden Detection Bars,R,No Knockouts
+2023-01-16,The Lakehouse,Loud,B,No Equipment Bags,P,Inexperienced,R,Shield Swarm
+2023-01-17,The Cache,Stealth,G,No Safecracking,B,Reinforced Locks,B,No Scrambler
+2023-01-18,The Withdrawal,Stealth,G,No Suppressors,P,Faster Detection,P,No Lockpicks
+2023-01-19,The SCRS,Stealth,G,Misplaced Gear,B,Extra Cameras,P,Reinforced Cameras
+2023-01-20,The Deposit,Loud,G,Boarded Up,B,No Heavy Armor,R,Explosive Flashbangs
+2023-01-21,The Blacksite,Stealth,B,Reinforced Doors,P,Fifteen Minutes,P,Inexperienced
+2023-01-22,The Score,Loud,G,No Aegis Armor,P,One Shot,R,No Explosives
+2023-01-23,The Financier,Loud,B,Criminal Arsenal,B,Unskilled,P,Aegis Academy
+2023-01-24,The Withdrawal,Stealth,G,No Suppressors,P,Hidden UI,R,Takedown Limit
+2023-01-25,Black Dusk,Loud,B,Reinforced Locks,P,One Shot,P,Less Health
+2023-01-26,The Blacksite,Stealth,B,Heavy Bags,B,No Scrambler,P,Fifteen Minutes
+2023-01-27,The Gala,Stealth,B,Reinforced Doors,B,Cascade Arsenal,R,No Moving Bodies
+2023-01-28,The Killhouse,Loud,B,No Heavy Armor,B,Mandatory Headshots,R,Explosive Revenge
+2023-01-29,The Deposit,Stealth,G,Misplaced Gear,B,No Interrogation,B,Bloodless
+2023-01-30,The SCRS,Stealth,P,Reinforced Cameras,P,Unintimidating,P,No Lockpicks
+2023-01-31,The Scientist,Stealth,P,Hidden Detection Bars,P,Fifteen Minutes,R,No Knockouts
+2023-02-01,The Setup,Stealth,G,No Safecracking,G,Fog,P,Faster Detection
+2023-02-02,Black Dusk,Loud,B,No Heavy Armor,P,Less Health,R,No Explosives
+2023-02-03,The Deposit,Stealth,G,No Suppressors,B,Heavy Bags,P,No Lockpicks
+2023-02-04,The Financier,Loud,G,Fog,P,One Shot,P,Hidden UI
+2023-02-05,The Killhouse,Loud,G,No Aegis Armor,B,Glass Cannon,R,Explosive Revenge
+2023-02-06,The Cache,Stealth,G,No Safecracking,B,Reinforced Doors,P,Reinforced Cameras
+2023-02-07,The Withdrawal,Stealth,P,Faster Detection,R,No Moving Bodies,R,Takedown Limit
+2023-02-08,The Blacksite,Stealth,B,Reinforced Locks,B,No Scrambler,P,Fifteen Minutes
+2023-02-09,The Scientist,Loud,B,Cascade Arsenal,B,Unskilled,P,Weaker Medkits
+2023-02-10,The SCRS,Stealth,B,Bloodless,P,Unintimidating,P,Hidden Detection Bars
+2023-02-11,The Score,Loud,B,Mandatory Headshots,B,Criminal Arsenal,P,Flashbang Revenge
+2023-02-12,The Killhouse,Stealth,G,No Suppressors,P,Hidden UI,R,No Moving Bodies
+2023-02-13,The Scientist,Loud,B,Flashbang Frenzy,B,No Equipment Bags,P,Less Health
+2023-02-14,The Lakehouse,Stealth,B,Cascade Arsenal,B,Reinforced Doors,P,No Lockpicks
+2023-02-15,The Deposit,Stealth,B,Extra Cameras,B,No Interrogation,P,Fifteen Minutes
+2023-02-16,The Gala,Stealth,B,Bloodless,B,Heavy Bags,P,Hidden Detection Bars
+2023-02-17,The Blacksite,Loud,G,No Aegis Armor,B,Armera Arsenal,R,No Explosives
+2023-02-18,Black Dusk,Loud,B,Criminal Arsenal,P,One Shot,P,Flashbang Revenge
+2023-02-19,The SCRS,Stealth,B,Reinforced Locks,P,Unintimidating,P,Inexperienced
+2023-02-20,The Financier,Loud,B,No Heavy Armor,B,Small Arms Only,P,Aegis Academy
+2023-02-21,The Score,Loud,P,Weaker Medkits,R,Explosive Revenge,R,Explosive Flashbangs
+2023-02-22,The Deposit,Stealth,G,No Suppressors,B,Extra Cameras,P,Hidden UI
+2023-02-23,The Financier,Loud,B,No Heavy Armor,P,Aegis Academy,P,One Shot
+2023-02-24,The SCRS,Loud,B,Reinforced Doors,P,Inexperienced,R,Shield Swarm
+2023-02-25,The Blacksite,Stealth,B,Cascade Arsenal,B,No Scrambler,B,Reinforced Locks
+2023-02-26,The Gala,Stealth,G,Fog,P,Faster Detection,R,No Moving Bodies
+2023-02-27,The Scientist,Stealth,B,Heavy Bags,P,Fifteen Minutes,R,No Knockouts
+2023-02-28,Black Dusk,Loud,B,Armera Arsenal,P,Flashbang Revenge,P,Weaker Medkits
+2023-03-01,The Withdrawal,Stealth,B,Bloodless,P,No Lockpicks,R,Takedown Limit
+2023-03-02,The Lakehouse,Loud,G,Boarded Up,R,No Explosives,R,Explosive Flashbangs
+2023-03-03,The Score,Loud,G,No Aegis Armor,B,Flashbang Frenzy,B,Mandatory Headshots
+2023-03-04,The Withdrawal,Loud,B,Criminal Arsenal,P,Weaker Medkits,R,Explosive Revenge
+2023-03-05,The Deposit,Stealth,G,Misplaced Gear,P,Fifteen Minutes,P,No Lockpicks
+2023-03-06,The Lakehouse,Stealth,G,No Suppressors,B,Heavy Bags,P,Hidden UI
+2023-03-07,The Scientist,Loud,G,Fog,B,Reinforced Locks,B,Glass Cannon
+2023-03-08,The Auction,Stealth,B,Reinforced Doors,P,Inexperienced,P,Faster Detection
+2023-03-09,The Blacksite,Stealth,B,Cascade Arsenal,B,Bloodless,P,Hidden UI
+2023-03-10,The Killhouse,Loud,B,Flashbang Frenzy,P,Flashbang Revenge,R,Explosive Flashbangs
+2023-03-11,Black Dusk,Loud,B,No Heavy Armor,B,Mandatory Headshots,P,One Shot
+2023-03-12,The Financier,Stealth,G,No Safecracking,P,Hidden Detection Bars,R,No Moving Bodies
+2023-03-13,The Setup,Stealth,B,No Scrambler,P,Unintimidating,R,Takedown Limit
+2023-03-14,Black Dusk,Loud,B,No Equipment Bags,P,Hidden UI,P,Weaker Medkits
+2023-03-15,The Financier,Loud,B,No Heavy Armor,B,No Hybrid Classes,P,Less Health
+2023-03-16,The SCRS,Stealth,B,Reinforced Doors,B,Heavy Bags,P,Reinforced Cameras
+2023-03-17,The Blacksite,Stealth,B,Bloodless,B,Reinforced Locks,P,Fifteen Minutes
+2023-03-18,The Auction,Stealth,G,Fog,G,No Suppressors,B,No Scrambler
+2023-03-19,The Scientist,Loud,B,Cascade Arsenal,P,Aegis Academy,R,Shield Swarm
+2023-03-20,The Lakehouse,Stealth,B,No Interrogation,P,No Lockpicks,R,No Moving Bodies
+2023-03-21,The Killhouse,Loud,B,Mandatory Headshots,P,One Shot,P,Flashbang Revenge
+2023-03-22,The Deposit,Loud,G,Boarded Up,B,Flashbang Frenzy,B,Armera Arsenal
+2023-03-23,The Lockup,Stealth,P,Faster Detection,P,Unintimidating,R,Takedown Limit
+2023-03-24,The Scientist,Stealth,B,Reinforced Locks,P,Fifteen Minutes,R,No Knockouts
+2023-03-25,The Killhouse,Stealth,G,Fog,B,Unskilled,P,Unintimidating
+2023-03-26,The Blacksite,Loud,B,Cascade Arsenal,B,Glass Cannon,R,Explosive Revenge
+2023-03-27,Black Dusk,Loud,B,Small Arms Only,B,No Equipment Bags,R,No Explosives
+2023-03-28,The Auction,Stealth,B,Reinforced Doors,B,No Scrambler,P,Hidden Detection Bars
+2023-03-29,The SCRS,Loud,B,Criminal Arsenal,B,Mandatory Headshots,R,Shield Swarm
+2023-03-30,The Deposit,Stealth,G,No Suppressors,B,Heavy Bags,P,Faster Detection
+2023-03-31,The Withdrawal,Stealth,B,Bloodless,P,Hidden UI,R,Takedown Limit
+2023-04-01,The Financier,Loud,B,Flashbang Frenzy,P,Less Health,P,Weaker Medkits
+2023-04-02,The Setup,Stealth,G,No Safecracking,P,Reinforced Cameras,R,No Moving Bodies
+2023-04-03,The Deposit,Loud,G,Boarded Up,B,Glass Cannon,B,Armera Arsenal
+2023-04-04,Black Dusk,Loud,B,No Hybrid Classes,P,Aegis Academy,P,Flashbang Revenge
+2023-04-05,The Withdrawal,Stealth,B,No Scrambler,P,No Lockpicks,P,Fifteen Minutes
+2023-04-06,The Blacksite,Loud,B,No Heavy Armor,B,No Equipment Bags,P,Hidden UI
+2023-04-07,The Cache,Stealth,G,Fog,B,Reinforced Locks,P,Faster Detection
+2023-04-08,The SCRS,Stealth,G,Misplaced Gear,G,No Suppressors,B,Heavy Bags
+2023-04-09,The Lakehouse,Stealth,P,Hidden Detection Bars,P,Reinforced Cameras,R,No Moving Bodies
+2023-04-10,The Financier,Loud,B,Cascade Arsenal,B,Mandatory Headshots,R,No Explosives
+2023-04-11,The Scientist,Stealth,G,Fog,P,Hidden UI,R,No Knockouts
+2023-04-12,The Lockup,Stealth,B,Bloodless,P,Unintimidating,R,Takedown Limit
+2023-04-13,The Deposit,Loud,G,No Aegis Armor,B,Reinforced Locks,R,No Explosives
+2023-04-14,The Scientist,Stealth,G,Fog,P,Reinforced Cameras,P,Faster Detection
+2023-04-15,Black Dusk,Loud,B,Cascade Arsenal,P,Less Health,P,Aegis Academy
+2023-04-16,The Blacksite,Stealth,B,Bloodless,P,Fifteen Minutes,P,Hidden UI
+2023-04-17,The Gala,Stealth,B,Reinforced Doors,B,Heavy Bags,P,Hidden Detection Bars
+2023-04-18,The Killhouse,Stealth,B,No Hybrid Classes,P,Unintimidating,R,No Moving Bodies
+2023-04-19,The Lakehouse,Loud,B,Small Arms Only,P,One Shot,R,Explosive Revenge
+2023-04-20,The SCRS,Loud,B,Flashbang Frenzy,B,No Heavy Armor,P,Flashbang Revenge
+2023-04-21,The Withdrawal,Loud,G,Boarded Up,B,Armera Arsenal,R,Explosive Flashbangs
+2023-04-22,The Lockup,Stealth,G,No Suppressors,P,No Lockpicks,R,Takedown Limit
+2023-04-23,The Lakehouse,Loud,G,Fog,B,Mandatory Headshots,P,Hidden UI
+2023-04-24,The Withdrawal,Loud,P,Less Health,P,Aegis Academy,R,Explosive Flashbangs
+2023-04-25,The Killhouse,Stealth,B,No Interrogation,B,No Hybrid Classes,R,No Moving Bodies
+2023-04-26,Black Dusk,Loud,B,No Heavy Armor,B,Reinforced Doors,P,One Shot
+2023-04-27,The Auction,Stealth,B,Cascade Arsenal,P,Hidden Detection Bars,R,Takedown Limit
+2023-04-28,The Scientist,Stealth,G,No Suppressors,B,Heavy Bags,R,No Knockouts
+2023-04-29,The Financier,Stealth,G,No Safecracking,P,Faster Detection,P,Unintimidating
+2023-04-30,The Blacksite,Stealth,B,No Scrambler,B,Reinforced Locks,P,Fifteen Minutes
+2023-05-01,The SCRS,Loud,B,Criminal Arsenal,R,No Explosives,R,Shield Swarm
+2023-05-02,The Setup,Stealth,B,Bloodless,P,No Lockpicks,R,No Disguise
+2023-05-03,The Lakehouse,Loud,B,Armera Arsenal,B,Mandatory Headshots,P,Flashbang Revenge
+2023-05-04,The Killhouse,Loud,B,Reinforced Locks,P,Aegis Academy,R,Explosive Flashbangs
+2023-05-05,The Scientist,Stealth,G,No Suppressors,G,Fog,P,Faster Detection
+2023-05-06,The Blacksite,Stealth,B,Reinforced Doors,B,Unskilled,P,Hidden Detection Bars
+2023-05-07,The Auction,Stealth,B,Cascade Arsenal,B,No Scrambler,P,Fifteen Minutes
+2023-05-08,The SCRS,Stealth,B,Extra Cameras,B,Bloodless,P,Reinforced Cameras
+2023-05-09,The Financier,Loud,G,Boarded Up,B,Criminal Arsenal,R,Shield Swarm
+2023-05-10,The Deposit,Stealth,B,Weapon Scanners,P,Hidden UI,P,Unintimidating
+2023-05-11,The Withdrawal,Stealth,B,Heavy Bags,P,No Lockpicks,P,Hidden Detection Bars
+2023-05-12,The Lockup,Stealth,B,Reinforced Doors,R,Takedown Limit,R,No Moving Bodies
+2023-05-13,The Lakehouse,Stealth,B,Heavy Bags,B,No Hybrid Classes,P,No Lockpicks
+2023-05-14,The Withdrawal,Stealth,G,Fog,P,Hidden Detection Bars,P,Reinforced Cameras
+2023-05-15,The Financier,Loud,B,Armera Arsenal,B,Reinforced Locks,R,Explosive Revenge
+2023-05-16,The Deposit,Stealth,G,No Safecracking,P,Unintimidating,P,Hidden UI
+2023-05-17,The Gala,Stealth,G,No Suppressors,B,No Scrambler,R,No Moving Bodies
+2023-05-18,The SCRS,Loud,B,No Heavy Armor,B,Criminal Arsenal,B,Glass Cannon
+2023-05-19,Black Dusk,Loud,B,Cascade Arsenal,P,Flashbang Revenge,R,No Explosives
+2023-05-20,The Scientist,Stealth,B,Heavy Bags,P,Faster Detection,R,No Knockouts
+2023-05-21,The Blacksite,Loud,B,Small Arms Only,B,Flashbang Frenzy,R,Explosive Flashbangs
+2023-05-22,The Score,Loud,G,No Aegis Armor,B,No Equipment Bags,P,Weaker Medkits
+2023-05-23,The Killhouse,Stealth,G,Fog,G,No Suppressors,P,Faster Detection
+2023-05-24,The Withdrawal,Loud,G,Boarded Up,P,One Shot,R,No Explosives
+2023-05-25,The Financier,Loud,B,No Equipment Bags,B,No Heavy Armor,R,Explosive Revenge
+2023-05-26,The Lakehouse,Stealth,B,Heavy Bags,P,Hidden Detection Bars,P,Reinforced Cameras
+2023-05-27,The Cache,Stealth,B,Reinforced Locks,B,Unskilled,P,Hidden UI
+2023-05-28,The Deposit,Stealth,G,Misplaced Gear,B,Weapon Scanners,B,Reinforced Doors
+2023-05-29,The Blacksite,Loud,B,Cascade Arsenal,P,Less Health,R,Explosive Flashbangs
+2023-05-30,Black Dusk,Loud,B,Criminal Arsenal,P,Flashbang Revenge,P,Aegis Academy
+2023-05-31,The Scientist,Stealth,B,Cascade Arsenal,P,Fifteen Minutes,R,No Knockouts
+2023-06-01,The Lockup,Stealth,P,Unintimidating,R,Takedown Limit,R,No Moving Bodies
+2023-06-02,The Deposit,Stealth,G,Misplaced Gear,P,Hidden Detection Bars,P,Reinforced Cameras
+2023-06-03,Black Dusk,Loud,B,Reinforced Doors,P,One Shot,R,Shield Swarm
+2023-06-04,The Blacksite,Loud,G,No Aegis Armor,B,Reinforced Locks,P,Weaker Medkits
+2023-06-05,The SCRS,Stealth,G,No Safecracking,P,Unintimidating,
+2023-06-06,The Auction,Stealth,G,No Suppressors,P,Faster Detection,R,No Disguise
+2023-06-07,The Financier,Stealth,B,Heavy Bags,P,Fifteen Minutes,P,No Lockpicks
+2023-06-08,The Scientist,Loud,G,Fog,B,Criminal Arsenal,B,Mandatory Headshots
+2023-06-09,The Killhouse,Stealth,B,No Interrogation,B,No Hybrid Classes,R,No Moving Bodies
+2023-06-10,The Lakehouse,Loud,B,Cascade Arsenal,P,Hidden UI,R,Explosive Revenge
+2023-06-11,The Score,Loud,B,No Equipment Bags,B,Flashbang Frenzy,P,Flashbang Revenge
+2023-06-12,The Scientist,Loud,B,Mandatory Headshots,B,Glass Cannon,R,No Explosives
+2023-06-13,The SCRS,Loud,G,Fog,B,Armera Arsenal,P,One Shot
+2023-06-14,Black Dusk,Loud,B,Flashbang Frenzy,B,Reinforced Locks,P,Aegis Academy
+2023-06-15,The Withdrawal,Loud,G,No Aegis Armor,P,Weaker Medkits,R,Explosive Flashbangs
+2023-06-16,The Auction,Stealth,B,Heavy Bags,B,Cascade Arsenal,P,Faster Detection
+2023-06-17,The Financier,Stealth,P,Hidden Detection Bars,P,No Lockpicks,R,No Moving Bodies
+2023-06-18,The Killhouse,Stealth,B,Bloodless,P,Unintimidating,P,Hidden UI
+2023-06-19,The Lakehouse,Stealth,B,No Interrogation,B,Unskilled,P,Reinforced Cameras
+2023-06-20,The Blacksite,Stealth,G,No Suppressors,B,No Scrambler,B,Reinforced Doors
+2023-06-21,The Setup,Stealth,G,No Safecracking,P,Fifteen Minutes,R,No Disguise
+2023-06-22,The Lakehouse,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Hidden Detection Bars
+2023-06-23,The Financier,Loud,B,Flashbang Frenzy,B,Reinforced Doors,R,No Explosives
+2023-06-24,The Killhouse,Stealth,B,Bloodless,B,No Hybrid Classes,P,Faster Detection
+2023-06-25,The Scientist,Stealth,B,Reinforced Locks,B,Heavy Bags,R,No Knockouts
+2023-06-26,The Cache,Stealth,G,No Safecracking,P,Hidden UI,P,Fifteen Minutes
+2023-06-27,The Deposit,Loud,B,No Heavy Armor,P,Flashbang Revenge,R,Explosive Flashbangs
+2023-06-28,The Blacksite,Stealth,G,No Suppressors,B,No Scrambler,P,Inexperienced
+2023-06-29,Black Dusk,Loud,B,Glass Cannon,B,Criminal Arsenal,P,Aegis Academy
+2023-06-30,The SCRS,Loud,G,No Aegis Armor,B,Small Arms Only,P,One Shot
+2023-07-01,The Lockup,Stealth,G,Fog,P,Unintimidating,P,No Lockpicks
+2023-07-02,The Blacksite,Stealth,G,No Suppressors,B,Reinforced Locks,P,Hidden UI
+2023-07-03,The Financier,Loud,G,No Aegis Armor,B,Mandatory Headshots,R,Shield Swarm
+2023-07-04,The Withdrawal,Stealth,B,Cascade Arsenal,P,Faster Detection,R,Takedown Limit
+2023-07-05,The Lakehouse,Stealth,G,Fog,B,Bloodless,P,Reinforced Cameras
+2023-07-06,The Cache,Stealth,B,Heavy Bags,P,Hidden Detection Bars,P,Fifteen Minutes
+2023-07-07,The Scientist,Stealth,B,No Hybrid Classes,P,Fifteen Minutes,R,No Knockouts
+2023-07-08,The Deposit,Loud,B,No Heavy Armor,R,Explosive Flashbangs,R,Explosive Revenge
+2023-07-09,The SCRS,Loud,P,Less Health,P,Aegis Academy,P,Flashbang Revenge
+2023-07-10,The Killhouse,Loud,B,No Equipment Bags,P,One Shot,P,Weaker Medkits
+2023-07-11,The Score,Loud,B,Flashbang Frenzy,B,Glass Cannon,R,No Explosives
+2023-07-12,The Scientist,Loud,B,Glass Cannon,B,Unskilled,P,Flashbang Revenge
+2023-07-13,Black Dusk,Loud,B,Small Arms Only,B,No Heavy Armor,R,Explosive Flashbangs
+2023-07-14,The Deposit,Loud,B,Flashbang Frenzy,B,Reinforced Locks,P,Less Health
+2023-07-15,The Killhouse,Stealth,G,No Suppressors,B,No Interrogation,P,Hidden UI
+2023-07-16,The Gala,Stealth,B,Cascade Arsenal,B,Bloodless,P,Hidden Detection Bars
+2023-07-17,The Lakehouse,Loud,G,No Aegis Armor,B,Reinforced Doors,P,One Shot
+2023-07-18,The Blacksite,Stealth,B,No Scrambler,B,Heavy Bags,P,Fifteen Minutes
+2023-07-19,The Financier,Stealth,G,Fog,P,No Lockpicks,R,No Moving Bodies
+2023-07-20,The Withdrawal,Stealth,P,Reinforced Cameras,P,Faster Detection,R,Takedown Limit
+2023-07-21,The Lockup,Stealth,B,Reinforced Doors,P,Unintimidating,P,Reinforced Cameras
+2023-07-22,The Deposit,Stealth,B,Weapon Scanners,P,Faster Detection,R,No Moving Bodies
+2023-07-23,The Financier,Loud,B,Armera Arsenal,P,Aegis Academy,R,Explosive Flashbangs
+2023-07-24,The SCRS,Loud,B,Small Arms Only,B,Flashbang Frenzy,R,No Explosives
+2023-07-25,The Blacksite,Stealth,B,Bloodless,P,Hidden Detection Bars,P,Fifteen Minutes
+2023-07-26,The Auction,Stealth,B,Cascade Arsenal,B,Reinforced Locks,B,No Hybrid Classes
+2023-07-27,Black Dusk,Loud,B,Reinforced Doors,P,One Shot,P,Hidden UI
+2023-07-28,The Withdrawal,Loud,G,Fog,B,Glass Cannon,R,Explosive Revenge
+2023-07-29,The Scientist,Stealth,G,No Suppressors,B,Heavy Bags,R,No Knockouts
+2023-07-30,The Killhouse,Stealth,B,Heavy Bags,P,Unintimidating,P,Inexperienced
+2023-07-31,The Score,Loud,B,Mandatory Headshots,P,Weaker Medkits,P,Flashbang Revenge
+2023-08-01,The Lakehouse,Loud,B,Small Arms Only,P,Less Health,P,Flashbang Revenge
+2023-08-02,The Scientist,Loud,B,Glass Cannon,P,Inexperienced,R,Explosive Revenge
+2023-08-03,The Killhouse,Stealth,B,Reinforced Locks,B,Bloodless,P,Faster Detection
+2023-08-04,Black Dusk,Loud,P,One Shot,P,Weaker Medkits,R,Shield Swarm
+2023-08-05,The Auction,Stealth,B,Reinforced Doors,P,Reinforced Cameras,P,Hidden UI
+2023-08-06,The Deposit,Stealth,B,No Scrambler,P,Hidden Detection Bars,P,Fifteen Minutes
+2023-08-07,The SCRS,Stealth,G,No Safecracking,B,Extra Cameras,P,No Lockpicks
+2023-08-08,The Financier,Stealth,G,No Suppressors,B,No Interrogation,R,No Moving Bodies
+2023-08-09,The Blacksite,Loud,G,No Aegis Armor,B,Criminal Arsenal,R,Explosive Flashbangs
+2023-08-10,The Lockup,Stealth,B,Cascade Arsenal,P,Unintimidating,R,Takedown Limit
+2023-08-11,Black Dusk,Loud,B,Cascade Arsenal,P,Inexperienced,R,No Explosives
+2023-08-12,The Withdrawal,Stealth,B,Heavy Bags,P,Hidden Detection Bars,R,Takedown Limit
+2023-08-13,The SCRS,Stealth,B,Reinforced Doors,B,Extra Cameras,P,Faster Detection
+2023-08-14,The Financier,Loud,G,Fog,B,No Heavy Armor,R,Explosive Revenge
+2023-08-15,The Cache,Stealth,G,No Safecracking,P,Hidden UI,P,Fifteen Minutes
+2023-08-16,The Killhouse,Loud,P,Aegis Academy,P,Weaker Medkits,R,Shield Swarm
+2023-08-17,The Blacksite,Loud,B,Armera Arsenal,B,Reinforced Locks,P,Less Health
+2023-08-18,The Lakehouse,Stealth,G,No Suppressors,P,No Lockpicks,P,Reinforced Cameras
+2023-08-19,The Scientist,Stealth,B,Reinforced Locks,P,Faster Detection,R,No Knockouts
+2023-08-20,The Score,Loud,B,Flashbang Frenzy,B,No Equipment Bags,R,Explosive Flashbangs
+2023-08-21,Black Dusk,Loud,G,No Aegis Armor,B,Small Arms Only,P,Aegis Academy
+2023-08-22,The Lakehouse,Loud,P,Hidden UI,P,Flashbang Revenge,R,No Explosives
+2023-08-23,The SCRS,Stealth,G,No Safecracking,B,Reinforced Doors,B,Unskilled
+2023-08-24,The Scientist,Loud,B,Cascade Arsenal,R,Shield Swarm,R,Explosive Revenge
+2023-08-25,The Auction,Stealth,B,Bloodless,P,Faster Detection,R,No Disguise
+2023-08-26,The Withdrawal,Loud,B,Criminal Arsenal,B,Reinforced Locks,P,Less Health
+2023-08-27,The Killhouse,Loud,B,No Heavy Armor,B,Glass Cannon,R,Explosive Flashbangs
+2023-08-28,The Financier,Stealth,G,No Suppressors,G,Fog,P,No Lockpicks
+2023-08-29,The Blacksite,Stealth,B,Heavy Bags,P,Hidden Detection Bars,P,Fifteen Minutes
+2023-08-30,The Setup,Stealth,B,No Scrambler,P,Reinforced Cameras,R,No Moving Bodies
+2023-08-31,The Deposit,Loud,G,Fog,B,No Hybrid Classes,R,Explosive Revenge
+2023-09-01,The Financier,Loud,B,Cascade Arsenal,P,One Shot,R,Explosive Flashbangs
+2023-09-02,The Scientist,Loud,G,No Aegis Armor,P,Weaker Medkits,P,Less Health
+2023-09-03,The Blacksite,Loud,B,Armera Arsenal,P,Flashbang Revenge,R,No Explosives
+2023-09-04,The Auction,Stealth,G,No Suppressors,B,Reinforced Doors,P,Hidden UI
+2023-09-05,The Killhouse,Stealth,B,Heavy Bags,B,Bloodless,P,Unintimidating
+2023-09-06,The Lakehouse,Stealth,P,Reinforced Cameras,P,No Lockpicks,R,Takedown Limit
+2023-09-07,Black Dusk,Loud,B,No Heavy Armor,B,Mandatory Headshots,R,Shield Swarm
+2023-09-08,The Withdrawal,Stealth,B,No Scrambler,P,Reinforced Cameras,P,Hidden Detection Bars
+2023-09-09,The Score,Loud,B,Criminal Arsenal,B,Reinforced Locks,P,Flashbang Revenge
+2023-09-10,The Killhouse,Loud,B,No Hybrid Classes,B,Glass Cannon,P,Flashbang Revenge
+2023-09-11,Black Dusk,Loud,B,Reinforced Locks,P,Weaker Medkits,R,No Explosives
+2023-09-12,The SCRS,Stealth,B,Reinforced Doors,P,Hidden Detection Bars,
+2023-09-13,The Scientist,Stealth,G,No Suppressors,P,Faster Detection,R,No Knockouts
+2023-09-14,The Cache,Stealth,B,Bloodless,P,Reinforced Cameras,P,Hidden UI
+2023-09-15,The Blacksite,Stealth,B,Heavy Bags,B,No Scrambler,P,Fifteen Minutes
+2023-09-16,The Deposit,Stealth,G,No Safecracking,G,Fog,B,No Hybrid Classes
+2023-09-17,The Withdrawal,Loud,B,Armera Arsenal,P,Aegis Academy,P,One Shot
+2023-09-18,The Financier,Loud,G,Boarded Up,B,Small Arms Only,B,No Equipment Bags
+2023-09-19,The Setup,Stealth,B,Cascade Arsenal,P,Unintimidating,R,No Disguise
+2023-09-20,The Blacksite,Loud,B,Small Arms Only,B,No Equipment Bags,R,Explosive Flashbangs
+2023-09-21,The Withdrawal,Loud,G,No Aegis Armor,P,Hidden UI,P,Flashbang Revenge
+2023-09-22,The Financier,Stealth,B,Cascade Arsenal,B,Bloodless,P,Inexperienced
+2023-09-23,The Scientist,Stealth,P,Fifteen Minutes,P,Hidden Detection Bars,P,Reinforced Cameras
+2023-09-24,The Gala,Stealth,B,No Scrambler,B,Reinforced Locks,R,No Moving Bodies
+2023-09-25,The Killhouse,Loud,B,Mandatory Headshots,B,Flashbang Frenzy,P,One Shot
+2023-09-26,The SCRS,Loud,G,Fog,B,No Heavy Armor,P,Aegis Academy
+2023-09-27,Black Dusk,Loud,B,Reinforced Doors,P,Less Health,R,Shield Swarm
+2023-09-28,The Deposit,Stealth,G,No Suppressors,G,Misplaced Gear,G,No Safecracking
+2023-09-29,The Lockup,Loud,B,Glass Cannon,B,Armera Arsenal,R,No Explosives
+2023-09-30,The Killhouse,Loud,P,Aegis Academy,R,Explosive Revenge,R,Explosive Flashbangs
+2023-10-01,The Withdrawal,Stealth,B,Unskilled,B,Bloodless,P,Faster Detection
+2023-10-02,The Deposit,Stealth,B,Reinforced Doors,P,No Lockpicks,P,Reinforced Cameras
+2023-10-03,The Scientist,Stealth,B,Heavy Bags,P,Hidden Detection Bars,R,No Knockouts
+2023-10-04,The Auction,Stealth,G,No Suppressors,P,Fifteen Minutes,R,No Moving Bodies
+2023-10-05,The Blacksite,Loud,G,No Aegis Armor,B,Flashbang Frenzy,P,One Shot
+2023-10-06,The Lakehouse,Loud,G,Fog,B,No Heavy Armor,P,Weaker Medkits
+2023-10-07,The Financier,Stealth,G,No Safecracking,P,Unintimidating,P,Hidden UI
+2023-10-08,Black Dusk,Loud,B,Mandatory Headshots,P,Less Health,R,Shield Swarm
+2023-10-09,The Score,Loud,B,Criminal Arsenal,P,Flashbang Revenge,R,No Explosives
+2023-10-10,Black Dusk,Loud,B,Flashbang Frenzy,B,Criminal Arsenal,P,One Shot
+2023-10-11,The Killhouse,Loud,B,Glass Cannon,P,Flashbang Revenge,P,Hidden UI
+2023-10-12,The Lakehouse,Loud,B,No Equipment Bags,P,Weaker Medkits,R,Explosive Revenge
+2023-10-13,The Blacksite,Stealth,B,No Scrambler,B,Reinforced Doors,P,Inexperienced
+2023-10-14,The Gala,Stealth,G,Fog,B,Cascade Arsenal,P,Reinforced Cameras
+2023-10-15,The Withdrawal,Loud,G,No Aegis Armor,B,Armera Arsenal,R,No Explosives
+2023-10-16,The SCRS,Loud,B,Small Arms Only,P,Less Health,R,Explosive Flashbangs
+2023-10-17,The Financier,Stealth,G,No Safecracking,B,Heavy Bags,P,Hidden Detection Bars
+2023-10-18,The Deposit,Stealth,G,No Suppressors,G,Misplaced Gear,P,Fifteen Minutes
+2023-10-19,The Setup,Stealth,B,Reinforced Locks,P,Faster Detection,R,No Disguise
+2023-10-20,The Scientist,Loud,B,No Equipment Bags,B,Mandatory Headshots,R,Shield Swarm
+2023-10-21,The Financier,Loud,B,Reinforced Doors,P,Less Health,R,Explosive Flashbangs
+2023-10-22,The Killhouse,Stealth,G,No Suppressors,B,Heavy Bags,P,Hidden Detection Bars
+2023-10-23,The Lakehouse,Stealth,B,Bloodless,B,Cascade Arsenal,P,No Lockpicks
+2023-10-24,The Cache,Stealth,G,Fog,P,Hidden UI,P,Reinforced Cameras
+2023-10-25,The SCRS,Stealth,G,Misplaced Gear,B,Reinforced Locks,P,Faster Detection
+2023-10-26,The Withdrawal,Stealth,B,No Scrambler,P,Inexperienced,R,Takedown Limit
+2023-10-27,The Blacksite,Loud,B,Armera Arsenal,B,No Heavy Armor,R,Explosive Revenge
+2023-10-28,Black Dusk,Loud,B,Flashbang Frenzy,P,Weaker Medkits,P,One Shot
+2023-10-29,The Setup,Stealth,P,Unintimidating,P,Fifteen Minutes,R,No Disguise
+2023-10-30,The Financier,Loud,B,Reinforced Locks,P,Aegis Academy,P,Weaker Medkits
+2023-10-31,The Scientist,Stealth,G,Fog,P,Hidden Detection Bars,P,Fifteen Minutes
+2023-11-01,The Deposit,Stealth,G,No Suppressors,B,No Scrambler,R,No Moving Bodies
+2023-11-02,The Blacksite,Loud,B,Flashbang Frenzy,P,Less Health,R,Explosive Revenge
+2023-11-03,The Gala,Stealth,B,Reinforced Doors,B,Heavy Bags,P,Faster Detection
+2023-11-04,The SCRS,Stealth,B,Extra Cameras,P,Hidden UI,
+2023-11-05,The Withdrawal,Stealth,B,Bloodless,P,Inexperienced,P,Faster Detection
+2023-11-06,The Killhouse,Stealth,B,Reinforced Locks,P,Unintimidating,P,Faster Detection
+2023-11-07,The Lakehouse,Loud,G,No Aegis Armor,P,One Shot,R,No Explosives
+2023-11-08,The Setup,Stealth,G,No Safecracking,P,No Lockpicks,R,No Disguise
+2023-11-09,The Financier,Loud,B,Mandatory Headshots,B,Reinforced Doors,P,Flashbang Revenge
+2023-11-10,The Blacksite,Loud,B,Glass Cannon,R,Explosive Flashbangs,R,No Explosives
+2023-11-11,The SCRS,Stealth,B,Reinforced Locks,B,Cascade Arsenal,P,Hidden Detection Bars
+2023-11-12,The Killhouse,Loud,B,No Equipment Bags,P,Inexperienced,P,One Shot
+2023-11-13,The Cache,Stealth,B,Bloodless,B,No Scrambler,P,Fifteen Minutes
+2023-11-14,The Scientist,Loud,G,Fog,B,Small Arms Only,P,Aegis Academy
+2023-11-15,The Deposit,Stealth,G,No Safecracking,G,No Suppressors,B,Heavy Bags
+2023-11-16,Black Dusk,Loud,B,Flashbang Frenzy,P,Less Health,P,Weaker Medkits
+2023-11-17,The Lakehouse,Stealth,B,No Interrogation,P,No Lockpicks,P,Reinforced Cameras
+2023-11-18,The Score,Loud,G,No Aegis Armor,B,Criminal Arsenal,P,Hidden UI
+2023-11-19,The Scientist,Loud,B,Mandatory Headshots,B,No Equipment Bags,P,Weaker Medkits
+2023-11-20,Black Dusk,Loud,B,Reinforced Locks,B,Small Arms Only,R,No Explosives
+2023-11-21,The Financier,Loud,G,Fog,P,Less Health,P,Flashbang Revenge
+2023-11-22,The Deposit,Stealth,B,Extra Cameras,P,Faster Detection,P,Unintimidating
+2023-11-23,The Auction,Stealth,B,No Scrambler,P,Fifteen Minutes,R,No Moving Bodies
+2023-11-24,The SCRS,Loud,B,Flashbang Frenzy,B,Cascade Arsenal,P,Inexperienced
+2023-11-25,The Killhouse,Stealth,G,No Suppressors,B,Reinforced Doors,P,Hidden Detection Bars
+2023-11-26,The Blacksite,Stealth,B,Bloodless,B,Heavy Bags,P,Hidden UI
+2023-11-27,The Lakehouse,Stealth,B,No Interrogation,P,No Lockpicks,R,Takedown Limit
+2023-11-28,The Lockup,Stealth,G,Fog,P,Reinforced Cameras,R,Takedown Limit
+2023-11-29,The Scientist,Stealth,B,Reinforced Locks,B,Unskilled,P,Fifteen Minutes
+2023-11-30,The Killhouse,Loud,G,Fog,P,Flashbang Revenge,P,Less Health
+2023-12-01,The Withdrawal,Stealth,B,Cascade Arsenal,B,No Scrambler,P,Reinforced Cameras
+2023-12-02,Black Dusk,Loud,B,No Heavy Armor,B,Reinforced Doors,R,Explosive Revenge
+2023-12-03,The Gala,Stealth,G,No Suppressors,B,Heavy Bags,P,Hidden Detection Bars
+2023-12-04,The Blacksite,Stealth,B,Bloodless,P,Fifteen Minutes,P,Hidden UI
+2023-12-05,The Financier,Stealth,G,No Safecracking,P,No Lockpicks,P,Unintimidating
+2023-12-06,The Lakehouse,Loud,G,Boarded Up,B,No Equipment Bags,P,Weaker Medkits
+2023-12-07,The SCRS,Loud,G,No Aegis Armor,B,Flashbang Frenzy,B,Glass Cannon
+2023-12-08,The Setup,Stealth,P,Faster Detection,R,Takedown Limit,R,No Moving Bodies
+2023-12-09,The Financier,Stealth,G,No Suppressors,P,Fifteen Minutes,P,Inexperienced
+2023-12-10,The Killhouse,Loud,B,Flashbang Frenzy,P,Weaker Medkits,R,Explosive Flashbangs
+2023-12-11,The Withdrawal,Loud,B,Armera Arsenal,P,Hidden UI,P,Flashbang Revenge
+2023-12-12,The Scientist,Stealth,G,Fog,B,Heavy Bags,R,No Knockouts
+2023-12-13,The Auction,Stealth,B,No Scrambler,P,Reinforced Cameras,R,No Moving Bodies
+2023-12-14,The Deposit,Stealth,B,Extra Cameras,B,Cascade Arsenal,P,Hidden Detection Bars
+2023-12-15,Black Dusk,Loud,B,Criminal Arsenal,B,No Equipment Bags,R,Explosive Revenge
+2023-12-16,The Blacksite,Loud,G,No Aegis Armor,B,Glass Cannon,B,Reinforced Doors
+2023-12-17,The SCRS,Stealth,B,Bloodless,P,Unintimidating,P,Faster Detection
+2023-12-18,The Score,Loud,B,Mandatory Headshots,P,One Shot,R,No Explosives
+2023-12-19,The SCRS,Loud,B,Glass Cannon,R,Explosive Flashbangs,R,No Explosives
+2023-12-20,The Killhouse,Loud,B,No Equipment Bags,B,Mandatory Headshots,P,Hidden UI
+2023-12-21,The Lakehouse,Stealth,B,Bloodless,P,Unintimidating,P,Hidden Detection Bars
+2023-12-22,The Withdrawal,Loud,B,No Hybrid Classes,B,Criminal Arsenal,P,Less Health
+2023-12-23,The Gala,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Reinforced Cameras
+2023-12-24,The Deposit,Loud,G,Fog,B,No Heavy Armor,R,Explosive Revenge
+2023-12-25,Black Dusk,Loud,B,Flashbang Frenzy,B,Armera Arsenal,P,Aegis Academy
+2023-12-26,The Blacksite,Stealth,B,No Scrambler,B,Heavy Bags,P,Fifteen Minutes
+2023-12-27,The Scientist,Stealth,B,Reinforced Locks,P,Faster Detection,R,No Knockouts
+2023-12-28,The Setup,Stealth,B,Reinforced Doors,R,No Moving Bodies,R,Takedown Limit
+2023-12-29,The Lakehouse,Stealth,G,No Suppressors,P,No Lockpicks,R,Takedown Limit
+2023-12-30,Black Dusk,Loud,B,Reinforced Locks,P,Aegis Academy,R,No Explosives
+2023-12-31,The Withdrawal,Loud,B,Mandatory Headshots,B,Reinforced Doors,R,Explosive Revenge
+2024-01-01,The Blacksite,Stealth,B,Bloodless,B,No Scrambler,P,Hidden UI
+2024-01-02,The Cache,Stealth,G,Fog,P,Fifteen Minutes,P,Hidden Detection Bars
+2024-01-03,The Financier,Loud,B,Cascade Arsenal,P,One Shot,R,Shield Swarm
+2024-01-04,The Killhouse,Loud,G,No Aegis Armor,B,Flashbang Frenzy,P,Flashbang Revenge
+2024-01-05,The Deposit,Stealth,B,Extra Cameras,B,Heavy Bags,P,Reinforced Cameras
+2024-01-06,The Scientist,Stealth,B,Unskilled,P,Faster Detection,R,No Knockouts
+2024-01-07,The Score,Loud,B,Criminal Arsenal,P,Weaker Medkits,R,Explosive Flashbangs
+2024-01-08,Black Dusk,Loud,B,No Heavy Armor,B,Criminal Arsenal,P,Aegis Academy
+2024-01-09,The Withdrawal,Stealth,B,Reinforced Locks,B,No Scrambler,P,Fifteen Minutes
+2024-01-10,The Scientist,Stealth,B,Heavy Bags,P,Hidden UI,R,No Knockouts
+2024-01-11,The Deposit,Loud,G,Boarded Up,B,Cascade Arsenal,B,No Equipment Bags
+2024-01-12,The Cache,Stealth,G,No Safecracking,G,Fog,B,Bloodless
+2024-01-13,The Blacksite,Stealth,G,No Suppressors,B,Unskilled,P,Hidden Detection Bars
+2024-01-14,The Killhouse,Stealth,B,Reinforced Doors,P,Unintimidating,R,No Moving Bodies
+2024-01-15,The SCRS,Stealth,B,Extra Cameras,P,Reinforced Cameras,P,No Lockpicks
+2024-01-16,The Financier,Loud,B,Flashbang Frenzy,P,One Shot,R,Explosive Flashbangs
+2024-01-17,The Lockup,Stealth,B,Cascade Arsenal,P,Faster Detection,R,Takedown Limit
+2024-01-18,The Deposit,Stealth,G,No Suppressors,G,Misplaced Gear,B,No Hybrid Classes
+2024-01-19,The SCRS,Loud,B,Cascade Arsenal,B,No Heavy Armor,P,Hidden UI
+2024-01-20,The Financier,Loud,G,Boarded Up,B,Flashbang Frenzy,R,Explosive Revenge
+2024-01-21,The Lakehouse,Loud,B,Reinforced Doors,P,Weaker Medkits,P,Flashbang Revenge
+2024-01-22,The Auction,Stealth,B,Reinforced Locks,P,Hidden Detection Bars,R,No Disguise
+2024-01-23,The Blacksite,Stealth,B,No Scrambler,B,Heavy Bags,P,Fifteen Minutes
+2024-01-24,The Withdrawal,Stealth,B,Bloodless,P,No Lockpicks,P,Faster Detection
+2024-01-25,The Scientist,Stealth,G,Fog,P,Inexperienced,R,No Knockouts
+2024-01-26,The Killhouse,Loud,B,Mandatory Headshots,P,Aegis Academy,R,Explosive Flashbangs
+2024-01-27,The Setup,Stealth,P,Reinforced Cameras,P,Unintimidating,R,Takedown Limit
+2024-01-28,The Lakehouse,Stealth,B,Cascade Arsenal,B,Bloodless,P,Unintimidating
+2024-01-29,The Financier,Loud,G,No Aegis Armor,P,Weaker Medkits,R,Explosive Flashbangs
+2024-01-30,The Withdrawal,Stealth,B,Reinforced Doors,P,Hidden UI,P,Reinforced Cameras
+2024-01-31,The SCRS,Loud,G,Fog,B,No Hybrid Classes,P,Flashbang Revenge
+2024-02-01,The Cache,Stealth,G,No Safecracking,B,Heavy Bags,P,Faster Detection
+2024-02-02,The Deposit,Loud,B,Mandatory Headshots,R,No Explosives,R,Shield Swarm
+2024-02-03,The Killhouse,Loud,B,Reinforced Locks,P,Less Health,P,One Shot
+2024-02-04,The Scientist,Stealth,G,No Suppressors,P,Fifteen Minutes,P,Hidden Detection Bars
+2024-02-05,The Blacksite,Stealth,B,No Scrambler,P,Hidden Detection Bars,P,Inexperienced
+2024-02-06,The Setup,Stealth,P,No Lockpicks,R,No Moving Bodies,R,Takedown Limit
+2024-02-07,The SCRS,Loud,B,No Equipment Bags,B,No Heavy Armor,B,Flashbang Frenzy
+2024-02-08,The Blacksite,Stealth,B,No Scrambler,B,Bloodless,P,Fifteen Minutes
+2024-02-09,The Deposit,Stealth,G,No Suppressors,B,No Interrogation,B,Cascade Arsenal
+2024-02-10,The Lakehouse,Loud,G,Boarded Up,B,Reinforced Doors,P,Hidden UI
+2024-02-11,The Gala,Stealth,B,No Hybrid Classes,B,Reinforced Locks,P,Faster Detection
+2024-02-12,The Killhouse,Stealth,G,Fog,P,Unintimidating,P,Hidden Detection Bars
+2024-02-13,The Scientist,Stealth,B,Heavy Bags,B,Unskilled,R,No Knockouts
+2024-02-14,The Financier,Loud,B,Small Arms Only,P,One Shot,P,Flashbang Revenge
+2024-02-15,The Withdrawal,Stealth,P,No Lockpicks,R,No Moving Bodies,R,Takedown Limit
+2024-02-16,The Score,Loud,G,No Aegis Armor,B,Glass Cannon,P,Weaker Medkits
+2024-02-17,The Killhouse,Loud,B,Flashbang Frenzy,B,Reinforced Locks,P,One Shot
+2024-02-18,The Lakehouse,Stealth,B,Reinforced Doors,B,Bloodless,P,Reinforced Cameras
+2024-02-19,The SCRS,Loud,B,Cascade Arsenal,P,Less Health,R,No Explosives
+2024-02-20,The Scientist,Stealth,G,No Suppressors,P,Inexperienced,P,Hidden UI
+2024-02-21,The Auction,Stealth,G,Fog,B,No Scrambler,R,No Disguise
+2024-02-22,The Financier,Loud,B,Small Arms Only,P,Flashbang Revenge,R,Shield Swarm
+2024-02-23,Black Dusk,Loud,G,No Aegis Armor,B,Glass Cannon,P,Aegis Academy
+2024-02-24,The Withdrawal,Loud,B,Armera Arsenal,R,Explosive Revenge,R,Explosive Flashbangs
+2024-02-25,The Blacksite,Stealth,B,Bloodless,P,Hidden Detection Bars,P,Fifteen Minutes
+2024-02-26,The Lockup,Loud,B,Criminal Arsenal,B,No Heavy Armor,B,Unskilled
+2024-02-27,The Deposit,Stealth,G,Misplaced Gear,B,Weapon Scanners,P,Faster Detection
+2024-02-28,The Withdrawal,Loud,G,No Aegis Armor,P,One Shot,R,No Explosives
+2024-02-29,The SCRS,Loud,B,Small Arms Only,B,No Equipment Bags,R,Shield Swarm
+2024-03-01,The Blacksite,Stealth,B,Bloodless,P,Fifteen Minutes,P,Hidden Detection Bars
+2024-03-02,The Gala,Stealth,B,Cascade Arsenal,B,Reinforced Locks,R,No Moving Bodies
+2024-03-03,Black Dusk,Loud,B,No Heavy Armor,B,Armera Arsenal,P,Weaker Medkits
+2024-03-04,The Financier,Stealth,G,No Safecracking,B,No Interrogation,P,Hidden UI
+2024-03-05,The Lakehouse,Stealth,B,Reinforced Doors,B,Unskilled,P,No Lockpicks
+2024-03-06,The Killhouse,Loud,B,Glass Cannon,P,Aegis Academy,R,Explosive Flashbangs
+2024-03-07,The Lockup,Loud,B,Mandatory Headshots,P,Flashbang Revenge,P,Less Health
+2024-03-08,The Blacksite,Loud,B,Flashbang Frenzy,B,Unskilled,R,Explosive Flashbangs
+2024-03-09,The SCRS,Stealth,G,Fog,B,Reinforced Doors,P,No Lockpicks
+2024-03-10,The Lakehouse,Loud,B,Small Arms Only,B,No Heavy Armor,P,Less Health
+2024-03-11,Black Dusk,Loud,B,Cascade Arsenal,B,Glass Cannon,P,Hidden UI
+2024-03-12,The Auction,Stealth,B,Heavy Bags,P,Hidden Detection Bars,R,Takedown Limit
+2024-03-13,The Scientist,Loud,G,No Aegis Armor,B,Armera Arsenal,R,Explosive Revenge
+2024-03-14,The Financier,Stealth,B,Reinforced Locks,P,Faster Detection,R,No Moving Bodies
+2024-03-15,The Withdrawal,Loud,B,Mandatory Headshots,P,Flashbang Revenge,P,Weaker Medkits
+2024-03-16,The Deposit,Stealth,G,No Safecracking,G,Misplaced Gear,P,Fifteen Minutes
+2024-03-17,The Setup,Stealth,G,No Suppressors,B,No Scrambler,P,Reinforced Cameras
+2024-03-18,The Deposit,Stealth,G,Misplaced Gear,B,Bloodless,P,Fifteen Minutes
+2024-03-19,The Lakehouse,Stealth,B,Heavy Bags,P,Hidden UI,P,No Lockpicks
+2024-03-20,The Blacksite,Loud,B,Armera Arsenal,P,One Shot,R,Explosive Revenge
+2024-03-21,The SCRS,Loud,B,Glass Cannon,P,Inexperienced,R,Explosive Flashbangs
+2024-03-22,The Auction,Stealth,B,Reinforced Doors,R,No Moving Bodies,R,Takedown Limit
+2024-03-23,Black Dusk,Loud,G,No Aegis Armor,B,Reinforced Locks,P,Weaker Medkits
+2024-03-24,The Killhouse,Stealth,G,No Suppressors,G,Fog,P,Hidden Detection Bars
+2024-03-25,The Withdrawal,Loud,P,Aegis Academy,R,No Explosives,R,Shield Swarm
+2024-03-26,The Financier,Stealth,B,No Interrogation,B,Cascade Arsenal,P,Faster Detection
+2024-03-27,The Score,Loud,B,Criminal Arsenal,B,No Equipment Bags,P,Flashbang Revenge
+2024-03-28,The Deposit,Stealth,G,Misplaced Gear,B,Reinforced Doors,B,Bloodless
+2024-03-29,Black Dusk,Loud,B,Cascade Arsenal,P,Flashbang Revenge,P,Hidden UI
+2024-03-30,The SCRS,Stealth,G,No Suppressors,G,Fog,B,Unskilled
+2024-03-31,The Killhouse,Loud,B,Glass Cannon,P,One Shot,R,Explosive Revenge
+2024-04-01,The Auction,Stealth,B,Reinforced Locks,P,Fifteen Minutes,R,No Moving Bodies
+2024-04-02,The Financier,Stealth,P,Hidden Detection Bars,P,Unintimidating,P,No Lockpicks
+2024-04-03,The Blacksite,Loud,B,No Heavy Armor,P,Weaker Medkits,R,No Explosives
+2024-04-04,The Scientist,Stealth,B,Heavy Bags,P,Faster Detection,P,Reinforced Cameras
+2024-04-05,The Withdrawal,Loud,G,No Aegis Armor,B,Armera Arsenal,P,Less Health
+2024-04-06,The Setup,Stealth,G,No Safecracking,B,No Scrambler,R,No Disguise
+2024-04-07,The Deposit,Stealth,B,No Interrogation,P,Hidden UI,R,No Moving Bodies
+2024-04-08,Black Dusk,Loud,B,Cascade Arsenal,P,Weaker Medkits,R,Explosive Revenge
+2024-04-09,The Withdrawal,Stealth,B,Unskilled,P,Hidden Detection Bars,P,Fifteen Minutes
+2024-04-10,The Scientist,Stealth,G,Fog,P,Faster Detection,P,Reinforced Cameras
+2024-04-11,The Cache,Stealth,B,Bloodless,B,Reinforced Doors,P,Fifteen Minutes
+2024-04-12,The Killhouse,Stealth,G,No Suppressors,P,Hidden Detection Bars,P,Fifteen Minutes
+2024-04-13,The Blacksite,Loud,B,Small Arms Only,P,Less Health,R,No Explosives
+2024-04-14,The Lakehouse,Stealth,B,Heavy Bags,P,No Lockpicks,R,Takedown Limit
+2024-04-15,The Financier,Loud,G,No Aegis Armor,B,Reinforced Locks,P,Aegis Academy
+2024-04-16,The Score,Loud,B,No Equipment Bags,P,Flashbang Revenge,R,Shield Swarm
+2024-04-17,The Deposit,Stealth,B,Extra Cameras,P,Faster Detection,P,Reinforced Cameras
+2024-04-18,The Withdrawal,Stealth,B,No Scrambler,P,Hidden UI,P,No Lockpicks
+2024-04-19,The Killhouse,Stealth,B,Unskilled,P,Fifteen Minutes,R,No Moving Bodies
+2024-04-20,The Financier,Loud,B,Criminal Arsenal,B,Glass Cannon,R,Explosive Revenge
+2024-04-21,The Auction,Stealth,G,Fog,B,Bloodless,R,No Disguise
+2024-04-22,The SCRS,Stealth,G,No Suppressors,B,Reinforced Doors,
+2024-04-23,The Scientist,Loud,G,No Aegis Armor,B,Small Arms Only,R,Shield Swarm
+2024-04-24,The Blacksite,Stealth,B,Reinforced Locks,B,Cascade Arsenal,P,Hidden Detection Bars
+2024-04-25,The Lakehouse,Loud,B,No Heavy Armor,B,Armera Arsenal,P,Flashbang Revenge
+2024-04-26,The Lockup,Stealth,B,Heavy Bags,P,Unintimidating,R,Takedown Limit
+2024-04-27,The Financier,Loud,B,Criminal Arsenal,B,Flashbang Frenzy,P,Less Health
+2024-04-28,The SCRS,Stealth,B,Extra Cameras,P,Hidden UI,
+2024-04-29,The Withdrawal,Loud,G,Fog,B,Small Arms Only,P,One Shot
+2024-04-30,Black Dusk,Loud,B,Armera Arsenal,P,Flashbang Revenge,R,Shield Swarm
+2024-05-01,The Cache,Stealth,G,No Suppressors,B,Reinforced Locks,P,Reinforced Cameras
+2024-05-02,The Deposit,Loud,B,Mandatory Headshots,B,Reinforced Doors,P,Inexperienced
+2024-05-03,The Scientist,Stealth,B,Cascade Arsenal,P,Hidden Detection Bars,P,Fifteen Minutes
+2024-05-04,The Killhouse,Stealth,B,No Interrogation,B,Bloodless,P,Faster Detection
+2024-05-05,The Blacksite,Stealth,B,No Scrambler,B,Heavy Bags,P,Fifteen Minutes
+2024-05-06,The Lockup,Stealth,P,Unintimidating,P,No Lockpicks,P,Hidden Detection Bars
+2024-05-07,The Financier,Stealth,B,Cascade Arsenal,B,Bloodless,P,Unintimidating
+2024-05-08,The Withdrawal,Loud,G,Boarded Up,B,Unskilled,P,Hidden UI
+2024-05-09,The Deposit,Loud,B,No Equipment Bags,B,Mandatory Headshots,R,Explosive Flashbangs
+2024-05-10,The Killhouse,Stealth,G,No Suppressors,B,Reinforced Locks,R,No Moving Bodies
+2024-05-11,The Cache,Stealth,B,Heavy Bags,P,Fifteen Minutes,P,Hidden Detection Bars
+2024-05-12,Black Dusk,Loud,B,Small Arms Only,P,Aegis Academy,R,Shield Swarm
+2024-05-13,The SCRS,Loud,B,Glass Cannon,B,No Hybrid Classes,P,Weaker Medkits
+2024-05-14,The Lakehouse,Loud,B,Reinforced Doors,B,Criminal Arsenal,P,Flashbang Revenge
+2024-05-15,The Blacksite,Stealth,B,No Scrambler,B,Reinforced Locks,P,Fifteen Minutes
+2024-05-16,The Lockup,Stealth,P,No Lockpicks,P,Faster Detection,R,Takedown Limit
+2024-05-17,The Deposit,Stealth,G,No Safecracking,B,Heavy Bags,B,Weapon Scanners
+2024-05-18,The Financier,Stealth,B,No Interrogation,P,Hidden UI,P,No Lockpicks
+2024-05-19,The Withdrawal,Loud,G,Fog,B,Cascade Arsenal,R,Shield Swarm
+2024-05-20,The Killhouse,Loud,B,Reinforced Locks,B,Unskilled,P,Less Health
+2024-05-21,The Gala,Stealth,P,Hidden Detection Bars,P,Reinforced Cameras,R,No Moving Bodies
+2024-05-22,The Lakehouse,Loud,B,Mandatory Headshots,B,Glass Cannon,R,Explosive Revenge
+2024-05-23,The Scientist,Stealth,G,No Suppressors,P,Faster Detection,R,No Knockouts
+2024-05-24,Black Dusk,Loud,B,Armera Arsenal,P,Aegis Academy,P,Flashbang Revenge
+2024-05-25,The Blacksite,Stealth,B,No Scrambler,B,Bloodless,P,Fifteen Minutes
+2024-05-26,The Setup,Stealth,B,Reinforced Doors,P,Unintimidating,R,Takedown Limit
+2024-05-27,The SCRS,Loud,G,No Aegis Armor,B,Reinforced Locks,R,No Explosives
+2024-05-28,Black Dusk,Loud,B,Glass Cannon,B,Small Arms Only,P,Flashbang Revenge
+2024-05-29,The Scientist,Loud,B,No Heavy Armor,B,No Equipment Bags,R,Explosive Flashbangs
+2024-05-30,The Lakehouse,Loud,G,Boarded Up,B,Reinforced Doors,B,No Hybrid Classes
+2024-05-31,The Cache,Stealth,G,Fog,P,Hidden Detection Bars,P,Reinforced Cameras
+2024-06-01,The Financier,Stealth,P,Hidden UI,P,Unintimidating,P,No Lockpicks
+2024-06-02,The Deposit,Stealth,G,No Suppressors,B,Heavy Bags,P,Faster Detection
+2024-06-03,The Blacksite,Stealth,B,Bloodless,B,No Scrambler,P,Fifteen Minutes
+2024-06-04,The Withdrawal,Stealth,B,Cascade Arsenal,R,Takedown Limit,R,No Moving Bodies
+2024-06-05,The Score,Loud,B,Mandatory Headshots,P,Weaker Medkits,P,One Shot
+2024-06-06,The Blacksite,Loud,B,Mandatory Headshots,P,Flashbang Revenge,R,Shield Swarm
+2024-06-07,The Killhouse,Stealth,G,No Suppressors,B,Reinforced Locks,P,Hidden Detection Bars
+2024-06-08,Black Dusk,Loud,B,No Equipment Bags,B,Armera Arsenal,R,No Explosives
+2024-06-09,The Financier,Loud,B,Flashbang Frenzy,P,Less Health,R,Explosive Revenge
+2024-06-10,The Auction,Stealth,B,Heavy Bags,B,Reinforced Doors,P,Fifteen Minutes
+2024-06-11,The SCRS,Stealth,B,Cascade Arsenal,P,Hidden UI,P,Unintimidating
+2024-06-12,The Scientist,Stealth,P,Inexperienced,P,Reinforced Cameras,P,Faster Detection
+2024-06-13,The Deposit,Stealth,G,Fog,B,Weapon Scanners,R,No Moving Bodies
+2024-06-14,The Lakehouse,Stealth,B,Bloodless,B,No Interrogation,P,No Lockpicks
+2024-06-15,The Score,Loud,G,No Aegis Armor,P,One Shot,R,Explosive Flashbangs
+2024-06-16,Black Dusk,Loud,B,Reinforced Locks,B,Flashbang Frenzy,P,One Shot
+2024-06-17,The Lakehouse,Stealth,G,No Suppressors,B,No Hybrid Classes,R,Takedown Limit
+2024-06-18,The Deposit,Loud,G,No Aegis Armor,P,Weaker Medkits,R,No Explosives
+2024-06-19,The Scientist,Loud,B,Armera Arsenal,P,Hidden UI,R,Shield Swarm
+2024-06-20,The Cache,Stealth,B,Heavy Bags,B,Reinforced Doors,P,Fifteen Minutes
+2024-06-21,The Withdrawal,Stealth,B,Cascade Arsenal,P,No Lockpicks,R,No Moving Bodies
+2024-06-22,The Blacksite,Stealth,B,No Scrambler,B,Bloodless,P,Hidden Detection Bars
+2024-06-23,The Killhouse,Stealth,G,Fog,B,No Interrogation,P,Faster Detection
+2024-06-24,The SCRS,Stealth,B,Extra Cameras,P,Unintimidating,P,Reinforced Cameras
+2024-06-25,The Score,Loud,B,Glass Cannon,P,Aegis Academy,R,Explosive Revenge
+2024-06-26,The Lakehouse,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Reinforced Cameras
+2024-06-27,The Financier,Stealth,G,Fog,P,Hidden UI,R,No Moving Bodies
+2024-06-28,The SCRS,Loud,B,No Hybrid Classes,B,No Equipment Bags,B,Flashbang Frenzy
+2024-06-29,The Blacksite,Stealth,B,Heavy Bags,B,Bloodless,P,Fifteen Minutes
+2024-06-30,The Auction,Stealth,B,No Scrambler,P,Hidden Detection Bars,R,No Disguise
+2024-07-01,The Scientist,Loud,B,Armera Arsenal,P,Less Health,R,Explosive Revenge
+2024-07-02,The Deposit,Loud,B,Reinforced Locks,P,Aegis Academy,P,One Shot
+2024-07-03,Black Dusk,Loud,B,Criminal Arsenal,R,Shield Swarm,R,No Explosives
+2024-07-04,The Killhouse,Loud,B,No Heavy Armor,P,Weaker Medkits,R,Explosive Flashbangs
+2024-07-05,The Setup,Stealth,B,Reinforced Doors,P,Faster Detection,P,Unintimidating
+2024-07-06,The Blacksite,Loud,B,No Heavy Armor,B,Armera Arsenal,R,Explosive Flashbangs
+2024-07-07,The Financier,Loud,G,No Aegis Armor,B,Reinforced Locks,P,Weaker Medkits
+2024-07-08,The Killhouse,Stealth,B,No Hybrid Classes,B,Heavy Bags,P,Hidden UI
+2024-07-09,Black Dusk,Loud,B,Glass Cannon,B,Flashbang Frenzy,P,Flashbang Revenge
+2024-07-10,The Cache,Stealth,B,Bloodless,P,Hidden Detection Bars,P,Reinforced Cameras
+2024-07-11,The Scientist,Stealth,G,Fog,G,No Suppressors,P,Faster Detection
+2024-07-12,The Withdrawal,Loud,B,Criminal Arsenal,B,No Equipment Bags,R,No Explosives
+2024-07-13,The Deposit,Loud,B,Mandatory Headshots,B,Cascade Arsenal,P,Aegis Academy
+2024-07-14,The SCRS,Stealth,G,No Safecracking,P,Unintimidating,
+2024-07-15,The Lockup,Loud,B,Small Arms Only,P,Less Health,R,Explosive Revenge
+2024-07-16,The Scientist,Stealth,G,Fog,G,No Suppressors,P,Faster Detection
+2024-07-17,The Lakehouse,Loud,B,Flashbang Frenzy,P,One Shot,P,Weaker Medkits
+2024-07-18,The SCRS,Loud,B,Reinforced Locks,B,Unskilled,R,Explosive Revenge
+2024-07-19,The Blacksite,Stealth,B,No Scrambler,B,Reinforced Doors,P,Hidden UI
+2024-07-20,The Gala,Stealth,B,Heavy Bags,P,Reinforced Cameras,P,Hidden UI
+2024-07-21,The Withdrawal,Stealth,P,No Lockpicks,P,Fifteen Minutes,P,Hidden Detection Bars
+2024-07-22,The Deposit,Stealth,B,Weapon Scanners,B,Extra Cameras,R,No Moving Bodies
+2024-07-23,Black Dusk,Loud,B,No Equipment Bags,B,Small Arms Only,R,Shield Swarm
+2024-07-24,The Killhouse,Loud,B,No Heavy Armor,B,Mandatory Headshots,P,Less Health
+2024-07-25,The Lockup,Loud,G,No Aegis Armor,B,Criminal Arsenal,R,Explosive Flashbangs
+2024-07-26,The Blacksite,Loud,B,Reinforced Locks,P,Hidden UI,R,Shield Swarm
+2024-07-27,The SCRS,Stealth,B,Bloodless,P,Unintimidating,P,Inexperienced
+2024-07-28,The Lakehouse,Loud,G,Fog,B,Reinforced Doors,R,No Explosives
+2024-07-29,The Killhouse,Loud,B,No Heavy Armor,B,No Equipment Bags,P,Aegis Academy
+2024-07-30,The Auction,Stealth,B,Cascade Arsenal,P,Faster Detection,R,No Disguise
+2024-07-31,The Deposit,Stealth,G,No Safecracking,G,No Suppressors,B,No Interrogation
+2024-08-01,Black Dusk,Loud,G,No Aegis Armor,P,Less Health,R,Explosive Revenge
+2024-08-02,The Withdrawal,Stealth,B,Heavy Bags,P,Hidden Detection Bars,R,Takedown Limit
+2024-08-03,The Scientist,Loud,B,Armera Arsenal,P,Flashbang Revenge,P,One Shot
+2024-08-04,The Score,Loud,B,Criminal Arsenal,P,Weaker Medkits,R,Explosive Flashbangs
+2024-08-05,The Deposit,Stealth,G,No Safecracking,B,Reinforced Locks,P,Faster Detection
+2024-08-06,Black Dusk,Loud,G,No Aegis Armor,B,Reinforced Doors,P,Aegis Academy
+2024-08-07,The Scientist,Stealth,G,No Suppressors,P,Hidden UI,R,No Knockouts
+2024-08-08,The Withdrawal,Stealth,B,Cascade Arsenal,P,Hidden Detection Bars,R,No Moving Bodies
+2024-08-09,The Gala,Stealth,B,Unskilled,B,No Scrambler,P,Reinforced Cameras
+2024-08-10,The Financier,Loud,B,No Equipment Bags,B,Armera Arsenal,R,No Explosives
+2024-08-11,The SCRS,Stealth,G,Misplaced Gear,B,Extra Cameras,P,No Lockpicks
+2024-08-12,The Blacksite,Loud,B,Criminal Arsenal,P,Less Health,P,Weaker Medkits
+2024-08-13,The Killhouse,Loud,B,Glass Cannon,P,One Shot,R,Explosive Revenge
+2024-08-14,The Lockup,Loud,B,Mandatory Headshots,B,No Heavy Armor,R,Explosive Flashbangs
+2024-08-15,The Financier,Stealth,B,Reinforced Doors,B,Unskilled,P,Hidden Detection Bars
+2024-08-16,The Blacksite,Stealth,G,No Suppressors,B,No Scrambler,P,Hidden UI
+2024-08-17,Black Dusk,Loud,B,Cascade Arsenal,B,Mandatory Headshots,P,Flashbang Revenge
+2024-08-18,The SCRS,Stealth,G,Misplaced Gear,B,Bloodless,P,Reinforced Cameras
+2024-08-19,The Gala,Stealth,B,Heavy Bags,B,Reinforced Locks,P,Faster Detection
+2024-08-20,The Withdrawal,Stealth,G,Fog,R,No Moving Bodies,R,Takedown Limit
+2024-08-21,The Lakehouse,Loud,G,No Aegis Armor,G,Boarded Up,P,Less Health
+2024-08-22,The Killhouse,Loud,B,Flashbang Frenzy,P,Weaker Medkits,P,One Shot
+2024-08-23,The Deposit,Stealth,B,Extra Cameras,P,Fifteen Minutes,P,Unintimidating
+2024-08-24,The Setup,Stealth,G,No Safecracking,P,Faster Detection,R,No Disguise
+2024-08-25,The Withdrawal,Stealth,B,Reinforced Doors,P,Faster Detection,R,Takedown Limit
+2024-08-26,The Lakehouse,Stealth,B,Bloodless,P,Unintimidating,P,Reinforced Cameras
+2024-08-27,The Deposit,Stealth,G,No Safecracking,B,Unskilled,P,Hidden UI
+2024-08-28,Black Dusk,Loud,B,Small Arms Only,B,Glass Cannon,R,Shield Swarm
+2024-08-29,The Gala,Stealth,G,Fog,B,No Scrambler,R,No Moving Bodies
+2024-08-30,The SCRS,Loud,B,Reinforced Locks,P,Less Health,R,No Explosives
+2024-08-31,The Financier,Loud,B,Flashbang Frenzy,R,Explosive Flashbangs,R,Explosive Revenge
+2024-09-01,The Blacksite,Loud,B,No Heavy Armor,P,Flashbang Revenge,P,Weaker Medkits
+2024-09-02,The Scientist,Stealth,B,Cascade Arsenal,P,Hidden Detection Bars,P,Fifteen Minutes
+2024-09-03,The Lockup,Stealth,G,No Suppressors,B,Heavy Bags,P,No Lockpicks
+2024-09-04,The Financier,Loud,P,Less Health,R,Explosive Flashbangs,R,Explosive Revenge
+2024-09-05,The Withdrawal,Loud,G,Boarded Up,P,One Shot,P,Flashbang Revenge
+2024-09-06,The Killhouse,Stealth,G,Fog,P,Unintimidating,P,Hidden UI
+2024-09-07,The Scientist,Loud,B,Cascade Arsenal,B,Mandatory Headshots,P,Aegis Academy
+2024-09-08,The Gala,Stealth,B,Heavy Bags,B,Reinforced Locks,P,Hidden Detection Bars
+2024-09-09,The SCRS,Stealth,G,No Safecracking,B,Bloodless,P,Reinforced Cameras
+2024-09-10,Black Dusk,Loud,B,Reinforced Doors,B,Armera Arsenal,R,Shield Swarm
+2024-09-11,The Deposit,Stealth,B,Weapon Scanners,P,Inexperienced,P,Fifteen Minutes
+2024-09-12,The Blacksite,Loud,G,No Aegis Armor,B,Small Arms Only,B,Flashbang Frenzy
+2024-09-13,The Lockup,Stealth,P,No Lockpicks,P,Faster Detection,R,Takedown Limit
+2024-09-14,The Financier,Stealth,B,Cascade Arsenal,P,Unintimidating,P,Hidden Detection Bars
+2024-09-15,The SCRS,Stealth,G,No Safecracking,B,Heavy Bags,B,Bloodless
+2024-09-16,The Lakehouse,Stealth,G,Fog,B,No Interrogation,P,Hidden UI
+2024-09-17,The Withdrawal,Loud,B,Armera Arsenal,P,Weaker Medkits,P,Aegis Academy
+2024-09-18,The Cache,Stealth,B,Reinforced Doors,P,Fifteen Minutes,P,Inexperienced
+2024-09-19,The Deposit,Stealth,G,Misplaced Gear,P,Reinforced Cameras,P,Faster Detection
+2024-09-20,The Scientist,Loud,G,No Aegis Armor,R,Explosive Flashbangs,R,Explosive Revenge
+2024-09-21,The Blacksite,Stealth,G,No Suppressors,B,Reinforced Locks,B,No Scrambler
+2024-09-22,The Killhouse,Loud,B,Mandatory Headshots,B,Flashbang Frenzy,P,One Shot
+2024-09-23,The Score,Loud,B,No Equipment Bags,B,Glass Cannon,R,No Explosives
+2024-09-24,The Financier,Loud,B,Unskilled,B,Reinforced Doors,R,Shield Swarm
+2024-09-25,The Deposit,Loud,B,Glass Cannon,B,Reinforced Locks,R,Explosive Revenge
+2024-09-26,The Scientist,Loud,G,Fog,B,Flashbang Frenzy,P,Flashbang Revenge
+2024-09-27,The SCRS,Stealth,G,Misplaced Gear,B,Bloodless,B,Extra Cameras
+2024-09-28,The Cache,Stealth,B,Heavy Bags,P,Hidden Detection Bars,P,Reinforced Cameras
+2024-09-29,The Lakehouse,Loud,G,Boarded Up,P,Less Health,P,Hidden UI
+2024-09-30,Black Dusk,Loud,B,Armera Arsenal,B,No Equipment Bags,R,No Explosives
+2024-10-01,The Withdrawal,Stealth,B,No Scrambler,P,Fifteen Minutes,R,Takedown Limit
+2024-10-02,The Blacksite,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Inexperienced
+2024-10-03,The Lockup,Stealth,G,No Suppressors,P,Faster Detection,P,No Lockpicks
+2024-10-04,The Withdrawal,Loud,G,Boarded Up,P,Hidden UI,R,Explosive Revenge
+2024-10-05,The Financier,Loud,G,No Aegis Armor,B,No Hybrid Classes,R,No Explosives
+2024-10-06,The Lakehouse,Loud,G,Fog,B,Reinforced Doors,P,One Shot
+2024-10-07,The Killhouse,Stealth,B,Bloodless,B,Reinforced Locks,B,No Interrogation
+2024-10-08,The Auction,Stealth,G,No Suppressors,B,No Scrambler,P,Hidden Detection Bars
+2024-10-09,The Blacksite,Stealth,B,Cascade Arsenal,B,Heavy Bags,B,Unskilled
+2024-10-10,Black Dusk,Loud,B,Glass Cannon,P,Flashbang Revenge,R,Shield Swarm
+2024-10-11,The Scientist,Stealth,P,Reinforced Cameras,P,Faster Detection,P,Inexperienced
+2024-10-12,The Deposit,Stealth,B,Extra Cameras,B,Weapon Scanners,R,No Moving Bodies
+2024-10-13,The Lockup,Stealth,B,Cascade Arsenal,P,Unintimidating,P,Fifteen Minutes
+2024-10-14,The Withdrawal,Loud,B,Mandatory Headshots,B,Flashbang Frenzy,R,Explosive Revenge
+2024-10-15,The Financier,Stealth,B,No Interrogation,B,Reinforced Locks,P,Faster Detection
+2024-10-16,The Blacksite,Stealth,G,No Suppressors,B,Reinforced Doors,B,Unskilled
+2024-10-17,The Deposit,Loud,G,Boarded Up,B,Cascade Arsenal,B,Glass Cannon
+2024-10-18,The Gala,Stealth,G,Fog,B,Bloodless,B,Heavy Bags
+2024-10-19,The Scientist,Loud,B,Criminal Arsenal,P,Flashbang Revenge,R,Shield Swarm
+2024-10-20,Black Dusk,Loud,P,Less Health,R,Explosive Flashbangs,R,No Explosives
+2024-10-21,The SCRS,Loud,G,No Aegis Armor,P,Hidden UI,P,One Shot
+2024-10-22,The Lakehouse,Stealth,P,Reinforced Cameras,P,No Lockpicks,R,Takedown Limit
+2024-10-23,The Setup,Stealth,P,Hidden Detection Bars,P,Fifteen Minutes,R,No Moving Bodies
+2024-10-24,The Scientist,Loud,G,Fog,B,Unskilled,P,Flashbang Revenge
+2024-10-25,The Withdrawal,Stealth,B,Bloodless,P,Fifteen Minutes,P,Hidden UI
+2024-10-26,The Blacksite,Stealth,B,Reinforced Doors,B,Heavy Bags,P,Hidden Detection Bars
+2024-10-27,The Deposit,Loud,B,Reinforced Locks,B,Armera Arsenal,R,No Explosives
+2024-10-28,The Cache,Stealth,G,No Suppressors,P,Reinforced Cameras,P,Hidden UI
+2024-10-29,The SCRS,Stealth,B,Cascade Arsenal,B,Extra Cameras,P,Unintimidating
+2024-10-30,The Financier,Stealth,G,No Safecracking,P,Faster Detection,P,No Lockpicks
+2024-10-31,The Lakehouse,Loud,G,No Aegis Armor,P,Weaker Medkits,R,Explosive Flashbangs
+2024-11-01,Black Dusk,Loud,B,Small Arms Only,B,Mandatory Headshots,P,Aegis Academy
+2024-11-02,The Lockup,Loud,B,No Equipment Bags,P,Less Health,P,One Shot
+2024-11-03,The Withdrawal,Stealth,G,No Suppressors,B,No Hybrid Classes,P,Hidden UI
+2024-11-04,The Blacksite,Stealth,B,Reinforced Locks,B,Cascade Arsenal,P,Fifteen Minutes
+2024-11-05,The Scientist,Stealth,G,Fog,P,Reinforced Cameras,P,Faster Detection
+2024-11-06,Black Dusk,Loud,G,No Aegis Armor,P,Weaker Medkits,R,Explosive Flashbangs
+2024-11-07,The Cache,Stealth,G,No Safecracking,B,Reinforced Doors,P,Hidden Detection Bars
+2024-11-08,The Financier,Loud,B,Small Arms Only,B,No Equipment Bags,P,Less Health
+2024-11-09,The SCRS,Stealth,B,Bloodless,B,Heavy Bags,P,Unintimidating
+2024-11-10,The Deposit,Loud,B,Criminal Arsenal,B,Flashbang Frenzy,R,No Explosives
+2024-11-11,The Killhouse,Stealth,B,Reinforced Doors,B,No Interrogation,R,No Moving Bodies
+2024-11-12,The Setup,Stealth,B,No Scrambler,P,No Lockpicks,R,Takedown Limit
+2024-11-13,The SCRS,Stealth,B,Reinforced Locks,B,Cascade Arsenal,P,Faster Detection
+2024-11-14,The Blacksite,Loud,B,Flashbang Frenzy,P,Hidden UI,R,Explosive Revenge
+2024-11-15,Black Dusk,Loud,G,No Aegis Armor,B,Armera Arsenal,B,Reinforced Doors
+2024-11-16,The Withdrawal,Loud,B,Criminal Arsenal,P,Flashbang Revenge,R,No Explosives
+2024-11-17,The Auction,Stealth,G,Fog,P,Hidden Detection Bars,R,No Disguise
+2024-11-18,The Scientist,Stealth,B,Cascade Arsenal,B,Heavy Bags,R,No Knockouts
+2024-11-19,The Lakehouse,Loud,B,Small Arms Only,B,Glass Cannon,B,No Heavy Armor
+2024-11-20,The Killhouse,Stealth,G,No Suppressors,B,No Interrogation,R,No Moving Bodies
+2024-11-21,The Financier,Stealth,B,Bloodless,B,No Hybrid Classes,P,Fifteen Minutes
+2024-11-22,The Lockup,Stealth,P,No Lockpicks,P,Reinforced Cameras,R,Takedown Limit
+2024-11-23,The SCRS,Loud,B,Flashbang Frenzy,B,No Equipment Bags,R,Explosive Flashbangs
+2024-11-24,The Deposit,Loud,B,Reinforced Locks,P,Hidden UI,R,No Explosives
+2024-11-25,Black Dusk,Loud,B,Cascade Arsenal,P,One Shot,R,Shield Swarm
+2024-11-26,The Withdrawal,Stealth,B,Heavy Bags,P,Hidden Detection Bars,P,No Lockpicks
+2024-11-27,The Cache,Stealth,B,Reinforced Doors,P,Inexperienced,P,Faster Detection
+2024-11-28,The Blacksite,Stealth,G,No Suppressors,P,Fifteen Minutes,P,Hidden UI
+2024-11-29,The Lakehouse,Loud,G,Boarded Up,B,Mandatory Headshots,P,Weaker Medkits
+2024-11-30,The Financier,Stealth,G,Fog,B,Bloodless,P,Unintimidating
+2024-12-01,The Killhouse,Loud,G,No Aegis Armor,B,Glass Cannon,P,Flashbang Revenge
+2024-12-02,The Score,Loud,B,Criminal Arsenal,P,Aegis Academy,R,Explosive Revenge
+2024-12-03,The Killhouse,Loud,B,Flashbang Frenzy,P,One Shot,P,Less Health
+2024-12-04,Black Dusk,Loud,B,Armera Arsenal,B,No Hybrid Classes,P,Hidden UI
+2024-12-05,The Scientist,Loud,B,Glass Cannon,P,Aegis Academy,R,No Explosives
+2024-12-06,The Deposit,Stealth,G,Misplaced Gear,B,No Scrambler,P,Fifteen Minutes
+2024-12-07,The Auction,Stealth,G,Fog,B,Reinforced Locks,P,Faster Detection
+2024-12-08,The SCRS,Loud,B,Mandatory Headshots,B,Criminal Arsenal,R,Shield Swarm
+2024-12-09,The Blacksite,Stealth,B,Reinforced Doors,B,Heavy Bags,P,Hidden Detection Bars
+2024-12-10,The Withdrawal,Stealth,B,Cascade Arsenal,P,Reinforced Cameras,R,No Moving Bodies
+2024-12-11,The Financier,Stealth,G,No Suppressors,P,Hidden Detection Bars,P,No Lockpicks
+2024-12-12,The Score,Loud,G,No Aegis Armor,P,Flashbang Revenge,R,Explosive Flashbangs
+2024-12-13,The SCRS,Stealth,B,Extra Cameras,B,Heavy Bags,P,Faster Detection
+2024-12-14,The Financier,Loud,B,No Equipment Bags,P,Weaker Medkits,P,Flashbang Revenge
+2024-12-15,The Withdrawal,Loud,B,Flashbang Frenzy,P,One Shot,R,Explosive Flashbangs
+2024-12-16,The Lakehouse,Stealth,B,No Interrogation,P,Inexperienced,P,Hidden Detection Bars
+2024-12-17,The Cache,Stealth,G,No Safecracking,B,Bloodless,P,Reinforced Cameras
+2024-12-18,The Scientist,Loud,G,Fog,B,No Heavy Armor,P,Hidden UI
+2024-12-19,Black Dusk,Loud,B,Cascade Arsenal,P,Aegis Academy,R,Shield Swarm
+2024-12-20,The Deposit,Loud,B,Small Arms Only,R,Explosive Revenge,R,No Explosives
+2024-12-21,The Blacksite,Stealth,G,No Suppressors,B,Reinforced Doors,P,Fifteen Minutes
+2024-12-22,The Score,Loud,B,Glass Cannon,B,Criminal Arsenal,B,Mandatory Headshots
+2024-12-23,Black Dusk,Loud,B,No Heavy Armor,P,Aegis Academy,R,Explosive Revenge
+2024-12-24,The Blacksite,Loud,B,Cascade Arsenal,P,Less Health,R,Explosive Flashbangs
+2024-12-25,The Withdrawal,Stealth,G,Fog,B,Reinforced Doors,P,Hidden UI
+2024-12-26,The Scientist,Stealth,B,Reinforced Locks,B,Heavy Bags,P,Reinforced Cameras
+2024-12-27,The Auction,Stealth,B,No Scrambler,P,Hidden Detection Bars,R,No Disguise
+2024-12-28,The Deposit,Stealth,B,No Interrogation,P,Fifteen Minutes,R,No Moving Bodies
+2024-12-29,The Killhouse,Stealth,G,No Suppressors,B,Unskilled,P,Faster Detection
+2024-12-30,The Financier,Stealth,G,No Safecracking,P,Unintimidating,P,No Lockpicks
+2024-12-31,The Lakehouse,Loud,B,Mandatory Headshots,B,Armera Arsenal,R,Shield Swarm
+2025-01-01,The Lockup,Stealth,B,Bloodless,P,No Lockpicks,R,Takedown Limit
+2025-01-02,The Withdrawal,Loud,B,No Heavy Armor,B,Flashbang Frenzy,P,Hidden UI
+2025-01-03,The Killhouse,Stealth,B,Reinforced Locks,P,Faster Detection,P,Unintimidating
+2025-01-04,The SCRS,Stealth,G,Misplaced Gear,G,Fog,
+2025-01-05,The Scientist,Loud,B,Cascade Arsenal,P,Flashbang Revenge,P,Weaker Medkits
+2025-01-06,The Gala,Stealth,G,No Suppressors,P,Reinforced Cameras,P,Hidden Detection Bars
+2025-01-07,Black Dusk,Loud,B,Reinforced Doors,P,Aegis Academy,R,Explosive Revenge
+2025-01-08,The Financier,Stealth,B,Unskilled,B,No Interrogation,R,No Moving Bodies
+2025-01-09,The Lakehouse,Loud,G,Boarded Up,P,One Shot,R,Shield Swarm
+2025-01-10,The Deposit,Stealth,B,No Scrambler,B,Extra Cameras,P,Fifteen Minutes
+2025-01-11,The Score,Loud,B,Mandatory Headshots,B,No Equipment Bags,R,No Explosives
+2025-01-12,The Killhouse,Stealth,B,Bloodless,P,Unintimidating,P,Hidden Detection Bars
+2025-01-13,The Lakehouse,Stealth,B,No Interrogation,B,Reinforced Doors,P,Hidden UI
+2025-01-14,Black Dusk,Loud,B,No Equipment Bags,P,Inexperienced,R,Explosive Revenge
+2025-01-15,The Scientist,Stealth,B,Heavy Bags,P,Reinforced Cameras,P,Faster Detection
+2025-01-16,The Auction,Stealth,G,No Suppressors,B,Cascade Arsenal,R,No Disguise
+2025-01-17,The Blacksite,Stealth,B,Reinforced Locks,B,No Scrambler,P,Fifteen Minutes
+2025-01-18,The Withdrawal,Loud,B,Armera Arsenal,R,Explosive Flashbangs,R,No Explosives
+2025-01-19,The Deposit,Stealth,G,Fog,B,Extra Cameras,R,No Moving Bodies
+2025-01-20,The Financier,Loud,G,No Aegis Armor,B,Mandatory Headshots,P,Weaker Medkits
+2025-01-21,The Lockup,Loud,B,Criminal Arsenal,B,No Heavy Armor,P,Less Health
+2025-01-22,The Withdrawal,Loud,B,Glass Cannon,B,No Hybrid Classes,P,Weaker Medkits
+2025-01-23,Black Dusk,Loud,B,No Equipment Bags,B,No Heavy Armor,P,Flashbang Revenge
+2025-01-24,The Lakehouse,Loud,G,No Aegis Armor,G,Fog,P,One Shot
+2025-01-25,The Deposit,Stealth,G,No Safecracking,B,Extra Cameras,P,Hidden UI
+2025-01-26,The Cache,Stealth,G,No Suppressors,P,Faster Detection,P,Reinforced Cameras
+2025-01-27,The SCRS,Stealth,B,Heavy Bags,B,Reinforced Doors,P,Hidden Detection Bars
+2025-01-28,The Financier,Stealth,B,No Interrogation,B,Reinforced Locks,B,Bloodless
+2025-01-29,The Scientist,Loud,B,Mandatory Headshots,P,Less Health,R,Shield Swarm
+2025-01-30,The Blacksite,Stealth,B,No Scrambler,P,Fifteen Minutes,P,Hidden UI
+2025-01-31,The Lockup,Loud,B,Criminal Arsenal,B,Flashbang Frenzy,P,Aegis Academy
+2025-02-01,The Withdrawal,Loud,B,Reinforced Locks,B,Cascade Arsenal,P,Aegis Academy
+2025-02-02,The Deposit,Stealth,P,Unintimidating,P,Reinforced Cameras,P,Hidden UI
+2025-02-03,The Lakehouse,Loud,B,Flashbang Frenzy,B,Unskilled,P,One Shot
+2025-02-04,The Killhouse,Stealth,G,Fog,B,Bloodless,P,Faster Detection
+2025-02-05,The Gala,Stealth,B,Heavy Bags,B,No Scrambler,P,Hidden Detection Bars
+2025-02-06,The Scientist,Loud,B,Small Arms Only,P,Less Health,R,Explosive Flashbangs
+2025-02-07,The SCRS,Stealth,G,No Suppressors,B,Extra Cameras,B,Reinforced Doors
+2025-02-08,The Blacksite,Loud,B,Armera Arsenal,B,Mandatory Headshots,R,Explosive Revenge
+2025-02-09,Black Dusk,Loud,G,No Aegis Armor,P,Flashbang Revenge,R,Shield Swarm
+2025-02-10,The Score,Loud,B,Criminal Arsenal,B,No Equipment Bags,R,No Explosives
+2025-02-11,The Blacksite,Loud,B,No Equipment Bags,B,Cascade Arsenal,P,Less Health
+2025-02-12,The Scientist,Loud,B,Armera Arsenal,P,Weaker Medkits,R,Shield Swarm
+2025-02-13,The Financier,Stealth,G,No Safecracking,B,Unskilled,P,Unintimidating
+2025-02-14,The SCRS,Stealth,B,Bloodless,P,No Lockpicks,P,Reinforced Cameras
+2025-02-15,The Gala,Stealth,G,Fog,P,Faster Detection,R,No Moving Bodies
+2025-02-16,The Killhouse,Loud,B,Glass Cannon,B,Reinforced Doors,P,Aegis Academy
+2025-02-17,The Withdrawal,Loud,B,No Heavy Armor,B,Criminal Arsenal,P,Flashbang Revenge
+2025-02-18,The Lakehouse,Stealth,G,No Suppressors,B,Heavy Bags,P,Hidden UI
+2025-02-19,Black Dusk,Loud,B,Flashbang Frenzy,P,One Shot,R,No Explosives
+2025-02-20,The Score,Loud,B,Mandatory Headshots,B,Reinforced Locks,R,Explosive Flashbangs
+2025-02-21,The Deposit,Stealth,B,Bloodless,B,Reinforced Doors,P,Hidden Detection Bars
+2025-02-22,The Scientist,Stealth,B,Heavy Bags,P,Faster Detection,R,No Knockouts
+2025-02-23,The Financier,Stealth,B,Cascade Arsenal,P,Unintimidating,P,Fifteen Minutes
+2025-02-24,Black Dusk,Loud,P,Flashbang Revenge,P,Aegis Academy,R,Explosive Flashbangs
+2025-02-25,The Auction,Stealth,B,No Scrambler,P,Hidden UI,R,No Disguise
+2025-02-26,The SCRS,Loud,B,Armera Arsenal,B,Flashbang Frenzy,P,Less Health
+2025-02-27,The Blacksite,Loud,G,No Aegis Armor,P,Weaker Medkits,R,Explosive Revenge
+2025-02-28,The Killhouse,Loud,G,Fog,B,Glass Cannon,R,Shield Swarm
+2025-03-01,The Withdrawal,Stealth,G,No Suppressors,B,Unskilled,R,No Moving Bodies
+2025-03-02,The Lockup,Stealth,P,No Lockpicks,P,Reinforced Cameras,R,Takedown Limit
+2025-03-03,The Withdrawal,Loud,G,Fog,B,Cascade Arsenal,P,One Shot
+2025-03-04,The Lakehouse,Stealth,B,No Interrogation,P,Faster Detection,P,No Lockpicks
+2025-03-05,The Blacksite,Stealth,B,Unskilled,P,Fifteen Minutes,P,Hidden UI
+2025-03-06,The Scientist,Loud,B,Small Arms Only,P,Flashbang Revenge,P,Less Health
+2025-03-07,The Gala,Stealth,B,Reinforced Doors,B,Heavy Bags,P,Hidden Detection Bars
+2025-03-08,The Killhouse,Stealth,G,No Suppressors,B,Reinforced Locks,R,No Moving Bodies
+2025-03-09,The Deposit,Loud,B,Flashbang Frenzy,B,No Equipment Bags,P,Weaker Medkits
+2025-03-10,Black Dusk,Loud,B,Mandatory Headshots,B,Armera Arsenal,R,Shield Swarm
+2025-03-11,The SCRS,Stealth,G,No Safecracking,P,Unintimidating,
+2025-03-12,The Lockup,Loud,G,No Aegis Armor,R,No Explosives,R,Explosive Revenge
+2025-03-13,The Withdrawal,Loud,B,Cascade Arsenal,P,Hidden UI,R,Explosive Flashbangs
+2025-03-14,The Killhouse,Stealth,B,Reinforced Locks,B,Unskilled,P,Faster Detection
+2025-03-15,The SCRS,Stealth,B,Extra Cameras,B,Heavy Bags,P,Hidden Detection Bars
+2025-03-16,The Blacksite,Loud,G,No Aegis Armor,B,Reinforced Doors,B,Small Arms Only
+2025-03-17,The Gala,Stealth,G,No Suppressors,P,Reinforced Cameras,R,No Moving Bodies
+2025-03-18,Black Dusk,Loud,B,Criminal Arsenal,P,One Shot,P,Aegis Academy
+2025-03-19,The Deposit,Stealth,B,No Interrogation,P,Fifteen Minutes,P,No Lockpicks
+2025-03-20,The Scientist,Stealth,G,Fog,P,Hidden UI,R,No Knockouts
+2025-03-21,The Financier,Loud,B,Armera Arsenal,P,Weaker Medkits,R,Explosive Revenge
+2025-03-22,The Score,Loud,B,No Equipment Bags,P,Flashbang Revenge,R,No Explosives
+2025-03-23,The Deposit,Loud,G,Boarded Up,B,Small Arms Only,R,No Explosives
+2025-03-24,Black Dusk,Loud,B,Flashbang Frenzy,B,No Heavy Armor,P,Flashbang Revenge
+2025-03-25,The SCRS,Stealth,G,Fog,B,Unskilled,P,Reinforced Cameras
+2025-03-26,The Blacksite,Loud,G,No Aegis Armor,B,Mandatory Headshots,B,Armera Arsenal
+2025-03-27,The Gala,Stealth,G,No Suppressors,P,Faster Detection,R,No Moving Bodies
+2025-03-28,The Killhouse,Stealth,B,Bloodless,P,Hidden UI,P,Unintimidating
+2025-03-29,The Withdrawal,Stealth,B,Heavy Bags,P,Fifteen Minutes,P,No Lockpicks
+2025-03-30,The Financier,Stealth,B,Reinforced Locks,B,No Interrogation,P,Hidden Detection Bars
+2025-03-31,The Scientist,Stealth,B,Cascade Arsenal,P,Fifteen Minutes,R,No Knockouts
+2025-04-01,The Score,Loud,B,Glass Cannon,R,Explosive Flashbangs,R,Explosive Revenge
+2025-04-02,The Blacksite,Loud,B,Glass Cannon,P,Weaker Medkits,R,Explosive Revenge
+2025-04-03,The Withdrawal,Loud,G,No Aegis Armor,B,Reinforced Doors,P,Less Health
+2025-04-04,The SCRS,Stealth,G,Fog,P,Reinforced Cameras,P,Hidden UI
+2025-04-05,The Killhouse,Stealth,B,No Hybrid Classes,B,Reinforced Locks,R,No Moving Bodies
+2025-04-06,The Cache,Stealth,G,No Safecracking,B,No Scrambler,B,Bloodless
+2025-04-07,The Scientist,Stealth,B,Heavy Bags,P,Hidden Detection Bars,P,Fifteen Minutes
+2025-04-08,The Deposit,Loud,B,Mandatory Headshots,B,Criminal Arsenal,P,Flashbang Revenge
+2025-04-09,The Lakehouse,Stealth,P,Faster Detection,P,No Lockpicks,R,Takedown Limit
+2025-04-10,The Financier,Stealth,B,Cascade Arsenal,P,Unintimidating,P,Inexperienced
+2025-04-11,The Lockup,Loud,B,Armera Arsenal,P,Aegis Academy,R,Explosive Flashbangs
+2025-04-12,The SCRS,Stealth,P,Reinforced Cameras,P,Hidden UI,
+2025-04-13,The Financier,Stealth,B,Reinforced Locks,P,Inexperienced,P,Fifteen Minutes
+2025-04-14,The Scientist,Loud,B,Mandatory Headshots,P,Weaker Medkits,P,One Shot
+2025-04-15,The Blacksite,Stealth,B,Bloodless,B,No Scrambler,P,Hidden Detection Bars
+2025-04-16,The Gala,Stealth,B,Heavy Bags,B,Reinforced Doors,P,Faster Detection
+2025-04-17,The Deposit,Loud,B,Armera Arsenal,P,Less Health,P,Aegis Academy
+2025-04-18,Black Dusk,Loud,B,Criminal Arsenal,R,No Explosives,R,Explosive Revenge
+2025-04-19,The Lakehouse,Stealth,G,Fog,G,No Suppressors,P,No Lockpicks
+2025-04-20,The Withdrawal,Loud,G,No Aegis Armor,B,Cascade Arsenal,P,Flashbang Revenge
+2025-04-21,The Lockup,Loud,B,Glass Cannon,B,No Equipment Bags,B,Flashbang Frenzy
+2025-04-22,The Killhouse,Stealth,B,No Interrogation,P,Fifteen Minutes,R,No Moving Bodies
+2025-04-23,The Withdrawal,Loud,P,Aegis Academy,P,Hidden UI,R,Shield Swarm
+2025-04-24,The Deposit,Stealth,G,Fog,B,Heavy Bags,P,Inexperienced
+2025-04-25,Black Dusk,Loud,B,Armera Arsenal,P,Flashbang Revenge,R,No Explosives
+2025-04-26,The Auction,Stealth,G,No Suppressors,B,Cascade Arsenal,R,Takedown Limit
+2025-04-27,The Blacksite,Loud,B,No Equipment Bags,B,Reinforced Locks,P,Less Health
+2025-04-28,The SCRS,Stealth,G,No Safecracking,P,No Lockpicks,P,Reinforced Cameras
+2025-04-29,The Financier,Loud,G,Boarded Up,B,Mandatory Headshots,R,Explosive Revenge
+2025-04-30,The Lakehouse,Loud,B,Small Arms Only,B,No Heavy Armor,P,One Shot
+2025-05-01,The Lockup,Loud,B,Glass Cannon,B,Criminal Arsenal,P,Weaker Medkits
+2025-05-02,The Financier,Stealth,B,Reinforced Doors,P,Faster Detection,P,Unintimidating
+2025-05-03,The Deposit,Stealth,G,No Suppressors,B,Heavy Bags,P,Hidden Detection Bars
+2025-05-04,The Scientist,Loud,G,No Aegis Armor,B,Criminal Arsenal,P,Inexperienced
+2025-05-05,The SCRS,Loud,B,Mandatory Headshots,B,Armera Arsenal,P,Less Health
+2025-05-06,The Cache,Stealth,G,No Safecracking,B,No Hybrid Classes,P,Reinforced Cameras
+2025-05-07,Black Dusk,Loud,B,No Equipment Bags,P,Hidden UI,P,Weaker Medkits
+2025-05-08,The Lakehouse,Stealth,B,Cascade Arsenal,B,No Interrogation,R,No Moving Bodies
+2025-05-09,The Withdrawal,Loud,B,Glass Cannon,P,One Shot,P,Flashbang Revenge
+2025-05-10,The Killhouse,Loud,B,Reinforced Locks,B,No Heavy Armor,R,Shield Swarm
+2025-05-11,The Lockup,Stealth,G,Fog,P,Fifteen Minutes,P,No Lockpicks
+2025-05-12,The Killhouse,Stealth,G,No Suppressors,P,Faster Detection,R,No Moving Bodies
+2025-05-13,The Scientist,Loud,G,Fog,B,Flashbang Frenzy,R,Explosive Flashbangs
+2025-05-14,The Blacksite,Stealth,B,Reinforced Doors,B,Bloodless,P,Hidden Detection Bars
+2025-05-15,The SCRS,Loud,B,No Heavy Armor,P,Weaker Medkits,P,One Shot
+2025-05-16,The Cache,Stealth,G,No Safecracking,B,No Scrambler,B,Unskilled
+2025-05-17,The Deposit,Loud,B,Small Arms Only,P,Aegis Academy,R,Explosive Revenge
+2025-05-18,The Financier,Stealth,B,Cascade Arsenal,B,No Interrogation,P,Hidden UI
+2025-05-19,Black Dusk,Loud,B,Criminal Arsenal,P,Flashbang Revenge,P,Less Health
+2025-05-20,The Withdrawal,Stealth,B,Heavy Bags,P,Reinforced Cameras,R,Takedown Limit
+2025-05-21,The Setup,Stealth,B,Reinforced Locks,P,Unintimidating,P,Fifteen Minutes
+2025-05-22,Black Dusk,Loud,B,Reinforced Locks,B,No Heavy Armor,P,Aegis Academy
+2025-05-23,The Blacksite,Loud,B,Mandatory Headshots,P,Hidden UI,R,Explosive Revenge
+2025-05-24,The Deposit,Stealth,P,Unintimidating,P,Faster Detection,R,No Moving Bodies
+2025-05-25,The SCRS,Loud,B,Reinforced Doors,P,Less Health,P,Weaker Medkits
+2025-05-26,The Cache,Stealth,B,Bloodless,B,Cascade Arsenal,P,Hidden Detection Bars
+2025-05-27,The Killhouse,Stealth,B,Heavy Bags,B,Unskilled,P,Fifteen Minutes
+2025-05-28,The Financier,Loud,B,Glass Cannon,P,One Shot,P,Flashbang Revenge
+2025-05-29,The Lakehouse,Stealth,G,No Suppressors,P,No Lockpicks,R,Takedown Limit
+2025-05-30,The Scientist,Stealth,G,Fog,P,Faster Detection,R,No Knockouts
+2025-05-31,The Setup,Stealth,G,No Safecracking,B,No Scrambler,P,Reinforced Cameras
+2025-06-01,The Withdrawal,Stealth,B,No Hybrid Classes,P,Fifteen Minutes,P,Reinforced Cameras
+2025-06-02,Black Dusk,Loud,G,No Aegis Armor,P,Aegis Academy,R,Explosive Flashbangs
+2025-06-03,The Financier,Loud,B,Criminal Arsenal,P,Flashbang Revenge,R,Shield Swarm
+2025-06-04,The Killhouse,Loud,G,Fog,B,Mandatory Headshots,B,No Heavy Armor
+2025-06-05,The Gala,Stealth,B,No Scrambler,B,Reinforced Doors,B,Bloodless
+2025-06-06,The Blacksite,Stealth,G,No Suppressors,B,Heavy Bags,P,Hidden UI
+2025-06-07,The SCRS,Loud,B,Glass Cannon,B,Reinforced Locks,R,No Explosives
+2025-06-08,The Scientist,Stealth,B,Cascade Arsenal,P,Faster Detection,R,No Knockouts
+2025-06-09,The Lakehouse,Stealth,B,No Interrogation,P,No Lockpicks,R,No Moving Bodies
+2025-06-10,The Lockup,Loud,P,Less Health,P,Weaker Medkits,P,One Shot
+2025-06-11,The Financier,Loud,G,Boarded Up,P,Flashbang Revenge,P,Hidden UI
+2025-06-12,The SCRS,Loud,B,Armera Arsenal,B,Reinforced Locks,P,Weaker Medkits
+2025-06-13,The Blacksite,Stealth,B,Bloodless,B,Reinforced Doors,P,Fifteen Minutes
+2025-06-14,The Deposit,Stealth,G,Misplaced Gear,P,Faster Detection,P,Inexperienced
+2025-06-15,The Cache,Stealth,B,No Scrambler,P,Reinforced Cameras,P,Hidden Detection Bars
+2025-06-16,The Scientist,Stealth,G,Fog,B,Cascade Arsenal,R,No Knockouts
+2025-06-17,The Lakehouse,Stealth,B,No Interrogation,P,No Lockpicks,R,Takedown Limit
+2025-06-18,The Withdrawal,Stealth,G,No Suppressors,B,Heavy Bags,P,No Lockpicks
+2025-06-19,The Killhouse,Loud,B,Glass Cannon,R,Explosive Revenge,R,Explosive Flashbangs
+2025-06-20,The Lockup,Loud,G,No Aegis Armor,B,Mandatory Headshots,B,Flashbang Frenzy
+2025-06-21,The Financier,Stealth,B,Cascade Arsenal,P,Unintimidating,R,No Moving Bodies
+2025-06-22,Black Dusk,Loud,B,No Heavy Armor,P,Inexperienced,R,Shield Swarm
+2025-06-23,The Deposit,Stealth,G,No Suppressors,B,Weapon Scanners,P,Hidden Detection Bars
+2025-06-24,The Killhouse,Loud,G,Fog,P,Less Health,P,Aegis Academy
+2025-06-25,The Auction,Stealth,B,Heavy Bags,B,Reinforced Locks,R,Takedown Limit
+2025-06-26,The Scientist,Loud,B,Mandatory Headshots,B,Criminal Arsenal,P,One Shot
+2025-06-27,The SCRS,Stealth,G,Misplaced Gear,P,Reinforced Cameras,P,Faster Detection
+2025-06-28,The Blacksite,Stealth,B,No Scrambler,B,Reinforced Doors,P,Fifteen Minutes
+2025-06-29,The Lakehouse,Stealth,B,No Interrogation,P,No Lockpicks,P,Reinforced Cameras
+2025-06-30,The Lockup,Loud,P,Hidden UI,R,Explosive Revenge,R,No Explosives
+2025-07-01,The Withdrawal,Stealth,G,Fog,G,No Suppressors,P,Fifteen Minutes
+2025-07-02,The Scientist,Loud,B,Criminal Arsenal,B,No Heavy Armor,R,Explosive Revenge
+2025-07-03,The Blacksite,Loud,G,No Aegis Armor,P,One Shot,P,Weaker Medkits
+2025-07-04,The Killhouse,Stealth,B,Bloodless,P,Hidden UI,P,Inexperienced
+2025-07-05,The Gala,Stealth,B,Cascade Arsenal,P,Hidden Detection Bars,P,Reinforced Cameras
+2025-07-06,The SCRS,Stealth,B,Extra Cameras,P,Faster Detection,
+2025-07-07,The Financier,Loud,B,Mandatory Headshots,P,Less Health,R,No Explosives
+2025-07-08,The Lakehouse,Stealth,B,Heavy Bags,B,Reinforced Doors,P,Unintimidating
+2025-07-09,Black Dusk,Loud,B,Reinforced Locks,B,Armera Arsenal,R,Explosive Flashbangs
+2025-07-10,The Lockup,Stealth,B,Heavy Bags,B,Reinforced Doors,P,Hidden Detection Bars
+2025-07-11,The Blacksite,Stealth,B,No Hybrid Classes,B,Bloodless,P,Fifteen Minutes
+2025-07-12,The Killhouse,Stealth,B,No Interrogation,B,Reinforced Locks,R,No Moving Bodies
+2025-07-13,The Withdrawal,Loud,G,Fog,P,Hidden UI,P,Aegis Academy
+2025-07-14,The Deposit,Stealth,B,Extra Cameras,P,Reinforced Cameras,P,No Lockpicks
+2025-07-15,The Gala,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Hidden Detection Bars
+2025-07-16,The Scientist,Stealth,B,Heavy Bags,P,Faster Detection,R,No Knockouts
+2025-07-17,The Lakehouse,Loud,P,Weaker Medkits,P,Flashbang Revenge,R,No Explosives
+2025-07-18,Black Dusk,Loud,B,No Equipment Bags,B,Reinforced Doors,R,Explosive Flashbangs
+2025-07-19,The Financier,Loud,G,No Aegis Armor,B,Criminal Arsenal,R,Shield Swarm
+2025-07-20,The Setup,Stealth,G,No Safecracking,P,Unintimidating,R,Takedown Limit
+2025-07-21,The Blacksite,Stealth,B,Bloodless,B,No Scrambler,P,Hidden UI
+2025-07-22,The Financier,Loud,B,No Heavy Armor,P,Less Health,R,No Explosives
+2025-07-23,The Withdrawal,Loud,G,Fog,P,Weaker Medkits,P,Inexperienced
+2025-07-24,The Scientist,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Fifteen Minutes
+2025-07-25,The Auction,Stealth,B,Reinforced Locks,P,Faster Detection,P,Reinforced Cameras
+2025-07-26,Black Dusk,Loud,G,No Aegis Armor,B,Armera Arsenal,R,Shield Swarm
+2025-07-27,The SCRS,Stealth,G,No Safecracking,P,Unintimidating,P,No Lockpicks
+2025-07-28,The Killhouse,Loud,B,Mandatory Headshots,B,Reinforced Doors,P,One Shot
+2025-07-29,The Lakehouse,Stealth,P,Hidden Detection Bars,R,Takedown Limit,R,No Moving Bodies
+2025-07-30,The Lockup,Stealth,B,Heavy Bags,P,Inexperienced,P,Reinforced Cameras
+2025-07-31,The Financier,Stealth,B,Unskilled,B,Cascade Arsenal,P,No Lockpicks
+2025-08-01,The Lakehouse,Stealth,B,Reinforced Doors,P,Reinforced Cameras,R,Takedown Limit
+2025-08-02,The Deposit,Loud,P,Aegis Academy,P,One Shot,R,Shield Swarm
+2025-08-03,The Killhouse,Stealth,G,Fog,P,Hidden Detection Bars,P,Fifteen Minutes
+2025-08-04,The Cache,Stealth,G,No Safecracking,B,Bloodless,B,Reinforced Locks
+2025-08-05,The Blacksite,Stealth,G,No Suppressors,B,Cascade Arsenal,P,Hidden UI
+2025-08-06,The Scientist,Loud,G,No Aegis Armor,P,Less Health,R,No Explosives
+2025-08-07,The Withdrawal,Stealth,B,No Scrambler,P,Faster Detection,P,No Lockpicks
+2025-08-08,Black Dusk,Loud,B,No Heavy Armor,B,No Equipment Bags,R,Explosive Revenge
+2025-08-09,The Score,Loud,B,Mandatory Headshots,B,Criminal Arsenal,R,Explosive Flashbangs
+2025-08-10,Black Dusk,Loud,B,No Equipment Bags,B,Reinforced Locks,P,Aegis Academy
+2025-08-11,The Lakehouse,Loud,G,Boarded Up,P,Hidden UI,R,Shield Swarm
+2025-08-12,The Deposit,Loud,G,No Aegis Armor,B,Reinforced Doors,R,Explosive Flashbangs
+2025-08-13,The Scientist,Stealth,P,Inexperienced,P,Reinforced Cameras,P,Fifteen Minutes
+2025-08-14,The Gala,Stealth,G,No Suppressors,G,Fog,P,Faster Detection
+2025-08-15,The Withdrawal,Stealth,B,Heavy Bags,B,Cascade Arsenal,P,No Lockpicks
+2025-08-16,The Killhouse,Loud,B,Glass Cannon,P,Flashbang Revenge,P,One Shot
+2025-08-17,The Financier,Loud,B,Small Arms Only,B,Flashbang Frenzy,R,Explosive Revenge
+2025-08-18,The Blacksite,Stealth,B,Bloodless,B,No Scrambler,P,Hidden Detection Bars
+2025-08-19,The Score,Loud,B,Criminal Arsenal,B,Mandatory Headshots,R,No Explosives
+2025-08-20,The Lakehouse,Stealth,B,Reinforced Doors,B,Cascade Arsenal,P,Faster Detection
+2025-08-21,The Blacksite,Stealth,B,Heavy Bags,P,Hidden UI,P,Fifteen Minutes
+2025-08-22,The Withdrawal,Stealth,B,Unskilled,P,No Lockpicks,R,Takedown Limit
+2025-08-23,Black Dusk,Loud,B,Criminal Arsenal,P,One Shot,R,Explosive Revenge
+2025-08-24,The Cache,Stealth,B,Bloodless,P,Reinforced Cameras,P,Hidden Detection Bars
+2025-08-25,The Deposit,Loud,G,Boarded Up,P,Aegis Academy,R,Explosive Flashbangs
+2025-08-26,The SCRS,Loud,B,Flashbang Frenzy,B,Reinforced Locks,P,Less Health
+2025-08-27,The Killhouse,Loud,B,No Equipment Bags,B,Mandatory Headshots,P,Flashbang Revenge
+2025-08-28,The Financier,Stealth,G,No Suppressors,G,No Safecracking,R,No Moving Bodies
+2025-08-29,The Setup,Stealth,G,Fog,P,Unintimidating,R,No Disguise
+2025-08-30,The Lakehouse,Stealth,B,Reinforced Doors,B,Bloodless,P,Hidden UI
+2025-08-31,The Withdrawal,Stealth,B,Cascade Arsenal,P,Faster Detection,P,No Lockpicks
+2025-09-01,The Blacksite,Loud,B,Reinforced Locks,B,Armera Arsenal,R,Explosive Revenge
+2025-09-02,The Scientist,Loud,B,Criminal Arsenal,P,Less Health,P,One Shot
+2025-09-03,The Gala,Stealth,G,Fog,P,Hidden Detection Bars,R,No Moving Bodies
+2025-09-04,The Financier,Stealth,G,No Safecracking,B,Heavy Bags,P,Fifteen Minutes
+2025-09-05,Black Dusk,Loud,B,Flashbang Frenzy,B,No Heavy Armor,P,Flashbang Revenge
+2025-09-06,The SCRS,Loud,G,No Aegis Armor,B,Mandatory Headshots,P,Weaker Medkits
+2025-09-07,The Deposit,Stealth,G,No Suppressors,B,Unskilled,P,Reinforced Cameras
+2025-09-08,The Lockup,Stealth,B,Reinforced Doors,P,Unintimidating,R,Takedown Limit
+2025-09-09,The Killhouse,Stealth,G,Fog,B,Heavy Bags,P,Faster Detection
+2025-09-10,The Deposit,Stealth,B,Weapon Scanners,P,Unintimidating,P,Hidden Detection Bars
+2025-09-11,The Withdrawal,Loud,G,No Aegis Armor,G,Boarded Up,B,Unskilled
+2025-09-12,The Blacksite,Stealth,G,No Suppressors,B,Cascade Arsenal,B,Reinforced Locks
+2025-09-13,The Gala,Stealth,B,Bloodless,B,Reinforced Doors,P,Reinforced Cameras
+2025-09-14,The Scientist,Stealth,B,Heavy Bags,P,Fifteen Minutes,R,No Knockouts
+2025-09-15,The Financier,Loud,B,No Equipment Bags,P,Flashbang Revenge,P,Less Health
+2025-09-16,The Lakehouse,Loud,B,Glass Cannon,P,One Shot,R,Shield Swarm
