@@ -73,16 +73,6 @@ const missionToTemplate = {
 	"The Cache": "{{Robux}} The Cache"
 };
 
-let modifierToTemplate = (modifier) => {
-	// TODO: Add condition for takedown limit (either 4 or 6)
-	// DEADLINE: 2023-01-07
-	if (false) {
-		return "";
-	} else {
-		return modifier.split(" ").join("");
-	}
-};
-
 let dailyStringIntoObject = (dailyString) => {
 	let [, mission, method, c1, m1, c2, m2, c3, m3] = dailyString.split(",");
 	return {
@@ -90,9 +80,9 @@ let dailyStringIntoObject = (dailyString) => {
 		templateMission: missionToTemplate[mission] ? missionToTemplate[mission] : mission,
 		method: method,
 		challenges: [
-			{ class: letterToClass[c1], mod: m1, templateMod: modifierToTemplate(m1) },
-			{ class: letterToClass[c2], mod: m2, templateMod: modifierToTemplate(m2) },
-			{ class: letterToClass[c3], mod: m3, templateMod: modifierToTemplate(m3) }
+			{ class: letterToClass[c1], mod: m1, templateMod: m1.split(" ").join("") },
+			{ class: letterToClass[c2], mod: m2, templateMod: m2.split(" ").join("") },
+			{ class: letterToClass[c3], mod: m3, templateMod: m3.split(" ").join("") }
 		]
 	};
 };
@@ -136,7 +126,7 @@ let updateDaily = async () => {
 		content = content.replace(matches[2], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[2].templateMod}}}`);
 
 		// Update the page
-		client.edit("Template:DailyChallenge", content, "Updating daily challenge", (err) => {
+		client.edit("Template:DailyChallenge", content, "Updated daily challenge", (err) => {
 			if (err) {
 				console.log(err);
 			}
