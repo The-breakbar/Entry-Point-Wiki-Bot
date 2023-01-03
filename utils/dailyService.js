@@ -8,14 +8,6 @@ let client = new WikiBot({
 	path: ""
 });
 
-client.logIn(process.env.WIKI_USERNAME, process.env.WIKI_PASSWORD, (err) => {
-	if (err) {
-		console.log(err);
-		return;
-	}
-	console.log("✅ Logged in to Fandom");
-});
-
 let isDST = () => {
 	// Check daylight saving time in EST (correct until 2026)
 	const now = new Date();
@@ -102,34 +94,41 @@ let updateDaily = async () => {
 	// Update dailyStrings
 	dailyStrings = getDailyStrings();
 
-	// Get the daily challenge template page
-	client.getArticle("Template:DailyChallenge", (err, content) => {
+	client.logIn(process.env.WIKI_USERNAME, process.env.WIKI_PASSWORD, (err) => {
 		if (err) {
 			console.log(err);
 			return;
 		}
 
-		// Replace the old daily challenge with the new one
-		let dailyInfo = dailyStringIntoObject(dailyStrings[0]);
-
-		// Change the mission header and the three challenge headers
-		let matches = content.match(/!.*\|.*/g);
-		content = content.replace(matches[0], `! colspan="3" style="text-align:center;"|${dailyInfo.templateMission} (${dailyInfo.method})`);
-		content = content.replace(matches[1], `! style="text-align:center;"|<span class="${dailyInfo.challenges[0].class}">${dailyInfo.challenges[0].mod}</span>`);
-		content = content.replace(matches[2], `! style="text-align:center;"|<span class="${dailyInfo.challenges[1].class}">${dailyInfo.challenges[1].mod}</span>`);
-		content = content.replace(matches[3], `! style="text-align:center;"|<span class="${dailyInfo.challenges[2].class}">${dailyInfo.challenges[2].mod}</span>`);
-
-		// Replace the challenge descriptions
-		matches = content.match(/\|.*\|.*/g);
-		content = content.replace(matches[0], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[0].templateMod}}}`);
-		content = content.replace(matches[1], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[1].templateMod}}}`);
-		content = content.replace(matches[2], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[2].templateMod}}}`);
-
-		// Update the page
-		client.edit("Template:DailyChallenge", content, "Updated daily challenge", (err) => {
+		// Get the daily challenge template page
+		client.getArticle("Template:DailyChallenge", (err, content) => {
 			if (err) {
 				console.log(err);
+				return;
 			}
+
+			// Replace the old daily challenge with the new one
+			let dailyInfo = dailyStringIntoObject(dailyStrings[0]);
+
+			// Change the mission header and the three challenge headers
+			let matches = content.match(/!.*\|.*/g);
+			content = content.replace(matches[0], `! colspan="3" style="text-align:center;"|${dailyInfo.templateMission} (${dailyInfo.method})`);
+			content = content.replace(matches[1], `! style="text-align:center;"|<span class="${dailyInfo.challenges[0].class}">${dailyInfo.challenges[0].mod}</span>`);
+			content = content.replace(matches[2], `! style="text-align:center;"|<span class="${dailyInfo.challenges[1].class}">${dailyInfo.challenges[1].mod}</span>`);
+			content = content.replace(matches[3], `! style="text-align:center;"|<span class="${dailyInfo.challenges[2].class}">${dailyInfo.challenges[2].mod}</span>`);
+
+			// Replace the challenge descriptions
+			matches = content.match(/\|.*\|.*/g);
+			content = content.replace(matches[0], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[0].templateMod}}}`);
+			content = content.replace(matches[1], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[1].templateMod}}}`);
+			content = content.replace(matches[2], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[2].templateMod}}}`);
+
+			// Update the page
+			client.edit("Template:DailyChallenge", content, "Updated daily challenge", (err) => {
+				if (err) {
+					console.log(err);
+				}
+			});
 		});
 	});
 };
