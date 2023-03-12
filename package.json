@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.8.0",
     "node-fetch": "^2.6.1",
     "nodemw": "^0.18.0",
     "redis": "^3.1.2"
