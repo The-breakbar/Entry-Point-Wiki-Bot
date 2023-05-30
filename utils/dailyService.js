@@ -123,11 +123,30 @@ let updateDaily = async () => {
 			content = content.replace(matches[1], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[1].templateMod}}}`);
 			content = content.replace(matches[2], `| style="width: 33%;" |{{ModifierDescription|${dailyInfo.challenges[2].templateMod}}}`);
 
-			// Update the page
-			client.edit("Template:DailyChallenge", content, "Updated daily challenge", (err) => {
+			// Get token
+			client.getToken("Template:DailyChallenge", "edit", (err, token) => {
 				if (err) {
 					console.log(err);
+					return;
 				}
+
+				// Define edit params
+				let params = {
+					action: "edit",
+					title: "Template:DailyChallenge",
+					bot: true,
+					text: content,
+					summary: "Updated daily challenge",
+					token: token
+				};
+
+				// Update the page
+				client.api.call(params, (err, info, next) => {
+					if (err) {
+						console.log(err);
+						return;
+					}
+				});
 			});
 		});
 	});
