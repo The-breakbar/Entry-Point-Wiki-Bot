@@ -141,12 +141,16 @@ let updateDaily = async () => {
 				};
 
 				// Update the page
-				client.api.call(params, (err, info, next) => {
-					if (err) {
-						console.log(err);
-						return;
-					}
-				});
+				client.api.call(
+					params,
+					(err, info, next) => {
+						if (err) {
+							console.log(err);
+							return;
+						}
+					},
+					"POST"
+				);
 			});
 		});
 	});
