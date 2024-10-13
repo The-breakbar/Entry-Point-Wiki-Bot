@@ -12,7 +12,8 @@ module.exports = {
 		client.wikiServer.guild = await client.guilds.fetch(global.wConfig.guild);
 		client.wikiServer.reports = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.reports);
 		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.log);
-		client.wikiServer.editLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["wiki-edits"]);
+		client.wikiServer.epLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["ep-edits"]);
+		client.wikiServer.opLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["op-edits"]);
 		client.wikiServer.submitMeme = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["submitted-memes"]);
 
 		// Initialize daily service

@@ -1,6 +1,9 @@
 const fetch = require("node-fetch");
 
-const url = "https://entry-point.fandom.com";
+const EP_URL = "https://entry-point.fandom.com";
+const OP_URL = "https://operators.miraheze.org";
+let epChanges = [];
+let opChanges = [];
 
 module.exports = {
 	// Callback hell
@@ -8,13 +11,44 @@ module.exports = {
 		setInterval(() => {
 			const now = Math.floor(Date.now() / 1000);
 			const before = now - interval / 1000;
-			// Make api call
-			fetch(`${url}/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user&rcnamespace=0&rcstart=${now}&rcend=${before}&format=json`)
+
+			// Make EP api call
+			fetch(`${EP_URL}/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcstart=${now}&rcend=${before}&format=json`)
 				.then((response) => {
-					// Send returned edits in edit log channel
 					response.json().then((jsonResponse) => {
 						try {
-							processChanges(jsonResponse, client);
+							let edits = jsonResponse.query.recentchanges.reverse().filter((edit) => {
+								return ["edit", "new"].includes(edit.type) && !epChanges.some((prev) => prev.pageid == edit.pageid && prev.revid == edit.revid);
+							});
+							epChanges = edits.slice();
+
+							let embeds = generateEmbed(edits, EP_URL + "/wiki/");
+							embeds.forEach((embed) => {
+								client.wikiServer.epLog.send({ embeds: [embed] }).catch((error) => console.error(error));
+							});
+						} catch (error) {
+							console.error(error);
+						}
+					});
+				})
+				.catch((error) => console.error(error));
+
+			// Make operators api call
+			fetch(
+				`${OP_URL}/w/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcstart=${now}&rcend=${before}&format=json`
+			)
+				.then((response) => {
+					response.json().then((jsonResponse) => {
+						try {
+							let edits = jsonResponse.query.recentchanges.reverse().filter((edit) => {
+								return ["edit", "new"].includes(edit.type) && !opChanges.some((prev) => prev.pageid == edit.pageid && prev.revid == edit.revid);
+							});
+							opChanges = edits.slice();
+
+							let embeds = generateEmbed(edits, OP_URL + "/");
+							embeds.forEach((embed) => {
+								client.wikiServer.opLog.send({ embeds: [embed] }).catch((error) => console.error(error));
+							});
 						} catch (error) {
 							console.error(error);
 						}
@@ -25,31 +59,23 @@ module.exports = {
 	}
 };
 
-let previousChanges = [];
-
-const processChanges = (response, client) => {
-	// Prevent duplicate logging
-	let editList = response.query.recentchanges.reverse().filter((edit) => {
-		return edit.type == "edit" && !previousChanges.includes(edit);
-	});
-	previousChanges = editList.slice();
-
-	editList.forEach((edit) => {
-		let { title, user, comment, revid, old_revid, oldlen, newlen } = edit;
+const generateEmbed = (edits, wikiUrl) => {
+	return edits.map((edit) => {
+		let { type, title, user, comment, revid, old_revid, oldlen, newlen, redirect } = edit;
 		// Underscores for valid links
 		title = title.replaceAll(" ", "_");
 		user = user.replaceAll(" ", "_");
 
 		// Parse links in edit summary
-		comment = comment.replace("User talk", "Message_Wall");
+		comment = comment.replace("User talk", "User");
 		let wikiTextLinks = comment.match(/\[\[[^\]]+]]/g);
 		if (wikiTextLinks)
 			wikiTextLinks.forEach((match) => {
 				let matchUrl = match.slice(2, -2);
 				if (matchUrl.includes("|")) {
-					matchUrl = `[${matchUrl.split("|")[1]}](${url}/wiki/${matchUrl.split("|")[0].replaceAll(" ", "_")})`;
+					matchUrl = `[${matchUrl.split("|")[1]}](${wikiUrl}${matchUrl.split("|")[0].replaceAll(" ", "_")})`;
 				} else {
-					matchUrl = `[${matchUrl}](${url}/wiki/${matchUrl.replaceAll(" ", "_")})`;
+					matchUrl = `[${matchUrl}](${wikiUrl}${matchUrl.replaceAll(" ", "_")})`;
 				}
 				comment = comment.replace(match, matchUrl);
 			});
@@ -57,22 +83,14 @@ const processChanges = (response, client) => {
 		// Create embed
 		const delta = (newlen - oldlen < 0 ? "" : "+") + (newlen - oldlen);
 		const description =
-			`New edit by [${user.replaceAll("_", " ")}](${url}/wiki/User:${user})` +
-			` (${delta}) ([diff](${url}/wiki/${title}?type=revision&diff=${revid}&oldid=${old_revid}))`;
+			`[${title.replaceAll("_", " ")}](${wikiUrl}${title}) (${delta}) ([diff](${wikiUrl}${title}?type=revision&diff=${revid}&oldid=${old_revid})) ` +
+			`| New ${redirect === "" ? "redirect" : type == "new" ? "page" : "edit"} by [${user.replaceAll("_", " ")}](${wikiUrl}User:${user})` +
+			`\n${comment ? comment : "No edit summary"}`;
 		const embed = {
 			color: global.colors.purple,
-			title: title.replaceAll("_", " "),
-			url: `${url}/wiki/${title}`,
-			description: description,
-			fields: [
-				{
-					name: "Edit summary",
-					value: comment ? comment : "No edit summary"
-				}
-			],
-			timestamp: new Date()
+			description: description
 		};
 
-		client.wikiServer.editLog.send({ embeds: [embed] }).catch((error) => console.error(error));
+		return embed;
 	});
 };
