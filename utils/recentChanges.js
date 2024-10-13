@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 const EP_URL = "https://entry-point.fandom.com";
-const OP_URL = "https://operators.miraheze.org";
+const OP_URL = "https://operators.wiki";
 let epChanges = [];
 let opChanges = [];
 
