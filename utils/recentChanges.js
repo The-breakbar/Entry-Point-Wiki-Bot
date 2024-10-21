@@ -13,7 +13,9 @@ module.exports = {
 			const before = now - interval / 1000;
 
 			// Make EP api call
-			fetch(`${EP_URL}/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcstart=${now}&rcend=${before}&format=json`)
+			fetch(
+				`${EP_URL}/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcshow=!bot&rcstart=${now}&rcend=${before}&format=json`
+			)
 				.then((response) => {
 					response.json().then((jsonResponse) => {
 						try {
@@ -35,7 +37,7 @@ module.exports = {
 
 			// Make operators api call
 			fetch(
-				`${OP_URL}/w/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcstart=${now}&rcend=${before}&format=json`
+				`${OP_URL}/w/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcshow=!bot&rcstart=${now}&rcend=${before}&format=json`
 			)
 				.then((response) => {
 					response.json().then((jsonResponse) => {
