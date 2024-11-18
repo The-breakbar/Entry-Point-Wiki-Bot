@@ -24,6 +24,9 @@ module.exports = {
 							});
 							epChanges = edits.slice();
 
+							// remove edits by wiki bot
+							edits = edits.filter((edit) => edit.user !== "Entry Point Wiki Bot");
+
 							let embeds = generateEmbed(edits, EP_URL + "/wiki/");
 							embeds.forEach((embed) => {
 								client.wikiServer.epLog.send({ embeds: [embed] }).catch((error) => console.error(error));
