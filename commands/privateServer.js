@@ -15,7 +15,7 @@ const row = new ActionRowBuilder().addComponents(button);
 module.exports = {
 	global: true,
 	name: "privateserver",
-	description: "Get the Wiki private server link",
+	description: "Get the wiki private server link",
 	async execute(interaction, client) {
 		// Reply with link
 		await interaction.deferReply();

@@ -8,6 +8,6 @@ You can invite the bot as an application to your own server with this [link](htt
 
 - /search-ep \<query> (search for an Entry Point wiki page)
 - /search-op \<query> (search for an Operators wiki page)
-- /privateserver (get the link to the Entry Point Wiki private server)
+- /privateserver (get the link to the Entry Point wiki private server)
 - /dailychallenge (get the current and next day's daily challenge)
 - /epmeme (get a random Entry Point meme)
