@@ -31,5 +31,15 @@ module.exports = {
 				}
 			}
 		});
+
+		// Remove commands that are not in client.commands
+		client.application.commands.fetch().then((commands) => {
+			commands.forEach(async (command) => {
+				if (!client.commands.find((data) => data.name == command.name)) {
+					command.delete();
+					console.log(`Deleted command ${command.name}.`);
+				}
+			});
+		});
 	}
 };

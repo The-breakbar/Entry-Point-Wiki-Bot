@@ -3,9 +3,9 @@ const fetch = require("node-fetch");
 
 module.exports = {
 	global: true,
-	name: "search",
-	description: "Search for a wiki page",
-	options: [{ name: "query", type: ApplicationCommandOptionType.String, description: "Term to search for on the wiki", required: true }],
+	name: "search-op",
+	description: "Search for an Operators wiki page",
+	options: [{ name: "query", type: ApplicationCommandOptionType.String, description: "Term to search for on the Operators wiki", required: true }],
 	async execute(interaction, client) {
 		// Defer reply
 		await interaction.deferReply();
@@ -13,7 +13,7 @@ module.exports = {
 		// Make API call to wiki
 		const query = interaction.options.getString("query");
 		const queryDisplay = query.length > 50 ? query.slice(0, 50) + "..." : query;
-		const URI = encodeURI(`https://entry-point.fandom.com/api.php?action=opensearch&format=json&search=${query}&namespace=0&limit=5&redirects=resolve`);
+		const URI = encodeURI(`https://operators.wiki/w/api.php?action=opensearch&format=json&search=${query}&namespace=0&limit=5&redirects=resolve`);
 		const response = await fetch(URI).catch((error) => {
 			console.error(error);
 		});
