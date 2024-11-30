@@ -2,6 +2,7 @@ const { syncMuted } = require("../utils/muteUtils");
 const { recentChanges } = require("../utils/recentChanges");
 const { ActivityType } = require("discord.js");
 const { initDaily } = require("../utils/dailyService");
+const { recentComments } = require("../utils/recentComments");
 
 module.exports = {
 	name: "ready",
@@ -14,7 +15,7 @@ module.exports = {
 		client.wikiServer.log = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels.log);
 		client.wikiServer.epLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["ep-edits"]);
 		client.wikiServer.opLog = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["op-edits"]);
-		client.wikiServer.submitMeme = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["submitted-memes"]);
+		client.wikiServer.opComments = await client.wikiServer.guild.channels.cache.get(global.wConfig.channels["op-comments"]);
 
 		// Initialize daily service
 		initDaily();
@@ -24,6 +25,7 @@ module.exports = {
 
 		// Checks wiki for new edits periodically
 		recentChanges(20000, client);
+		recentComments(60000, client);
 
 		// Set status, change status every hour
 		const startingStatus = activities[Math.floor(Math.random() * activities.length)];
