@@ -36,7 +36,7 @@ module.exports = {
 						}
 					});
 				})
-				.catch((error) => console.error(error));
+				.catch((error) => console.log(`Failed to fetch EP recent changes.`));
 
 			// Make operators api call
 			fetch(
@@ -59,7 +59,7 @@ module.exports = {
 						}
 					});
 				})
-				.catch((error) => console.error(error));
+				.catch((error) => console.log(`Failed to fetch OP recent changes.`));
 		}, interval);
 	}
 };
