@@ -17,24 +17,27 @@ module.exports = {
 				`${EP_URL}/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcshow=!bot&rcstart=${now}&rcend=${before}&format=json`
 			)
 				.then((response) => {
-					response.json().then((jsonResponse) => {
-						try {
-							let edits = jsonResponse.query.recentchanges.reverse().filter((edit) => {
-								return ["edit", "new"].includes(edit.type) && !epChanges.some((prev) => prev.pageid == edit.pageid && prev.revid == edit.revid);
-							});
-							epChanges = edits.slice();
+					response
+						.json()
+						.then((jsonResponse) => {
+							try {
+								let edits = jsonResponse.query.recentchanges.reverse().filter((edit) => {
+									return ["edit", "new"].includes(edit.type) && !epChanges.some((prev) => prev.pageid == edit.pageid && prev.revid == edit.revid);
+								});
+								epChanges = edits.slice();
 
-							// remove edits by wiki bot
-							edits = edits.filter((edit) => edit.user !== "Entry Point Wiki Bot");
+								// remove edits by wiki bot
+								edits = edits.filter((edit) => edit.user !== "Entry Point Wiki Bot");
 
-							let embeds = generateEmbed(edits, EP_URL + "/wiki/");
-							embeds.forEach((embed) => {
-								client.wikiServer.epLog.send({ embeds: [embed] }).catch((error) => console.error(error));
-							});
-						} catch (error) {
-							console.error(error);
-						}
-					});
+								let embeds = generateEmbed(edits, EP_URL + "/wiki/");
+								embeds.forEach((embed) => {
+									client.wikiServer.epLog.send({ embeds: [embed] }).catch((error) => console.error(error));
+								});
+							} catch (error) {
+								console.error(error);
+							}
+						})
+						.catch((error) => console.log(`Failed to parse EP recent changes.`));
 				})
 				.catch((error) => console.log(`Failed to fetch EP recent changes.`));
 
@@ -43,21 +46,24 @@ module.exports = {
 				`${OP_URL}/w/api.php?action=query&list=recentchanges&rcprop=title|ids|sizes|comment|user|redirect&rcnamespace=0|10&rcshow=!bot&rcstart=${now}&rcend=${before}&format=json`
 			)
 				.then((response) => {
-					response.json().then((jsonResponse) => {
-						try {
-							let edits = jsonResponse.query.recentchanges.reverse().filter((edit) => {
-								return ["edit", "new"].includes(edit.type) && !opChanges.some((prev) => prev.pageid == edit.pageid && prev.revid == edit.revid);
-							});
-							opChanges = edits.slice();
+					response
+						.json()
+						.then((jsonResponse) => {
+							try {
+								let edits = jsonResponse.query.recentchanges.reverse().filter((edit) => {
+									return ["edit", "new"].includes(edit.type) && !opChanges.some((prev) => prev.pageid == edit.pageid && prev.revid == edit.revid);
+								});
+								opChanges = edits.slice();
 
-							let embeds = generateEmbed(edits, OP_URL + "/");
-							embeds.forEach((embed) => {
-								client.wikiServer.opLog.send({ embeds: [embed] }).catch((error) => console.error(error));
-							});
-						} catch (error) {
-							console.error(error);
-						}
-					});
+								let embeds = generateEmbed(edits, OP_URL + "/");
+								embeds.forEach((embed) => {
+									client.wikiServer.opLog.send({ embeds: [embed] }).catch((error) => console.error(error));
+								});
+							} catch (error) {
+								console.error(error);
+							}
+						})
+						.catch((error) => console.log(`Failed to parse OP recent changes.`));
 				})
 				.catch((error) => console.log(`Failed to fetch OP recent changes.`));
 		}, interval);
