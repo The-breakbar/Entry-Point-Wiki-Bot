@@ -17,6 +17,9 @@ redisClient.get("filter").then((badWordString) => {
 	}
 });
 
+const EP_URL = "https://entry-point.fandom.com/wiki/";
+const OP_URL = "https://operators.wiki/";
+
 module.exports = {
 	name: "messageCreate",
 	async execute(message, client) {
@@ -177,6 +180,24 @@ module.exports = {
 			) {
 				message.react("❤️").catch((error) => console.error(error));
 			}
+		}
+
+		let linkMatches = message.content.matchAll(/\[\[(ep|op):(.+?)\]\]/g);
+		linkMatches = Array.from(linkMatches, (match) => {
+			const prefix = match[1];
+			let title = match[2];
+
+			let displayTitle = title.trim().replace(/\b\w/g, (char) => char.toUpperCase());
+			let linkTitle = displayTitle.replace(/ /g, "_");
+
+			let url = prefix == "ep" ? EP_URL : OP_URL;
+			url += linkTitle;
+
+			return `[${displayTitle}](<${url}>)`;
+		});
+
+		if (linkMatches.length > 0) {
+			message.channel.send(linkMatches.join(" "));
 		}
 	}
 };
